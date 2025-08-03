@@ -1,0 +1,104 @@
+/* 1. Layout principal */
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 90px 1fr 1fr;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url("../../../../img/page/index/fundo-section-1.jpg") center center no-repeat fixed;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* 2. Itens da seção referente ao topo */
+.section__logo {
+   width: 200px;
+   height: 81px;
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 1;
+   grid-column-end: 3;
+
+}
+
+.section__div-topo {
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 3;
+   grid-column-end: -1;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   margin-right: 30px;
+}
+
+/* 3. Itens dentro da .section__div--topo */
+
+.section__div-topo_a {
+   color: white;
+   text-decoration: none;
+}
+
+.section__div-topo_input {
+   padding: 10px;
+   margin-right: 20px;
+   border-radius: 10px;
+}
+
+/* 3. Itens da seção referente ao meio */
+
+.section__div-meio {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 2;
+   grid-column-end: 4;
+}
+
+/* 3. Itens dentro da .section__div--meio */
+   /*Para tirar caracter daria para por assim section__div-meio a*/
+
+.section__div-meio__h1 {
+   white-space: nowrap;
+   color: var(--cor-branco);
+   font-size: var(--font-size-padrao-h1);
+}
+
+.section__div-meio__p {
+   white-space: nowrap;
+
+   color: var(--cor-branco);
+   font-size: var( --font-size-padrao-p);
+}
+
+.section__div-meio__input {
+   height: 50px;
+   width: 80%;
+   border-radius: 20px;
+   background: url("../../../../img/page/index/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg") 95% center no-repeat;
+   background-color: white;
+   background-size: 20px 20px;
+   border: none;
+
+}
+
