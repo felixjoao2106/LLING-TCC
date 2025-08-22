@@ -5,7 +5,7 @@
     grid-template-rows: 90px 1fr 1fr;
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 400px;
     background: url("../../../../img/page/index/fundo-section-1.jpg") center center no-repeat fixed;
     background-size: cover;
     overflow: hidden;
@@ -79,31 +79,87 @@
 }
 
 /* 3. Itens dentro da .section__div--meio */
-   /*Para tirar caracter daria para por assim section__div-meio a*/
+/*Para tirar caracter daria para por assim section__div-meio a*/
 
 .section__div-meio__h1 {
-   white-space: nowrap;
-   color: var(--cor-branco);
-   /*font-size: var(--font-size-padrao-h1);*/
-   font-size: 2em
+    white-space: nowrap;
+    color: var(--cor-branco);
+    /*font-size: var(--font-size-padrao-h1);*/
+    font-size: 2em
 }
 
 .section__div-meio__p {
-   white-space: nowrap;
-
-   color: var(--cor-branco);
-   /*font-size: var( --font-size-padrao-p);*/
-   font-size: 0.8em;
+    white-space: nowrap;
+    
+    color: var(--cor-branco);
+    /*font-size: var( --font-size-padrao-p);*/
+    font-size: 0.8em;
 }
 
 .section__div-meio__input {
-   height: 50px;
-   width: 100%;
-   border-radius: 20px;
-   background: url("../../../../img/page/index/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg") 95% center no-repeat;
-   background-color: white;
-   background-size: 20px 20px;
-   border: none;
-
+    height: 50px;
+    width: 100%;
+    border-radius: 20px;
+    background: url("../../../../img/page/index/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg") 95% center no-repeat;
+    background-color: white;
+    background-size: 20px 20px;
+    border: none;
+    
 }
 
+/* 4. Itens dentro da .section__div--enbaixo */
+
+.section__div-enbaixo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.section__div-enbaixo__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+    padding: 10px;
+}
+
+.section__div-enbaixo__item a{
+    text-decoration: none;
+    color: white;
+}
+
+.img-casamento, .img-ei, .img-cosplay, .img-cosplay, .img-estetico {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-shadow: 2px 1px rgba(0, 0, 0, 0.401);
+} 
+
+.img-casamento {
+    background-image: url('../../../../img/page/index/casamento.jpg');
+}
+
+.img-ei {
+    background-image: url('../../../../img/page/index/ensaio-fotografico.jpg');
+    
+}
+
+.img-cosplay {
+    background-image: url('../../../../img/page/index/cosplay.jpg');
+    
+}
+
+.img-estetico {
+    background-image: url('../../../../img/page/index/estetico.jpg');
+
+}
