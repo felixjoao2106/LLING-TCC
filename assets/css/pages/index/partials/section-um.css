@@ -30,7 +30,7 @@
 /* 2. Itens da seção referente ao topo */
 .section__logo {
    display: flex; 
-   width: 100px;
+   width: 150px;
    align-self: center;
    grid-row-start: 1;
    grid-row-end: 2;
@@ -62,6 +62,7 @@
    padding: 10px;
    margin-right: 20px;
    border-radius: 10px;
+   border: none;
 }
 
 /* 3. Itens da seção referente ao meio */
