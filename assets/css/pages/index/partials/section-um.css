@@ -1,7 +1,7 @@
 /* 1. Layout principal */
 .section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: 90px 1fr 1fr;
     position: relative;
     width: 100%;
@@ -58,7 +58,7 @@
 }
 
 .section__div-topo_input {
-   font-size: 10px;
+   font-size: 7px;
    padding: 10px;
    margin-right: 20px;
    border-radius: 10px;
@@ -98,7 +98,7 @@
 
 .section__div-meio__input {
    height: 50px;
-   width: 80%;
+   width: 100%;
    border-radius: 20px;
    background: url("../../../../img/page/index/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg") 95% center no-repeat;
    background-color: white;
