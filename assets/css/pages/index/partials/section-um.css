@@ -1,5 +1,5 @@
 /* 1. Layout principal */
-.section {
+.section-um {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: 90px 1fr 1fr;
@@ -12,7 +12,7 @@
     z-index: 0;
 }
 
-.section::before {
+.section-um::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
@@ -22,7 +22,7 @@
     z-index: 1;
 }
 
-.section > * {
+.section-um > * {
     position: relative;
     z-index: 2;
 }

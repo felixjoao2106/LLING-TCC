@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrossel estilo streaming</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 900px;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+      background: #222;
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+      height: 100%;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Capa */
+    .carousel-item img {
+      width: 250px;
+      border-radius: 10px;
+    }
+
+    /* Conteúdo */
+    .carousel-content {
+      max-width: 600px;
+    }
+
+    .carousel-content h2 {
+      margin: 0 0 10px;
+      font-size: 1.8rem;
+    }
+
+    .tags {
+      margin: 10px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 2px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      background: #333;
+    }
+
+    .rating {
+      margin: 10px 0;
+      font-size: 0.9rem;
+      color: gold;
+    }
+
+    /* Botões de navegação */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #fff;
+      background: rgba(0,0,0,0.4);
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .arrow.left { left: 10px; }
+    .arrow.right { right: 10px; }
+
+    /* Indicadores */
+    .indicators {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: gray;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel-container">
+    <div class="carousel-slide">
+
+      <!-- Item 1 -->
+      <div class="carousel-item">
+        <img src="https://m.media-amazon.com/images/I/81xP8EjsuLL.jpg" alt="Porteiro da Dungeon">
+        <div class="carousel-content">
+          <h2>Porteiro da Masmorra</h2>
+          <div class="tags">
+            <span class="tag">Ação</span>
+            <span class="tag">Aventura</span>
+            <span class="tag">Comédia</span>
+          </div>
+          <p>
+            Um mundo onde apenas aqueles com talento nato podem se tornar aventureiros que conquistam masmorras.
+            Nagi é visto como um simples carregador, mas o destino o desafia!
+          </p>
+          <div class="rating">⭐ 3.17 | 📖 4 capítulos | 👁️ 2.217 visualizações</div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="carousel-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/50/Overlord_light_novel_cover.jpg" alt="Overlord">
+        <div class="carousel-content">
+          <h2>Overlord</h2>
+          <div class="tags">
+            <span class="tag">Fantasia</span>
+            <span class="tag">Isekai</span>
+            <span class="tag">Ação</span>
+          </div>
+          <p>
+            Um jogador preso em um MMORPG comanda seu exército de NPCs leais para dominar o novo mundo.
+          </p>
+          <div class="rating">⭐ 4.8 | 📖 14 volumes | 👁️ 1M visualizações</div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="carousel-item">
+        <img src="https://m.media-amazon.com/images/I/91O0m4rPqUL.jpg" alt="Solo Leveling">
+        <div class="carousel-content">
+          <h2>Solo Leveling</h2>
+          <div class="tags">
+            <span class="tag">Ação</span>
+            <span class="tag">Fantasia</span>
+            <span class="tag">Dungeon</span>
+          </div>
+          <p>
+            Sung Jin-Woo, o caçador mais fraco, recebe o poder de evoluir sem limites e começa sua jornada épica.
+          </p>
+          <div class="rating">⭐ 4.9 | 📖 179 capítulos | 👁️ 5M visualizações</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <button class="arrow left">&#10094;</button>
+    <button class="arrow right">&#10095;</button>
+
+    <!-- Indicadores -->
+    <div class="indicators"></div>
+
+  </div>
+
+  <script>
+    const slide = document.querySelector('.carousel-slide');
+const items = document.querySelectorAll('.carousel-item');
+const indicators = document.querySelector('.indicators');
+let dots = [];
+let index = 0;
+
+// Criar os pontinhos dinamicamente
+items.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active'); // primeiro ativo
+  dot.addEventListener('click', () => {
+    index = i;
+    updateCarousel();
+  });
+  indicators.appendChild(dot);
+  dots.push(dot);
+});
+
+function updateCarousel() {
+  slide.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+}
+
+document.querySelector('.arrow.left').addEventListener('click', () => {
+  index = (index > 0) ? index - 1 : items.length - 1;
+  updateCarousel();
+});
+
+document.querySelector('.arrow.right').addEventListener('click', () => {
+  index = (index < items.length - 1) ? index + 1 : 0;
+  updateCarousel();
+});
+
+  </script>
+</body>
+</html>

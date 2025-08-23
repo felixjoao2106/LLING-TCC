@@ -9,19 +9,12 @@
    position: relative; /* necessário pro ::before */
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr 100px;
-   gap: 20px;
-   align-items: center;
-   justify-items: center;
-   width: 280px;
-   margin: auto;
-   padding: 20px;   
+   grid-template-rows: 1fr 1fr;
    background-image: url("../../../../img/page/index/cosplay.jpg");
    background-size: cover;
    background-position: center center;
    background-repeat: no-repeat;
    color: white; /* texto em branco */
-   margin-top: 20px;
    overflow: hidden;
 }
 
@@ -47,26 +40,25 @@
 .carrosel__img {
    width: 100px;
    align-self: center;
-   justify-items: center;
    
    grid-column-start: 1;
-   grid-column-end: -1;
+   grid-column-end: 2;
    grid-row-start: 1;
    grid-row-end: 2;
 }
 
 .carrosel__info {
-   grid-column-start: 1;
+   grid-column-start: 2;
    grid-column-end: -1;
-   grid-row-start: 2;
-   grid-row-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 2;
    
 }
 
 .carrosel_points {
    grid-column-start: 1;
    grid-column-end: -1;
-   grid-row-start: 3;
+   grid-row-start: 2;
    grid-row-end: -1;
    
 }
