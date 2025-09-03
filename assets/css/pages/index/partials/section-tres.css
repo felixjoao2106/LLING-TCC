@@ -1,0 +1,27 @@
+.section-tres {
+    width: 100vw;
+    height: 500px;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.section-tres__carrossel-rec {
+    display: flex;
+}
+
+.carrossel-rec__item {
+
+}
+
+.carrossel-rec__item__img {
+    width: 250px;
+    
+}
+
+.carrossel-rec__item__title {
+
+}
+
+.carrossel-rec__item__location {
+
+}
