@@ -1,17 +1,18 @@
-const cards = document.querySelectorAll(".section-dois__carrosel__card");
+const cards = document.querySelectorAll(".card");
+  const infos = document.querySelectorAll(".info");
   let atual = 0;
 
-  // Mostra só o card ativo
   function mostrarCard(index) {
     cards.forEach((c, i) => {
       c.style.display = (i === index) ? "block" : "none";
     });
+    infos.forEach((info, i) => {
+      info.style.display = (i === index) ? "flex" : "none";
+    });
   }
 
-  // Inicializa
   mostrarCard(atual);
 
-  // Troca automático a cada 4s
   setInterval(() => {
     atual = (atual + 1) % cards.length;
     mostrarCard(atual);
