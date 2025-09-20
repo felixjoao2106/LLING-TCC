@@ -1,5 +1,14 @@
 :root {
+    --cor-primaria: #5297FF;
+    --cor-secundaria: #99C7FF;
+    --cor-terciaria: #EBF4FF;
+    
     --cor-branco: #fff;
+    --cor-cinza-escuro: #BDBDBD;
+    --cor-cinza-claro: #D9D9D9;
+    
+    
+    
 
     --font-size-padrao-h1: 3em;
     --font-size-padrao-p: 1em;
