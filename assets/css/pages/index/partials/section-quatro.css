@@ -74,9 +74,21 @@
 }
 
 .sec-qua__cont__box-cad-fot-user__img {
+    height: 250px;
     background-color: var(--cor-cinza-claro);
 }
+.sec-qua__cont__box-cad-log-user__img {
+    height: 250px;
+}
 
+.sec-qua__cont__box-cad-fot-user__img img{
+    width: 400px;
+}
+
+.sec-qua__cont__box-cad-log-user__img img{
+    width: 650px;
+}
+/*
 .sec-qua__cont__box-cad-log-user__img .phone,
 .sec-qua__cont__box-cad-fot-user__img .phone {
     width: 100px;
@@ -85,7 +97,8 @@
     background-color: white;
     position: relative;
     bottom: 90px;
-}
+} 
+*/
 
 .sec-qua__cont__box-cad-log-user__img .phone {
     background-image: url("../.././../../img/page/influencia_user.png");
@@ -93,10 +106,10 @@
     background-size: contain;
 }
 
-.sec-qua__cont__box-cad-log-user__img .phone {
-    background-image: url("../.././../../img/page/influencia_user.png");
+.sec-qua__cont__box-cad-fot-user__img .phone {
+    background-image: url("../.././../../img/Design\ sem\ nome\ \(1\).png");
     background-repeat: no-repeat;
-    background-size: contain;
+    width: 100px;
 }
 /*
 .sec-qua__cont__box-cad-log-user__img .notch,
