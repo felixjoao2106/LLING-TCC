@@ -50,7 +50,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
     /* 2. Itens da seção referente ao topo */
     .section__logo {
         display: flex;
-        width: 150px;
+        width: 180px;
         align-self: center;
         grid-row-start: 1;
         grid-row-end: 2;
@@ -84,13 +84,19 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
     }
 
     .section__div-topo_a {
+        display: block;
         color: white;
         text-decoration: none;
+        margin-left: 5px;
+    }
+
+    .section__div_user {
+        width: 2.5em;
     }
 
     .section__div-topo_input {
-        font-size: 7px;
-        padding: 10px;
+        font-size: 0.8em;
+        padding: 12px;
         margin-right: 20px;
         border-radius: 10px;
         border: none;
@@ -145,8 +151,8 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100px;
-        height: 50px;
+        width: 200px;
+        height: 120px;
         background-color: aqua;
         padding: 10px;
     }
@@ -154,6 +160,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
     .section__div-enbaixo__item a {
         text-decoration: none;
         color: white;
+        font-size: 1.5em;
     }
 
     .img-casamento,

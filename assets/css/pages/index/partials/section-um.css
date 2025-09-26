@@ -5,7 +5,7 @@
     grid-template-rows: 90px 1fr 1fr;
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 545px;
     background: url("../../../../img/page/index/fundo-section-1.jpg") center center no-repeat fixed;
     background-size: cover;
     overflow: hidden;
@@ -15,67 +15,69 @@
 .section-um::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-.section-um > * {
+.section-um>* {
     position: relative;
     z-index: 2;
 }
 
 /* 2. Itens da seção referente ao topo */
 .section__logo {
-   display: flex; 
-   width: 150px;
-   align-self: center;
-   grid-row-start: 1;
-   grid-row-end: 2;
-   grid-column-start: 1;
-   grid-column-end: 3;
+    display: flex;
+    width: 150px;
+    align-self: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
 
 }
 
 .section__div-topo {
-   grid-row-start: 1;
-   grid-row-end: 2;
-   grid-column-start: 3;
-   grid-column-end: -1;
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
-   margin-right: 30px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: -1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30px;
 }
 
 /* 3. Itens dentro da .section__div--topo */
 
 .section__div-topo_a {
-   color: white;
-   text-decoration: none;
+    display: none;
+    color: white;
+    text-decoration: none;
 }
 
 .section__div-topo_input {
-   font-size: 7px;
-   padding: 10px;
-   margin-right: 20px;
-   border-radius: 10px;
-   border: none;
+    font-size: 7px;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: none;
 }
 
 /* 3. Itens da seção referente ao meio */
 
 .section__div-meio {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   align-items: center;
-   grid-row-start: 2;
-   grid-row-end: 3;
-   grid-column-start: 2;
-   grid-column-end: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
 
 /* 3. Itens dentro da .section__div--meio */
@@ -90,7 +92,7 @@
 
 .section__div-meio__p {
     white-space: nowrap;
-    
+
     color: var(--cor-branco);
     /*font-size: var( --font-size-padrao-p);*/
     font-size: 0.8em;
@@ -104,7 +106,7 @@
     background-color: white;
     background-size: 20px 20px;
     border: none;
-    
+
 }
 
 /* 4. Itens dentro da .section__div--enbaixo */
@@ -133,17 +135,21 @@
     padding: 10px;
 }
 
-.section__div-enbaixo__item a{
+.section__div-enbaixo__item a {
     text-decoration: none;
     color: white;
 }
 
-.img-casamento, .img-ei, .img-cosplay, .img-cosplay, .img-estetico {
+.img-casamento,
+.img-ei,
+.img-cosplay,
+.img-cosplay,
+.img-estetico {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     text-shadow: 2px 1px rgba(0, 0, 0, 0.401);
-} 
+}
 
 .img-casamento {
     background-image: url('../../../../img/page/index/casamento.jpg');
@@ -151,12 +157,12 @@
 
 .img-ei {
     background-image: url('../../../../img/page/index/ensaio-fotografico.jpg');
-    
+
 }
 
 .img-cosplay {
     background-image: url('../../../../img/page/index/cosplay.jpg');
-    
+
 }
 
 .img-estetico {

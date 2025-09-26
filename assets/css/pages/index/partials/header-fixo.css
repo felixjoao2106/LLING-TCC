@@ -1,0 +1,13 @@
+.header-fixo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #333; /* fundo escuro */
+  z-index: 1000;
+  display: none; /* começa escondido */
+  transition: all 0.3s ease-in-out;
+}
+.header-fixo.mostrar {
+  display: flex; /* aparece quando rolar */
+}

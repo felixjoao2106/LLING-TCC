@@ -1,7 +1,7 @@
 .section-tres {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 75% 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 30px 1fr;
   margin-top: 20px;
 }
@@ -12,16 +12,17 @@
 }
 
 .section-tres__carrossel-rec-3 {
-  display: flex; 
-  overflow-x: auto;        
-  scroll-behavior: smooth; 
-  scrollbar-width: none;   
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
   grid-column: 2;
   grid-row: 2;
 }
 
 .section-tres__carrossel-rec-3::-webkit-scrollbar {
-  display: none; /* some a barra */
+  display: none;
+  /* some a barra */
 }
 
 .carrossel-rec__item-3 {
@@ -34,14 +35,15 @@
   border-radius: 10px;
 }
 
-.carrossel-rec__item-3 > div,
+.carrossel-rec__item-3>div,
 .carrossel-rec__item-3 p {
   padding-top: 5px;
 }
 
 .carrosel__info_category-3 span {
   position: relative;
-  padding-left: 15px; /* espaço para o círculo */
+  padding-left: 15px;
+  /* espaço para o círculo */
 }
 
 .carrosel__info_category-3 span::before {
@@ -53,7 +55,8 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgb(0, 0, 0); /* 🔴 mude a cor do círculo aqui */
+  background: rgb(0, 0, 0);
+  /* 🔴 mude a cor do círculo aqui */
 }
 
 .carrossel-rec__item__rating-3 {
@@ -90,16 +93,21 @@
 .section-tres h1 {
   grid-column: 2;
   grid-row: 1;
-  display: flex;                 /* deixa h1 flexível */
-  justify-content: space-between; /* título à esquerda, setas à direita */
-  align-items: center;           /* centraliza verticalmente */
+  display: flex;
+  /* deixa h1 flexível */
+  justify-content: space-between;
+  /* título à esquerda, setas à direita */
+  align-items: center;
+  /* centraliza verticalmente */
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .section-tres h1 span {
-  display: flex;                 /* garante que os botões fiquem na mesma linha */
-  gap: 8px;                      /* espaçamento entre as setas */
+  display: flex;
+  /* garante que os botões fiquem na mesma linha */
+  gap: 8px;
+  /* espaçamento entre as setas */
 }
 
 .arrow {
@@ -121,5 +129,3 @@
   background: rgba(0, 0, 0, 0.8);
   transform: scale(1.1);
 }
-
-
