@@ -79,15 +79,26 @@
 
 .sec-qua__cont__box-cad-log-user__img .phone,
 .sec-qua__cont__box-cad-fot-user__img .phone {
-    width: 120px;
+    width: 100px;
     height: 230px;
     border: 3px solid black;
-    border-radius: 30px;
     background-color: white;
     position: relative;
     bottom: 90px;
 }
 
+.sec-qua__cont__box-cad-log-user__img .phone {
+    background-image: url("../.././../../img/page/influencia_user.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sec-qua__cont__box-cad-log-user__img .phone {
+    background-image: url("../.././../../img/page/influencia_user.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/*
 .sec-qua__cont__box-cad-log-user__img .notch,
 .sec-qua__cont__box-cad-fot-user__img .notch {
     width: 40px;
@@ -99,3 +110,4 @@
     left: 50%;
     transform: translateX(-50%);
 }
+*/
