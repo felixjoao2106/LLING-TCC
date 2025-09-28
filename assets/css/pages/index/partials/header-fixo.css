@@ -32,7 +32,7 @@
 
 .header-fixo__input {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 900px;
 }
 
