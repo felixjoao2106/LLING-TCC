@@ -7,36 +7,47 @@
   left: 0;
   width: 100%;
   min-height: 100px;
-  background: #333; /* fundo escuro */
+  background: #333;
+  /* fundo escuro */
   z-index: 1000;
-  display: none; /* começa escondido */
+  display: none;
+  /* começa escondido */
   transition: all 0.3s ease-in-out;
   gap: 10px;
 
 }
 
 .header-fixo.mostrar {
-  display: flex; /* aparece quando rolar */
+  display: flex;
+  /* aparece quando rolar */
 }
 
-.header-fixo__logo, .header-fixo__input , .header-fixo__login-fot-user {
+.header-fixo__logo,
+.header-fixo__input,
+.header-fixo__login-fot-user {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.header-fixo__logo {
+.header-fixo__logo {}
+
+.header-fixo__logo img {}
+
+/* Botões de pesquisa e fechar escondidos no desktop */
+.header-fixo__search-btn,
+.header-fixo__close-btn {
+  display: none;
 }
-.header-fixo__logo img {
-}
+
 
 .header-fixo__input {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 900px;
 }
 
-.header-fixo__input input{
+.header-fixo__input input {
   flex-basis: 290px;
   flex-grow: 1;
   flex-shrink: 1;
@@ -63,6 +74,6 @@
 }
 
 .header-fixo__login-fot-user a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }

@@ -10,5 +10,6 @@
 @import './partials/section-quatro-media-querie.css';
 @import './partials/section-cinco-media-querie.css';
 @import './partials/header-fixo.css';
+@import './partials/header-fixo-media-querie.css';
 
 @import '../../global/global.css'
