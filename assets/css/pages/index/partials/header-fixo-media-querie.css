@@ -81,6 +81,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
 
     .section__div_user {
         width: 2em;
+        cursor: pointer;
     }
 
 

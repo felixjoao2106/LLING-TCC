@@ -73,6 +73,11 @@
   display: flex;
 }
 
+.section__div_user {
+  width: 2em;
+  cursor: pointer;
+}
+
 .header-fixo__login-fot-user a {
   color: white;
   text-decoration: none;

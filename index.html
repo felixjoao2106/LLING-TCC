@@ -6,10 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./assets/css/global/global.css">
+  <link rel="stylesheet" href="./assets/css/pages/tela-cadastro-user/index.css">
   <link rel="stylesheet" href="./assets/css/pages/index/index.css">
 </head>
 
 <body>
+  <!-- Modal Login -->
+  <div class="modal-overlay" id="loginModal" >
+    <section class="modal-overlay__section-login">
+      <button class="modal-overlay__section-login__modal-close" id="closeModal">&times;</button>
+
+      <div class="modal-overlay__section-login__div-text">
+        <h1>Crie uma conta</h1>
+        <p>Faça o cadastro e contrate um de nossos profissionais</p>
+      </div>
+
+      <div class="modal-overlay__section-login__div-input">
+        <input type="text" placeholder="Nome completo" autocomplete="name">
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Senha">
+        <input type="password" placeholder="Confirme sua senha">
+        <input type="tel" placeholder="Telefone">
+      </div>
+
+      <div class="modal-overlay__section-login__div-button">
+        <input type="submit" value="Cadastrar-se">
+        <p>Já tenho uma conta</p>
+      </div>
+    </section>
+  </div>
+
   <header class="header-fixo mostrar">
     <div class="header-fixo__logo">
       <img src="assets/img/page/index/logo-section-1.png" alt="">
@@ -166,7 +192,7 @@
         <div class="sec-qua__cont__box-cad-log-user__info">
           <h1>Faça Login/Cadastre-se</h1>
           <p>Encontre o profissional adequado para as suas memorias</p>
-          <button>Entrar</button>
+          <button id="sec-qua__cont__box-cad-log-user__info__button">Entrar</button>
         </div>
         <div class="sec-qua__cont__box-cad-log-user__img">
           <img src="assets/img/Design sem nome (2).png" alt="">
@@ -244,5 +270,6 @@
 <script src="assets/js/index/slider-rec.js"></script>
 <script src="assets/js/index/header-fixed.js"></script>
 <script src="assets/js/index/fechar_abrir.js"></script>
+<script src="assets/js/tela-cadastro-user/fechar-abrir.js"></script>
 
 </html>
