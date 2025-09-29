@@ -9,28 +9,32 @@
 
 </head>
 
-<!-- Modal -->
-<div class="modal-overlay">
-    <section class="modal-overlay__section-login">
-        <button class="modal-overlay__section-login__modal-close">&times;</button>
+<body>
+    <div class="modal-overlay" id="cadastroModal">
+        <section class="modal-overlay__section-cadastro">
+            <button class="modal-overlay__section-cadastro__modal-close" id="closeModal">&times;</button>
 
-        <div class="modal-overlay__section-login__div-text">
-            <h1>Faça login</h1>
-            <p>Faça o login e contrate um de nossos profissionais</p>
-        </div>
+            <div class="modal-overlay__section-cadastro__div-text">
+                <h1>Crie uma conta</h1>
+                <p>Faça o cadastro e contrate um de nossos profissionais</p>
+            </div>
 
-        <div class="modal-overlay__section-login__div-input">
-            <input type="text" placeholder="Nome completo" autocomplete="name">
-            <input type="email" placeholder="E-mail">
-            <input type="password" placeholder="Senha">
-            
-        </div>
+            <div class="modal-overlay__section-cadastro__div-input">
+                <form action="cadastro.php" method="POST">
+                    <input type="text" name="nome" placeholder="Nome completo" autocomplete="name" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <input type="password" name="senha" placeholder="Senha" required>
+                    <input type="password" name="confirma_senha" placeholder="Confirme sua senha" required>
+                    <input type="tel" name="telefone" placeholder="Telefone" required>
 
-        <div class="modal-overlay__section-login__div-button">
-            <input type="submit" value="Entrar">
-            <p>Não tenho conta</p>
-        </div>
-    </section>
-</div>
+                    <div class="modal-overlay__section-cadastro__div-button">
+                        <input type="submit" value="Cadastrar-se">
+                        <p>Já tenho uma conta</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
 
 </html>

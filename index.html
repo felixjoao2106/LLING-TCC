@@ -8,33 +8,64 @@
   <link rel="stylesheet" href="./assets/css/global/global.css">
   <link rel="stylesheet" href="./assets/css/pages/tela-cadastro-user/index.css">
   <link rel="stylesheet" href="./assets/css/pages/index/index.css">
+  <link rel="stylesheet" href="./assets/css/pages/tela-login-user/index.css">
 </head>
 
 <body>
-  <!-- Modal Login -->
-  <div class="modal-overlay" id="loginModal" >
+  <!-- Modal para login do usuario -->
+  <div class="modal-overlay">
     <section class="modal-overlay__section-login">
-      <button class="modal-overlay__section-login__modal-close" id="closeModal">&times;</button>
+      <button class="modal-overlay__section-login__modal-close">&times;</button>
 
       <div class="modal-overlay__section-login__div-text">
+        <h1>Faça login</h1>
+        <p>Faça o login e contrate um de nossos profissionais</p>
+      </div>
+
+      <div class="modal-overlay__section-login__div-input">
+        <form action="login.php" method="POST">
+          <input type="text" name="nome" placeholder="Nome completo" autocomplete="name" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <input type="password" name="senha" placeholder="Senha" required>
+
+          <div class="modal-overlay__section-login__div-button">
+            <input type="submit" value="Entrar">
+            <p>Não tenho conta</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Modal cadastro usuario -->
+  <div class="modal-overlay" id="cadastroModal">
+    <section class="modal-overlay__section-cadastro">
+      <button class="modal-overlay__section-cadastro__modal-close" id="closeModal">&times;</button>
+
+      <div class="modal-overlay__section-cadastro__div-text">
         <h1>Crie uma conta</h1>
         <p>Faça o cadastro e contrate um de nossos profissionais</p>
       </div>
 
-      <div class="modal-overlay__section-login__div-input">
-        <input type="text" placeholder="Nome completo" autocomplete="name">
-        <input type="email" placeholder="E-mail">
-        <input type="password" placeholder="Senha">
-        <input type="password" placeholder="Confirme sua senha">
-        <input type="tel" placeholder="Telefone">
-      </div>
+      <div class="modal-overlay__section-cadastro__div-input">
+        <form action="cadastro.php" method="POST">
+          <input type="text" name="nome" placeholder="Nome completo" autocomplete="name" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <input type="password" name="senha" placeholder="Senha" required>
+          <input type="password" name="confirma_senha" placeholder="Confirme sua senha" required>
+          <input type="tel" name="telefone" placeholder="Telefone" required>
 
-      <div class="modal-overlay__section-login__div-button">
-        <input type="submit" value="Cadastrar-se">
-        <p>Já tenho uma conta</p>
+          <div class="modal-overlay__section-cadastro__div-button">
+            <input type="submit" value="Cadastrar-se">
+            <p>Já tenho uma conta</p>
+          </div>
+        </form>
       </div>
     </section>
   </div>
+
+
 
   <header class="header-fixo mostrar">
     <div class="header-fixo__logo">

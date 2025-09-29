@@ -1,4 +1,3 @@
-
 /* Fundo escuro transparente atrás do modal */
 .modal-overlay {
     position: fixed;
@@ -14,9 +13,8 @@
     z-index: 2000;
 }
 
-
 /* Botão de fechar */
-.modal-overlay__section-login__modal-close {
+.modal-overlay__section-cadastro__modal-close {
     position: absolute;
     top: 15px;
     right: 25px;
@@ -27,7 +25,7 @@
 }
 
 /* Caixa do modal */
-.modal-overlay__section-login {
+.modal-overlay__section-cadastro {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -39,29 +37,28 @@
     border-radius: 12px;
     padding: 25px;
     padding-top: 70px;
-    padding-bottom: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 
 /* Texto */
-.modal-overlay__section-login__div-text {
+.modal-overlay__section-cadastro__div-text {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.modal-overlay__section-login__div-text h1 {
+.modal-overlay__section-cadastro__div-text h1 {
     font-size: 22px;
     margin-bottom: 5px;
 }
 
-.modal-overlay__section-login__div-text p {
+.modal-overlay__section-cadastro__div-text p {
     font-size: 14px;
     color: #555;
 }
 
 /* Inputs */
-.modal-overlay__section-login__div-input {
+.modal-overlay__section-cadastro__div-input {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -69,21 +66,22 @@
     margin-bottom: 20px;
 }
 
-.modal-overlay__section-login__div-input input {
+.modal-overlay__section-cadastro__div-input input {
     border-radius: 6px;
     border: 1px solid #ccc;
     padding: 12px;
     width: 100%;
+    margin-bottom: 10px;
     font-size: 14px;
 }
 
 /* Botão */
-.modal-overlay__section-login__div-button {
+.modal-overlay__section-cadastro__div-button {
     width: 100%;
     text-align: center;
 }
 
-.modal-overlay__section-login__div-button input {
+.modal-overlay__section-cadastro__div-button input {
     width: 100%;
     background: #222;
     color: #fff;
@@ -92,9 +90,10 @@
     padding: 12px;
     cursor: pointer;
     font-size: 15px;
+    margin-top: 50px;
 }
 
-.modal-overlay__section-login__div-button p {
+.modal-overlay__section-cadastro__div-button p {
     margin-top: 15px;
     font-size: 14px;
     color: #333;
