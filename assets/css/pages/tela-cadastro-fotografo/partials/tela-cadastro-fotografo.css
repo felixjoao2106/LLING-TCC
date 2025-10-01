@@ -1,0 +1,336 @@
+/* overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+  /* espaço nas laterais em telas pequenas */
+  box-sizing: border-box;
+}
+
+/* modal box */
+.section-cadastro-fotografo {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  max-width: 100%;
+  max-height: calc(100vh - 40px);
+  /* limita altura pra caber na tela */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  /* evita scroll na própria section */
+}
+
+/* botão fechar */
+.section-cadastro-fotografo__modal-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* título (mantém tamanho fixo) */
+.section-cadastro-fotografo__div-title {
+  padding: 70px 30px 0;
+  text-align: center;
+}
+
+.section-cadastro-fotografo__div-title p {
+  margin-top: 10px;
+}
+
+/* wrapper da área de inputs: ocupa o espaço restante */
+.section-cadastro__div-input {
+  flex: 1 1 auto;
+  /* faz essa div expandir/encolher */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* o form dentro fará a rolagem */
+}
+
+/* o FORM é a área rolável */
+.section-cadastro__div-input form {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  /* aqui vem a rolagem */
+  padding: 18px 20px 22px;
+  -webkit-overflow-scrolling: touch;
+  /* suaviza rolagem em iOS */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* labels e inputs */
+.section-cadastro__div-input label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.section-cadastro__div-input input,
+.section-cadastro__div-input select,
+.section-cadastro__div-input textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.div-input__imagem-local {
+  margin-top: 15px;
+}
+
+.div-input__imagem-local label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* Caixa de upload */
+.imagem-local__upload-box {
+  width: 100%;
+  height: 180px;
+  border: 2px dashed #d0d0d0;
+  border-radius: 8px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease;
+  position: relative;
+  /* necessário para posicionar o botão X */
+  overflow: hidden;
+}
+
+.imagem-local__upload-box:hover {
+  border-color: #bdbdbd;
+  background: #fff;
+}
+
+.imagem-local__upload-box img {
+  color: black;
+}
+
+/* ícone + texto (estado inicial) */
+.imagem-local__upload-box #icone-camera {
+  width: 36px;
+  pointer-events: none;
+  /* garante que o X (quando aparecer) receba o clique primeiro */
+  margin-bottom: 10px;
+}
+
+.imagem-local__upload-box p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.imagem-local__upload-box p span {
+  font-size: 12px;
+  color: #888;
+}
+
+/* imagem carregada (preview) */
+.imagem-local__upload-box .preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+}
+
+/* botão X visível sobre a imagem */
+.remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffffcc;
+  /* fundo branco translúcido (estético) */
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  font-size: 1.5em;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 0;
+}
+
+.remove-btn:focus {
+  outline: 2px solid #0066ff;
+}
+
+.div-input__localizacao input,
+.div-input__tipo-ensaio select {
+  margin-top: 10px;
+}
+
+.div-input__tipo-ensaio label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.div-input__tipo-ensaio select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff url('assets/img/icons/arrow-drop-down.svg') no-repeat right 10px center;
+  background-size: 18px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+
+
+.horarios-container {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.dia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.dia-nome {
+  width: 80px;
+  font-weight: 500;
+}
+
+.dia-horario {
+  width: 90px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.btn-config {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #4caf50;
+}
+
+input:checked+.slider:before {
+  transform: translateX(20px);
+}
+
+.section-cadastro-fotografo__modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* botões finais */
+.section-cadastro__div-button {
+  padding-top: 6px;
+  text-align: center;
+}
+
+.section-cadastro__div-button input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.section-cadastro__div-button p {
+  margin-top: 12px;
+  cursor: pointer;
+  color: #444;
+  font-size: 14px;
+  text-decoration: underline;
+}
