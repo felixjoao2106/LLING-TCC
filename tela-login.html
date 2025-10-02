@@ -254,24 +254,56 @@
 
                         <!-- Duração -->
                         <div class="adicionar-ensaio__duracao">
-                            <label>Duração</label>
+                            <label for="select-horas">Duração</label>
                             <div class="duracao-container">
-                                <input type="number" id="input-hora" name="hora" min="0" max="23" placeholder="HH"
-                                    required>
+                                <!-- Horas -->
+                                <select id="select-horas" name="horas" required>
+                                    <option value="0">0 h</option>
+                                    <option value="1">1 h</option>
+                                    <option value="2">2 h</option>
+                                    <option value="3">3 h</option>
+                                    <option value="4">4 h</option>
+                                    <option value="5">5 h</option>
+                                    <option value="6">6 h</option>
+                                    <option value="7">7 h</option>
+                                    <option value="8">8 h</option>
+                                    <option value="9">9 h</option>
+                                    <option value="10">10 h</option>
+                                    <option value="11">11 h</option>
+                                    <option value="12">12 h</option>
+                                </select>
+
                                 <span>:</span>
-                                <input type="number" id="input-minuto" name="minutos" min="0" max="59" placeholder="MM"
-                                    required>
+
+                                <!-- Minutos -->
+                                <select id="select-minutos" name="minutos" required>
+                                    <option value="0">00 min</option>
+                                    <option value="5">05 min</option>
+                                    <option value="10">10 min</option>
+                                    <option value="15">15 min</option>
+                                    <option value="20">20 min</option>
+                                    <option value="25">25 min</option>
+                                    <option value="30">30 min</option>
+                                    <option value="35">35 min</option>
+                                    <option value="40">40 min</option>
+                                    <option value="45">45 min</option>
+                                    <option value="50">50 min</option>
+                                    <option value="55">55 min</option>
+                                </select>
                             </div>
                         </div>
+
 
                         <!-- Preço -->
                         <div class="adicionar-ensaio__preco">
                             <label for="input-preco">Preço</label>
                             <div class="preco-wrapper">
                                 <span class="preco-simbolo">R$</span>
-                                <input type="text" id="input-preco" name="preco" placeholder="0,00" required>
+                                <input type="text" id="input-preco" name="preco" placeholder="0,00" inputmode="numeric"
+                                    required>
                             </div>
                         </div>
+
                     </div>
 
 
@@ -447,23 +479,27 @@
                 }
             });
         });
-        const precoInput = document.getElementById('input-preco');
+        const inputPreco = document.getElementById("input-preco");
 
-        precoInput.addEventListener('input', function (e) {
-            // Remove tudo que não é número
-            let valor = this.value.replace(/\D/g, '');
+        inputPreco.addEventListener("input", (e) => {
+            let value = e.target.value;
 
-            // Limita a 2 casas decimais
-            valor = (valor / 100).toFixed(2);
+            // Remove tudo que não for número
+            value = value.replace(/\D/g, "");
 
-            // Substitui ponto por vírgula
-            valor = valor.replace('.', ',');
+            // Converte para centavos
+            value = (parseInt(value, 10) / 100).toFixed(2);
 
-            this.value = valor;
+            // Formata em estilo brasileiro (R$ 1.234,56)
+            value = new Intl.NumberFormat("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+            }).format(value);
+
+            // Remove o R$ porque já temos o <span>
+            e.target.value = value.replace("R$", "").trim();
         });
 
-        // Opcional: converter para float antes de enviar
-        // exemplo: parseFloat(precoInput.value.replace(',', '.'))
 
 
 
