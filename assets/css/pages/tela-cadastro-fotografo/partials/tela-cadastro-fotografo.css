@@ -1,4 +1,4 @@
-/* overlay */
+/* Overlay principal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -11,29 +11,27 @@
   align-items: center;
   z-index: 2000;
   padding: 20px;
-  /* espaço nas laterais em telas pequenas */
   box-sizing: border-box;
 }
 
-/* modal box */
+/* Modal box */
 .section-cadastro-fotografo {
   display: flex;
   flex-direction: column;
   width: 400px;
   max-width: 100%;
   max-height: calc(100vh - 40px);
-  /* limita altura pra caber na tela */
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
-  /* evita scroll na própria section */
 }
 
-/* botão fechar */
+/* Botão fechar */
 .section-cadastro-fotografo__modal-close {
   position: absolute;
+  padding: 5px;
   top: 15px;
   right: 25px;
   font-size: 40px;
@@ -43,7 +41,19 @@
   z-index: 2;
 }
 
-/* título (mantém tamanho fixo) */
+/*Tudo o que eu adicionei sem uma ordem especifica*/
+
+hr {
+  margin-top: 15px;
+}
+
+.div-input__sobre-voce strong{
+  font-size: 13px;
+  
+}
+
+
+/* Título */
 .section-cadastro-fotografo__div-title {
   padding: 70px 30px 0;
   text-align: center;
@@ -53,40 +63,36 @@
   margin-top: 10px;
 }
 
-/* wrapper da área de inputs: ocupa o espaço restante */
-.section-cadastro__div-input {
+/* Wrapper dos inputs */
+.section-cadastro-fotografo__div-input {
   flex: 1 1 auto;
-  /* faz essa div expandir/encolher */
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  /* o form dentro fará a rolagem */
 }
 
-/* o FORM é a área rolável */
-.section-cadastro__div-input form {
+.section-cadastro-fotografo__div-input form {
   flex: 1 1 auto;
   overflow-y: auto;
-  /* aqui vem a rolagem */
   padding: 18px 20px 22px;
   -webkit-overflow-scrolling: touch;
-  /* suaviza rolagem em iOS */
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* labels e inputs */
-.section-cadastro__div-input label {
+/* Labels e inputs */
+.section-cadastro-fotografo__div-input label {
   display: block;
   font-size: 13px;
-  margin-bottom: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: #333;
 }
 
-.section-cadastro__div-input input,
-.section-cadastro__div-input select,
-.section-cadastro__div-input textarea {
+.section-cadastro-fotografo__div-input input,
+.section-cadastro-fotografo__div-input select,
+.section-cadastro-fotografo__div-input textarea {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #ccc;
@@ -96,14 +102,13 @@
   box-sizing: border-box;
 }
 
+/* Input de imagem local */
 .div-input__imagem-local {
-  margin-top: 15px;
 }
 
 .div-input__imagem-local label {
   display: block;
   font-size: 13px;
-  margin-bottom: 8px;
   color: #444;
 }
 
@@ -123,7 +128,6 @@
   cursor: pointer;
   transition: border-color 0.18s ease, background 0.18s ease;
   position: relative;
-  /* necessário para posicionar o botão X */
   overflow: hidden;
 }
 
@@ -136,11 +140,9 @@
   color: black;
 }
 
-/* ícone + texto (estado inicial) */
-.imagem-local__upload-box #icone-camera {
+#icone-camera__cadastro-fotografo {
   width: 36px;
   pointer-events: none;
-  /* garante que o X (quando aparecer) receba o clique primeiro */
   margin-bottom: 10px;
 }
 
@@ -156,7 +158,6 @@
   color: #888;
 }
 
-/* imagem carregada (preview) */
 .imagem-local__upload-box .preview-img {
   width: 100%;
   height: 100%;
@@ -165,7 +166,7 @@
   border-radius: 5px;
 }
 
-/* botão X visível sobre a imagem */
+/* Botão X da imagem */
 .remove-btn {
   position: absolute;
   top: 8px;
@@ -176,7 +177,6 @@
   align-items: center;
   justify-content: center;
   background: #ffffffcc;
-  /* fundo branco translúcido (estético) */
   color: #333;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 50%;
@@ -192,15 +192,14 @@
   outline: 2px solid #0066ff;
 }
 
+/* Localização e tipo de ensaio */
 .div-input__localizacao input,
 .div-input__tipo-ensaio select {
-  margin-top: 10px;
 }
 
 .div-input__tipo-ensaio label {
   display: block;
   font-size: 13px;
-  margin-bottom: 6px;
   color: #333;
 }
 
@@ -213,66 +212,59 @@
   background: #fff url('assets/img/icons/arrow-drop-down.svg') no-repeat right 10px center;
   background-size: 18px;
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
-
-
-
-.horarios-container {
+/* Horários */
+.div-input__horarios-container {
   width: 100%;
-  margin: 20px auto;
 }
 
-.dia {
+.horarios-container__dia {
   display: grid;
   grid-template-columns: 80px 90px 1fr 80px;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: #fafafa;
+  padding: 10px;
 }
 
-.dia-nome {
-  grid-row-start: 1;
-  grid-row-end: -1;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  font-weight: 500;
+.dia__dia-nome {
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+  font-size: 13px;
 }
 
-.dia-horario {
-  grid-row-start: 2;
-  grid-row-end: -1;
-  grid-column-start: 2;
-  grid-column-end: 3;
+.dia__dia-horario {
+  grid-row: 2 / -1;
+  grid-column: 2 / 3;
   text-align: left;
+  font-size: 13px;
 }
 
-.acoes {
-  grid-row-start: 1;
-  grid-row-end: -1;
-  grid-column-start: 4;
-  grid-column-end: 5;
+.dia__acoes {
+  grid-row: 1 / -1;
+  grid-column: 4 / 5;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
 
-.switch {
+.acoes__switch {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 20px;
 }
 
-.switch input {
+.acoes__switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.slider {
+.switch__slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -284,7 +276,7 @@
   border-radius: 20px;
 }
 
-.slider:before {
+.switch__slider:before {
   position: absolute;
   content: "";
   height: 16px;
@@ -296,78 +288,134 @@
   border-radius: 50%;
 }
 
-input:checked+.slider {
+.acoes__switch input:checked+.switch__slider {
   background-color: #4caf50;
 }
 
-input:checked+.slider:before {
+.acoes__switch input:checked+.switch__slider:before {
   transform: translateX(20px);
 }
 
-.btn-config {
+.acoes__btn-config {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.btn-config img {
+.acoes__btn-config img {
   width: 24px;
   height: 24px;
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-}
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
+/* Overlay secundário (configuração de horário) */
+.div-input__modal-overlay {
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000; /* acima do modal principal */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.slider:before {
+/* Caixa do modal */
+.modal-overlay__div-config-time {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 100%;
+  padding: 28px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: modalFade 0.25s ease-out;
+}
+
+/* Animação de entrada */
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botão fechar (X) */
+.div-config-time__modal-close {
   position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-input:checked+.slider {
-  background-color: #4caf50;
-}
-
-input:checked+.slider:before {
-  transform: translateX(20px);
-}
-
-.section-cadastro-fotografo__modal-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 25px;
+  top: 14px;
+  right: 18px;
+  font-size: 34px;
   background: none;
   border: none;
+  color: #666;
   cursor: pointer;
+  transition: color 0.2s;
+}
+
+.div-config-time__modal-close:hover {
+  color: #000;
+}
+
+/* Título */
+.div-config-time__div-title {
+  margin-top: 30px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.div-config-time__div-title h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.div-config-time__div-title p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Inputs de hora */
+.modal-overlay__div-config-time label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.modal-overlay__div-config-time input[type="time"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Botão salvar */
+#salvar-horario__cadastro-fotografo {
+  width: 100%;
+  padding: 12px;
+  background: #222;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+#salvar-horario__cadastro-fotografo:hover {
+  background: #444;
 }
 
 
@@ -375,28 +423,33 @@ input:checked+.slider:before {
 
 
 
+
+
+
+
+
+/* Adicionar ensaio */
 .div-input__adicionar-ensaio {
   font-family: Arial, sans-serif;
 }
 
 .div-input__adicionar-ensaio label {
   display: block;
-  margin-bottom: 4px;
+  
   font-weight: bold;
   color: #333;
 }
 
-.div-input__adicionar-ensaio input {
+.div-input__adicionar-ensaio input,
+.div-input__adicionar-ensaio select {
   width: 100%;
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  box-sizing: border-box;
   font-size: 14px;
+  box-sizing: border-box;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
-
-
 
 .adicionar-ensaio__nome-ensaio,
 .adicionar-ensaio__duracao,
@@ -404,60 +457,28 @@ input:checked+.slider:before {
   margin-bottom: 16px;
 }
 
-.adicionar-ensaio__duracao {
-  margin-bottom: 16px;
-}
-
-.duracao-container {
+.duracao__duracao-container {
   display: flex;
   gap: 8px;
   align-items: center;
 }
 
-.duracao-container select {
+.duracao__duracao-container select {
   flex: 1;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-
-.duracao-container span {
+.duracao__duracao-container span {
   font-weight: bold;
   font-size: 16px;
   color: #333;
 }
 
-
-/* Estilo para preço com símbolo */
-.preco-wrapper {
+/* Preço */
+.preco__preco-wrapper {
   position: relative;
 }
 
-.preco-wrapper .preco-simbolo {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-  color: #555;
-  pointer-events: none;
-  /* Para não atrapalhar o clique no input */
-}
-
-.preco-wrapper input {
-  padding-left: 36px;
-  /* Espaço para o R$ */
-}
-
-/* ...mesmo CSS anterior... */
-.preco-wrapper {
-  position: relative;
-}
-
-.preco-wrapper .preco-simbolo {
+.preco-wrapper__preco-simbolo {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -467,26 +488,17 @@ input:checked+.slider:before {
   pointer-events: none;
 }
 
-.preco-wrapper input {
+.preco__preco-wrapper input {
   padding-left: 36px;
 }
 
-
-
-
-
-
-
-
-
-
-/* botões finais */
-.section-cadastro__div-button {
+/* Botões finais */
+.div-input__div-button {
   padding-top: 6px;
   text-align: center;
 }
 
-.section-cadastro__div-button input[type="submit"] {
+.div-input__div-button input[type="submit"] {
   width: 100%;
   padding: 12px;
   background: #222;
@@ -496,7 +508,7 @@ input:checked+.slider:before {
   cursor: pointer;
 }
 
-.section-cadastro__div-button p {
+.div-input__div-button p {
   margin-top: 12px;
   cursor: pointer;
   color: #444;

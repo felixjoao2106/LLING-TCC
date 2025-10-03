@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -10,87 +10,127 @@
 </head>
 
 <body>
-    <div class="modal-overlay" id="cadastroModal">
+    <div class="modal-overlay" id="modal__cadastro-fotografo">
         <section class="section-cadastro-fotografo">
-            <button class="section-cadastro-fotografo__modal-close" id="closeModal">&times;</button>
+            <button class="section-cadastro-fotografo__modal-close" id="closeModal__cadastro-fotografo">&times;</button>
 
             <div class="section-cadastro-fotografo__div-title">
                 <h1>Crie uma conta</h1>
                 <p>Faça o cadastro e, tenha uma plataforma inteira de visibilidade</p>
             </div>
 
-            <div class="section-cadastro__div-input">
+            <div class="section-cadastro-fotografo__div-input">
                 <form action="cadastro.php" method="POST">
                     <!-- E-mail -->
                     <div class="div-input__e-mail">
-                        <label for="input-email">E-mail</label>
-                        <input type="email" id="input-email" name="email" placeholder="E-mail" required>
+                        <label for="input-email__cadastro-fotografo"><strong>E-mail</strong></label>
+                        <input type="email" id="input-email__cadastro-fotografo" name="email" placeholder="E-mail"
+                            required>
                         <hr>
                     </div>
 
                     <!-- Sobre você -->
                     <div class="div-input__sobre-voce">
-                        <label for="input-empresa">Nome da empresa</label>
-                        <input type="text" id="input-empresa" name="empresa" placeholder="Nome da empresa" required>
+                        <sapn><strong>Sobre você</strong></sapn>
+                        <label for="input-empresa__cadastro-fotografo">Nome da empresa</label>
+                        <input type="text" id="input-empresa__cadastro-fotografo" name="empresa"
+                            placeholder="Nome da empresa" required>
 
-                        <label for="input-nome">Nome completo</label>
-                        <input type="text" id="input-nome" name="nome" placeholder="Nome completo" required>
+                        <label for="input-nome__cadastro-fotografo">Nome completo</label>
+                        <input type="text" id="input-nome__cadastro-fotografo" name="nome" placeholder="Nome completo"
+                            required>
 
-                        <label for="input-telefone">Telefone</label>
-                        <input type="tel" id="input-telefone" name="telefone" placeholder="Telefone" required>
+                        <label for="input-telefone__cadastro-fotografo">Telefone</label>
+                        <input type="tel" id="input-telefone__cadastro-fotografo" name="telefone" placeholder="Telefone"
+                            required>
                         <hr>
                     </div>
 
                     <!-- Senha -->
                     <div class="div-input__senha">
-                        <label for="input-senha">Senha</label>
-                        <input type="password" id="input-senha" name="senha" placeholder="Senha" required>
+                        <label for="input-senha__cadastro-fotografo"><strong>Senha</strong></label>
+                        <input type="password" id="input-senha__cadastro-fotografo" name="senha" placeholder="Senha"
+                            required>
                         <hr>
                     </div>
 
                     <div class="div-input__imagem-local">
-                        <label for="input-imagem">Adicione seu local de trabalho <strong>(Opcional)</strong></label>
+                        <label for="input-imagem__cadastro-fotografo"><strong>
+                            Adicione seu local de trabalho
+                                (Opcional)
+                        </strong></label>
 
                         <!-- Input escondido -->
-                        <input type="file" id="input-imagem" accept="image/*" style="display: none;">
+                        <input type="file" id="input-imagem__cadastro-fotografo" accept="image/*"
+                            style="display: none;">
 
                         <!-- Área clicável -->
-                        <div id="preview" class="imagem-local__upload-box"
-                            onclick="document.getElementById('input-imagem').click()" role="button" tabindex="0"
-                            aria-label="Adicionar imagem do local de trabalho">
+                        <div id="preview__cadastro-fotografo" class="imagem-local__upload-box"
+                            onclick="document.getElementById('input-imagem__cadastro-fotografo').click()" role="button"
+                            tabindex="0" aria-label="Adicionar imagem do local de trabalho">
                             <img src="assets/img/page/tela-cadastro-fotografo/photo_camera_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                                alt="ícone câmera" id="icone-camera" style="width: 36px; opacity: 0.7;">
+                                alt="ícone câmera" id="icone-camera__cadastro-fotografo"
+                                style="width: 36px; opacity: 0.7;">
                             <p>
                                 Adicione uma foto do seu local de trabalho.<br>
                                 <span>Opcional, mas altamente recomendado. Mostre aos clientes o que você faz.</span>
                             </p>
                         </div>
+                        <hr>
                     </div>
 
                     <!-- Localização completa -->
                     <div class="div-input__localizacao">
-                        <label for="input-cep">CEP</label>
+                        <!-- CEP -->
+                        <label><strong>Localização</strong></label>
+                        <label for="input-cep__cadastro-fotografo">CEP</label>
                         <div style="position: relative;">
-                            <input type="text" id="input-cep" name="cep" placeholder="Digite o CEP" maxlength="10">
+                            <input type="text" id="input-cep__cadastro-fotografo" name="cep" placeholder="Digite o CEP"
+                                maxlength="10">
                             <span
-                                style="position: absolute; top: 50%; right: 12px; transform: translateY(-50%); cursor: pointer;">
+                                style="position: absolute; top: 55%; right: 12px; transform: translateY(-50%); cursor: pointer;">
                                 <img src="assets/img/page/tela-cadastro-fotografo/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                                    alt="Buscar" style="width: 18px; opacity: 0.6;">
+                                    alt="Buscar" style="width: 20px;">
                             </span>
                         </div>
 
-                        <input type="text" id="input-endereco" name="endereco" placeholder="Rua" readonly>
-                        <input type="text" id="input-numero" name="numero" placeholder="Número do endereço">
-                        <input type="text" id="input-bairro" name="bairro" placeholder="Bairro" readonly>
-                        <input type="text" id="input-cidade" name="cidade" placeholder="Cidade" readonly>
-                        <input type="text" id="input-estado" name="estado" placeholder="Estado" readonly>
-                        <input type="text" id="input-complemento" name="complemento" placeholder="Complemento">
+                        <!-- Rua / Endereço -->
+                        <label for="input-endereco__cadastro-fotografo">Rua</label>
+                        <input type="text" id="input-endereco__cadastro-fotografo" name="endereco" placeholder="Rua"
+                            readonly>
+
+                        <!-- Número -->
+                        <label for="input-numero__cadastro-fotografo">Número</label>
+                        <input type="text" id="input-numero__cadastro-fotografo" name="numero"
+                            placeholder="Número do endereço">
+
+                        <!-- Bairro -->
+                        <label for="input-bairro__cadastro-fotografo">Bairro</label>
+                        <input type="text" id="input-bairro__cadastro-fotografo" name="bairro" placeholder="Bairro"
+                            readonly>
+
+                        <!-- Cidade -->
+                        <label for="input-cidade__cadastro-fotografo">Cidade</label>
+                        <input type="text" id="input-cidade__cadastro-fotografo" name="cidade" placeholder="Cidade"
+                            readonly>
+
+                        <!-- Estado -->
+                        <label for="input-estado__cadastro-fotografo">Estado</label>
+                        <input type="text" id="input-estado__cadastro-fotografo" name="estado" placeholder="Estado"
+                            readonly>
+
+                        <!-- Complemento -->
+                        <label for="input-complemento__cadastro-fotografo">Complemento</label>
+                        <input type="text" id="input-complemento__cadastro-fotografo" name="complemento"
+                            placeholder="Complemento">
+                        <hr>
                     </div>
+
 
                     <!-- Tipo de ensaio -->
                     <div class="div-input__tipo-ensaio">
-                        <label for="input-ensaio">Seu tipo de ensaio</label>
-                        <select id="input-ensaio" name="tipo_ensaio" required>
+                        <label for="input-ensaio__cadastro-fotografo"><strong>Seu tipo de ensaio</strong></label>
+                        <select id="input-ensaio__cadastro-fotografo" name="tipo_ensaio" required>
                             <option value="" disabled selected>Escolha</option>
                             <option value="casamento">Casamento</option>
                             <option value="gestante">Gestante</option>
@@ -100,22 +140,23 @@
                             <option value="studio">Estúdio</option>
                             <option value="outro">Outro</option>
                         </select>
+                        <hr>
                     </div>
 
 
-                    <div class="horarios-container">
-                        <h3>Horários de funcionamento</h3>
+                    <div class="div-input__horarios-container">
+                        <label><strong>Horários de funcionamento</strong></label>
 
                         <!-- Segunda -->
-                        <div class="dia" data-dia="Segunda" data-horario="09:00-18:00">
-                            <span class="dia-nome">Segunda</span>
-                            <span class="dia-horario">09:00-18:00</span>
-                            <div class="acoes">
-                                <label class="switch">
+                        <div class="horarios-container__dia" data-dia="Segunda" data-horario="09:00-18:00">
+                            <span class="dia__dia-nome">Segunda</span>
+                            <span class="dia__dia-horario">09:00-18:00</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
                                     <input type="checkbox" name="segunda_status" checked>
-                                    <span class="slider"></span>
+                                    <span class="switch__slider"></span>
                                 </label>
-                                <button type="button" class="btn-config">
+                                <button type="button" class="acoes__btn-config">
                                     <img src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
                                         alt="">
                                 </button>
@@ -124,15 +165,15 @@
                         </div>
 
                         <!-- Terça -->
-                        <div class="dia" data-dia="Terça" data-horario="09:00-18:00">
-                            <span class="dia-nome">Terça</span>
-                            <span class="dia-horario">09:00-18:00</span>
-                            <div class="acoes">
-                                <label class="switch">
+                        <div class="horarios-container__dia" data-dia="Terça" data-horario="09:00-18:00">
+                            <span class="dia__dia-nome">Terça</span>
+                            <span class="dia__dia-horario">09:00-18:00</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
                                     <input type="checkbox" name="terca_status" checked>
-                                    <span class="slider"></span>
+                                    <span class="switch__slider"></span>
                                 </label>
-                                <button type="button" class="btn-config">
+                                <button type="button" class="acoes__btn-config">
                                     <img src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
                                         alt="">
                                 </button>
@@ -141,15 +182,15 @@
                         </div>
 
                         <!-- Quarta -->
-                        <div class="dia" data-dia="Quarta" data-horario="09:00-18:00">
-                            <span class="dia-nome">Quarta</span>
-                            <span class="dia-horario">09:00-18:00</span>
-                            <div class="acoes">
-                                <label class="switch">
+                        <div class="horarios-container__dia" data-dia="Quarta" data-horario="09:00-18:00">
+                            <span class="dia__dia-nome">Quarta</span>
+                            <span class="dia__dia-horario">09:00-18:00</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
                                     <input type="checkbox" name="quarta_status" checked>
-                                    <span class="slider"></span>
+                                    <span class="switch__slider"></span>
                                 </label>
-                                <button type="button" class="btn-config">
+                                <button type="button" class="acoes__btn-config">
                                     <img src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
                                         alt="">
                                 </button>
@@ -158,15 +199,15 @@
                         </div>
 
                         <!-- Quinta -->
-                        <div class="dia" data-dia="Quinta" data-horario="09:00-18:00">
-                            <span class="dia-nome">Quinta</span>
-                            <span class="dia-horario">09:00-18:00</span>
-                            <div class="acoes">
-                                <label class="switch">
+                        <div class="horarios-container__dia" data-dia="Quinta" data-horario="09:00-18:00">
+                            <span class="dia__dia-nome">Quinta</span>
+                            <span class="dia__dia-horario">09:00-18:00</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
                                     <input type="checkbox" name="quinta_status" checked>
-                                    <span class="slider"></span>
+                                    <span class="switch__slider"></span>
                                 </label>
-                                <button type="button" class="btn-config">
+                                <button type="button" class="acoes__btn-config">
                                     <img src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
                                         alt="">
                                 </button>
@@ -175,15 +216,15 @@
                         </div>
 
                         <!-- Sexta -->
-                        <div class="dia" data-dia="Sexta" data-horario="09:00-18:00">
-                            <span class="dia-nome">Sexta</span>
-                            <span class="dia-horario">09:00-18:00</span>
-                            <div class="acoes">
-                                <label class="switch">
+                        <div class="horarios-container__dia" data-dia="Sexta" data-horario="09:00-18:00">
+                            <span class="dia__dia-nome">Sexta</span>
+                            <span class="dia__dia-horario">09:00-18:00</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
                                     <input type="checkbox" name="sexta_status" checked>
-                                    <span class="slider"></span>
+                                    <span class="switch__slider"></span>
                                 </label>
-                                <button type="button" class="btn-config">
+                                <button type="button" class="acoes__btn-config">
                                     <img src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
                                         alt="">
                                 </button>
@@ -192,15 +233,15 @@
                         </div>
 
                         <!-- Sábado -->
-                        <div class="dia" data-dia="Sábado" data-horario="Fechado">
-                            <span class="dia-nome">Sábado</span>
-                            <span class="dia-horario">Fechado</span>
-                            <div class="acoes">
-                                <label class="switch">
+                        <div class="horarios-container__dia" data-dia="Sábado" data-horario="Fechado">
+                            <span class="dia__dia-nome">Sábado</span>
+                            <span class="dia__dia-horario">Fechado</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
                                     <input type="checkbox" name="sabado_status">
-                                    <span class="slider"></span>
+                                    <span class="switch__slider"></span>
                                 </label>
-                                <button type="button" class="btn-config disabled">
+                                <button type="button" class="acoes__btn-config disabled">
                                     <img src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
                                         alt="">
                                 </button>
@@ -209,37 +250,38 @@
                         </div>
 
                         <!-- Domingo -->
-                        <div class="dia" data-dia="Domingo" data-horario="Fechado">
-                            <span class="dia-nome">Domingo</span>
-                            <span class="dia-horario">Fechado</span>
-                            <div class="acoes">
-                                <label class="switch">
+                        <div class="horarios-container__dia" data-dia="Domingo" data-horario="Fechado">
+                            <span class="dia__dia-nome">Domingo</span>
+                            <span class="dia__dia-horario">Fechado</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
                                     <input type="checkbox" name="domingo_status">
-                                    <span class="slider"></span>
+                                    <span class="switch__slider"></span>
                                 </label>
-                                <button type="button" class="btn-config disabled">
+                                <button type="button" class="acoes__btn-config disabled">
                                     <img src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
                                         alt="">
                                 </button>
                             </div>
                             <input type="hidden" name="domingo_horario" value="Fechado">
                         </div>
+                        <hr>
                     </div>
 
                     <!-- Modal de configuração do horário -->
-                    <div id="modal-horario" class="modal-overlay" style="display:none;">
-                        <div class="section-cadastro-fotografo">
-                            <button class="section-cadastro-fotografo__modal-close">&times;</button>
-                            <div class="section-cadastro-fotografo__div-title">
+                    <div id="modal-horario__cadastro-fotografo" class="div-input__modal-overlay" style="display:none;">
+                        <div class="modal-overlay__div-config-time">
+                            <button class="div-config-time__modal-close">&times;</button>
+                            <div class="div-config-time__div-title">
                                 <h3>Configurar Horário</h3>
-                                <p id="modal-dia-nome"></p>
+                                <p id="modal-dia-nome__cadastro-fotografo"></p>
                             </div>
-                            <div style="padding: 20px;">
-                                <label>Hora de início</label>
-                                <input type="time" id="hora-inicio">
-                                <label>Hora de fim</label>
-                                <input type="time" id="hora-fim">
-                                <button id="salvar-horario" style="margin-top:10px;">Salvar</button>
+                            <div>
+                                <label for="hora-inicio__cadastro-fotografo">Hora de início</label>
+                                <input type="time" id="hora-inicio__cadastro-fotografo">
+                                <label for="hora-fim__cadastro-fotografo">Hora de fim</label>
+                                <input type="time" id="hora-fim__cadastro-fotografo">
+                                <button id="salvar-horario__cadastro-fotografo">Salvar</button>
                             </div>
                         </div>
                     </div>
@@ -247,17 +289,17 @@
                     <div class="div-input__adicionar-ensaio">
                         <!-- Nome do Ensaio -->
                         <div class="adicionar-ensaio__nome-ensaio">
-                            <label for="input-nome-ensaio">Nome do Ensaio</label>
-                            <input type="text" id="input-nome-ensaio" name="nome_ensaio"
+                            <label for="input-nome-ensaio__cadastro-fotografo">Nome do Ensaio</label>
+                            <input type="text" id="input-nome-ensaio__cadastro-fotografo" name="nome_ensaio"
                                 placeholder="Digite o nome do ensaio" required>
                         </div>
 
                         <!-- Duração -->
                         <div class="adicionar-ensaio__duracao">
-                            <label for="select-horas">Duração</label>
-                            <div class="duracao-container">
+                            <label for="select-horas__cadastro-fotografo">Duração</label>
+                            <div class="duracao__duracao-container">
                                 <!-- Horas -->
-                                <select id="select-horas" name="horas" required>
+                                <select id="select-horas__cadastro-fotografo" name="horas" required>
                                     <option value="0">0 h</option>
                                     <option value="1">1 h</option>
                                     <option value="2">2 h</option>
@@ -276,7 +318,7 @@
                                 <span>:</span>
 
                                 <!-- Minutos -->
-                                <select id="select-minutos" name="minutos" required>
+                                <select id="select-minutos__cadastro-fotografo" name="minutos" required>
                                     <option value="0">00 min</option>
                                     <option value="5">05 min</option>
                                     <option value="10">10 min</option>
@@ -296,11 +338,11 @@
 
                         <!-- Preço -->
                         <div class="adicionar-ensaio__preco">
-                            <label for="input-preco">Preço</label>
-                            <div class="preco-wrapper">
-                                <span class="preco-simbolo">R$</span>
-                                <input type="text" id="input-preco" name="preco" placeholder="0,00" inputmode="numeric"
-                                    required>
+                            <label for="input-preco__cadastro-fotografo">Preço</label>
+                            <div class="preco__preco-wrapper">
+                                <span class="preco-wrapper__preco-simbolo">R$</span>
+                                <input type="text" id="input-preco__cadastro-fotografo" name="preco" placeholder="0,00"
+                                    inputmode="numeric" required>
                             </div>
                         </div>
 
@@ -308,11 +350,7 @@
 
 
 
-
-
-
-
-                    <div class="section-cadastro__div-button">
+                    <div class="div-input__div-button">
                         <input type="submit" value="Cadastrar-se">
                         <p>Já tenho uma conta</p>
                     </div>
@@ -322,13 +360,14 @@
     </div>
 
     <script>
-        const inputImagem = document.getElementById('input-imagem');
-        const preview = document.getElementById('preview');
+        // Imagem do local de trabalho
+        const inputImagem = document.getElementById('input-imagem__cadastro-fotografo');
+        const preview = document.getElementById('preview__cadastro-fotografo');
 
-        // salva o HTML inicial do preview para restaurar depois
+        // Salva o HTML inicial do preview para restaurar depois
         const initialPreviewHTML = preview.innerHTML;
 
-        // abrir filepicker por teclado também
+        // Abrir filepicker por teclado também
         preview.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -336,18 +375,16 @@
             }
         });
 
-        // quando escolher arquivo
+        // Quando escolher arquivo
         inputImagem.addEventListener('change', function () {
             if (this.files && this.files[0]) {
                 const reader = new FileReader();
                 reader.onload = function (e) {
-                    // insere botão X e a imagem preview
                     preview.innerHTML = `
-          <button type="button" class="remove-btn" aria-label="Remover imagem">&times;</button>
-          <img class="preview-img" src="${e.target.result}" alt="Preview da imagem">
-        `;
+                <button type="button" class="remove-btn" aria-label="Remover imagem">&times;</button>
+                <img class="preview-img" src="${e.target.result}" alt="Preview da imagem">
+            `;
 
-                    // evento para o botão X recém-criado
                     const btn = preview.querySelector('.remove-btn');
                     btn.addEventListener('click', removerImagem);
                 };
@@ -356,13 +393,10 @@
         });
 
         function removerImagem(event) {
-            event.stopPropagation(); // não dispara clique no preview
-            // limpa input de arquivo
+            event.stopPropagation();
             inputImagem.value = '';
-            // restaura o HTML inicial (ícone + texto)
             preview.innerHTML = initialPreviewHTML;
 
-            // re-reattach do listener de teclado porque innerHTML foi substituído
             preview.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -370,14 +404,15 @@
                 }
             });
         }
-        document.getElementById('input-cep').addEventListener('blur', function () {
-            const cep = this.value.replace(/\D/g, ''); // remove qualquer caracter que não seja número
+
+        // Busca CEP
+        document.getElementById('input-cep__cadastro-fotografo').addEventListener('blur', function () {
+            const cep = this.value.replace(/\D/g, '');
             if (cep.length !== 8) {
-                alert('CEP inválido! Um CEP tem 8 numeros, tente apenas digitar os 8 numeros sem caracteres.');
+                alert('CEP inválido! Um CEP tem 8 números.');
                 return;
             }
 
-            // Chamada à API ViaCEP
             fetch(`https://viacep.com.br/ws/${cep}/json/`)
                 .then(response => response.json())
                 .then(data => {
@@ -386,34 +421,31 @@
                         return;
                     }
 
-                    document.getElementById('input-endereco').value = data.logradouro || '';
-                    document.getElementById('input-bairro').value = data.bairro || '';
-                    document.getElementById('input-cidade').value = data.localidade || '';
-                    document.getElementById('input-estado').value = data.uf || '';
+                    document.getElementById('input-endereco__cadastro-fotografo').value = data.logradouro || '';
+                    document.getElementById('input-bairro__cadastro-fotografo').value = data.bairro || '';
+                    document.getElementById('input-cidade__cadastro-fotografo').value = data.localidade || '';
+                    document.getElementById('input-estado__cadastro-fotografo').value = data.uf || '';
                 })
                 .catch(error => {
                     console.error('Erro ao buscar CEP:', error);
                 });
         });
 
-        const modal = document.getElementById('modal-horario');
-        const closeBtnHorario = modal.querySelector('.section-cadastro-fotografo__modal-close');
-        const modalDiaNome = document.getElementById('modal-dia-nome');
-        const horaInicioInput = document.getElementById('hora-inicio');
-        const horaFimInput = document.getElementById('hora-fim');
+        // Modal de horário
+        const modalHorario = document.getElementById('modal-horario__cadastro-fotografo');
+        const closeBtnHorario = modalHorario.querySelector('.div-config-time__modal-close');
+        const modalDiaNome = document.getElementById('modal-dia-nome__cadastro-fotografo');
+        const horaInicioInput = document.getElementById('hora-inicio__cadastro-fotografo');
+        const horaFimInput = document.getElementById('hora-fim__cadastro-fotografo');
+        const salvarHorarioBtn = document.getElementById('salvar-horario__cadastro-fotografo');
+
         let diaAtual = null;
 
-        closeBtnHorario.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
         // Botões de configuração
-        document.querySelectorAll('.dia .btn-config').forEach(btn => {
+        document.querySelectorAll('.horarios-container__dia .acoes__btn-config').forEach(btn => {
             btn.addEventListener('click', () => {
-                const dia = btn.closest('.dia');
+                const dia = btn.closest('.horarios-container__dia');
                 const checkbox = dia.querySelector('input[type="checkbox"]');
-
-                // Só abre o modal se o switch estiver ativo (não fechado)
                 if (!checkbox.checked) return;
 
                 diaAtual = dia;
@@ -429,42 +461,36 @@
                     horaFimInput.value = '18:00';
                 }
 
-                modal.style.display = 'flex';
+                modalHorario.style.display = 'flex';
             });
         });
 
         // Fechar modal
-        document.querySelector('.section-cadastro-fotografo__modal-close').addEventListener('click', () => {
-            modal.style.display = 'none';
+        closeBtnHorario.addEventListener('click', () => {
+            modalHorario.style.display = 'none';
         });
 
         // Salvar horário
-        document.getElementById('salvar-horario').addEventListener('click', () => {
+        salvarHorarioBtn.addEventListener('click', () => {
             const novoHorario = `${horaInicioInput.value}-${horaFimInput.value}`;
-
-            diaAtual.dataset.horario = novoHorario;
-
-            const statusSpan = diaAtual.querySelector('.dia-horario');
             const checkbox = diaAtual.querySelector('input[type="checkbox"]');
+            const statusSpan = diaAtual.querySelector('.dia__dia-horario');
             const hiddenInput = diaAtual.querySelector('input[type="hidden"]');
 
             statusSpan.textContent = checkbox.checked ? novoHorario : 'Fechado';
+            if (hiddenInput) hiddenInput.value = checkbox.checked ? novoHorario : 'Fechado';
 
-            // 🔑 Atualiza o input hidden que vai pro backend
-            if (hiddenInput) {
-                hiddenInput.value = checkbox.checked ? novoHorario : 'Fechado';
-            }
-
-            modal.style.display = 'none';
+            diaAtual.dataset.horario = checkbox.checked ? novoHorario : 'Fechado';
+            modalHorario.style.display = 'none';
         });
 
 
         // Atualiza status quando o switch muda
-        document.querySelectorAll('.dia input[type="checkbox"]').forEach(checkbox => {
+        document.querySelectorAll('.horarios-container__dia input[type="checkbox"]').forEach(checkbox => {
             checkbox.addEventListener('change', () => {
-                const dia = checkbox.closest('.dia');
-                const statusSpan = dia.querySelector('.dia-horario');
-                const btnConfig = dia.querySelector('.btn-config');
+                const dia = checkbox.closest('.horarios-container__dia');
+                const statusSpan = dia.querySelector('.dia__dia-horario');
+                const btnConfig = dia.querySelector('.acoes__btn-config');
                 const hiddenInput = dia.querySelector('input[type="hidden"]');
 
                 if (checkbox.checked) {
@@ -479,32 +505,21 @@
                 }
             });
         });
-        const inputPreco = document.getElementById("input-preco");
+
+        // Formato do preço
+        const inputPreco = document.getElementById("input-preco__cadastro-fotografo");
 
         inputPreco.addEventListener("input", (e) => {
-            let value = e.target.value;
-
-            // Remove tudo que não for número
-            value = value.replace(/\D/g, "");
-
-            // Converte para centavos
-            value = (parseInt(value, 10) / 100).toFixed(2);
-
-            // Formata em estilo brasileiro (R$ 1.234,56)
+            let value = e.target.value.replace(/\D/g, ""); // remove tudo que não é número
+            value = (parseInt(value || "0", 10) / 100).toFixed(2); // converte para reais
             value = new Intl.NumberFormat("pt-BR", {
                 style: "currency",
                 currency: "BRL"
             }).format(value);
 
-            // Remove o R$ porque já temos o <span>
-            e.target.value = value.replace("R$", "").trim();
+            e.target.value = value.replace("R$", "").trim(); // remove R$ se você já tem no span
         });
-
-
-
-
     </script>
-    <script src="https://unpkg.com/imask"></script>
 
 
 
