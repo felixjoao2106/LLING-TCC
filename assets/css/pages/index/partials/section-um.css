@@ -59,12 +59,22 @@
     text-decoration: none;
 }
 
+.section__div-topo_a:hover {
+    text-decoration: underline;
+}
+
 .section__div-topo_input {
     font-size: 7px;
     padding: 10px;
     margin-right: 20px;
     border-radius: 10px;
     border: none;
+}
+
+.section__div-topo_input:hover {
+    cursor: pointer;
+    background-color: var(--cor-cinza-claro);
+    transition: 0.5s ;
 }
 
 /* 3. Itens da seção referente ao meio */

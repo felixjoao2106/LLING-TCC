@@ -62,6 +62,11 @@
     font-size: 16px;
 }
 
+.section-quatro button:hover {
+    background-color: var(--cor-preto-50);
+    transition: 0.5s ;
+}
+
 .sec-qua__cont__box-cad-log-user__img,
 .sec-qua__cont__box-cad-fot-user__img {
     width: 100%;

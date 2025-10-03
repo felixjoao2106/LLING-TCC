@@ -66,6 +66,14 @@
   margin-right: 20px;
   border-radius: 10px;
   border: none;
+  background-color: var(--cor-branco);
+
+}
+
+.header-fixo__login-fot-user__input:hover {
+  cursor: pointer;
+  background-color: var(--cor-cinza-claro);
+  transition: 0.5s;
 
 }
 

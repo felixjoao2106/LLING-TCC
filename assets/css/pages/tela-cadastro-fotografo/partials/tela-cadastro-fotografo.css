@@ -1,12 +1,13 @@
 /* Overlay principal */
 .modal-overlay {
+  display: none;
+  /* escondido por padrão */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2000;
@@ -47,9 +48,9 @@ hr {
   margin-top: 15px;
 }
 
-.div-input__sobre-voce strong{
+.div-input__sobre-voce strong {
   font-size: 13px;
-  
+
 }
 
 
@@ -103,8 +104,7 @@ hr {
 }
 
 /* Input de imagem local */
-.div-input__imagem-local {
-}
+.div-input__imagem-local {}
 
 .div-input__imagem-local label {
   display: block;
@@ -194,8 +194,7 @@ hr {
 
 /* Localização e tipo de ensaio */
 .div-input__localizacao input,
-.div-input__tipo-ensaio select {
-}
+.div-input__tipo-ensaio select {}
 
 .div-input__tipo-ensaio label {
   display: block;
@@ -319,7 +318,8 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3000; /* acima do modal principal */
+  z-index: 3000;
+  /* acima do modal principal */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -342,6 +342,7 @@ hr {
     opacity: 0;
     transform: translateY(-12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -421,13 +422,6 @@ hr {
 
 
 
-
-
-
-
-
-
-
 /* Adicionar ensaio */
 .div-input__adicionar-ensaio {
   font-family: Arial, sans-serif;
@@ -435,7 +429,7 @@ hr {
 
 .div-input__adicionar-ensaio label {
   display: block;
-  
+
   font-weight: bold;
   color: #333;
 }

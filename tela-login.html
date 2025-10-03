@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/pages/tela-cadastro-fotografo/index.css">
 
 </head>
 
@@ -56,9 +55,9 @@
 
                     <div class="div-input__imagem-local">
                         <label for="input-imagem__cadastro-fotografo"><strong>
-                            Adicione seu local de trabalho
+                                Adicione seu local de trabalho
                                 (Opcional)
-                        </strong></label>
+                            </strong></label>
 
                         <!-- Input escondido -->
                         <input type="file" id="input-imagem__cadastro-fotografo" accept="image/*"
@@ -126,7 +125,6 @@
                         <hr>
                     </div>
 
-
                     <!-- Tipo de ensaio -->
                     <div class="div-input__tipo-ensaio">
                         <label for="input-ensaio__cadastro-fotografo"><strong>Seu tipo de ensaio</strong></label>
@@ -142,7 +140,6 @@
                         </select>
                         <hr>
                     </div>
-
 
                     <div class="div-input__horarios-container">
                         <label><strong>Horários de funcionamento</strong></label>
@@ -335,7 +332,6 @@
                             </div>
                         </div>
 
-
                         <!-- Preço -->
                         <div class="adicionar-ensaio__preco">
                             <label for="input-preco__cadastro-fotografo">Preço</label>
@@ -345,10 +341,7 @@
                                     inputmode="numeric" required>
                             </div>
                         </div>
-
                     </div>
-
-
 
                     <div class="div-input__div-button">
                         <input type="submit" value="Cadastrar-se">
@@ -358,173 +351,6 @@
             </div>
         </section>
     </div>
-
-    <script>
-        // Imagem do local de trabalho
-        const inputImagem = document.getElementById('input-imagem__cadastro-fotografo');
-        const preview = document.getElementById('preview__cadastro-fotografo');
-
-        // Salva o HTML inicial do preview para restaurar depois
-        const initialPreviewHTML = preview.innerHTML;
-
-        // Abrir filepicker por teclado também
-        preview.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                inputImagem.click();
-            }
-        });
-
-        // Quando escolher arquivo
-        inputImagem.addEventListener('change', function () {
-            if (this.files && this.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    preview.innerHTML = `
-                <button type="button" class="remove-btn" aria-label="Remover imagem">&times;</button>
-                <img class="preview-img" src="${e.target.result}" alt="Preview da imagem">
-            `;
-
-                    const btn = preview.querySelector('.remove-btn');
-                    btn.addEventListener('click', removerImagem);
-                };
-                reader.readAsDataURL(this.files[0]);
-            }
-        });
-
-        function removerImagem(event) {
-            event.stopPropagation();
-            inputImagem.value = '';
-            preview.innerHTML = initialPreviewHTML;
-
-            preview.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    inputImagem.click();
-                }
-            });
-        }
-
-        // Busca CEP
-        document.getElementById('input-cep__cadastro-fotografo').addEventListener('blur', function () {
-            const cep = this.value.replace(/\D/g, '');
-            if (cep.length !== 8) {
-                alert('CEP inválido! Um CEP tem 8 números.');
-                return;
-            }
-
-            fetch(`https://viacep.com.br/ws/${cep}/json/`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.erro) {
-                        alert('CEP não encontrado!');
-                        return;
-                    }
-
-                    document.getElementById('input-endereco__cadastro-fotografo').value = data.logradouro || '';
-                    document.getElementById('input-bairro__cadastro-fotografo').value = data.bairro || '';
-                    document.getElementById('input-cidade__cadastro-fotografo').value = data.localidade || '';
-                    document.getElementById('input-estado__cadastro-fotografo').value = data.uf || '';
-                })
-                .catch(error => {
-                    console.error('Erro ao buscar CEP:', error);
-                });
-        });
-
-        // Modal de horário
-        const modalHorario = document.getElementById('modal-horario__cadastro-fotografo');
-        const closeBtnHorario = modalHorario.querySelector('.div-config-time__modal-close');
-        const modalDiaNome = document.getElementById('modal-dia-nome__cadastro-fotografo');
-        const horaInicioInput = document.getElementById('hora-inicio__cadastro-fotografo');
-        const horaFimInput = document.getElementById('hora-fim__cadastro-fotografo');
-        const salvarHorarioBtn = document.getElementById('salvar-horario__cadastro-fotografo');
-
-        let diaAtual = null;
-
-        // Botões de configuração
-        document.querySelectorAll('.horarios-container__dia .acoes__btn-config').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const dia = btn.closest('.horarios-container__dia');
-                const checkbox = dia.querySelector('input[type="checkbox"]');
-                if (!checkbox.checked) return;
-
-                diaAtual = dia;
-                modalDiaNome.textContent = dia.dataset.dia;
-
-                let horario = dia.dataset.horario;
-                if (horario !== 'Fechado') {
-                    let partes = horario.split('-');
-                    horaInicioInput.value = partes[0];
-                    horaFimInput.value = partes[1];
-                } else {
-                    horaInicioInput.value = '09:00';
-                    horaFimInput.value = '18:00';
-                }
-
-                modalHorario.style.display = 'flex';
-            });
-        });
-
-        // Fechar modal
-        closeBtnHorario.addEventListener('click', () => {
-            modalHorario.style.display = 'none';
-        });
-
-        // Salvar horário
-        salvarHorarioBtn.addEventListener('click', () => {
-            const novoHorario = `${horaInicioInput.value}-${horaFimInput.value}`;
-            const checkbox = diaAtual.querySelector('input[type="checkbox"]');
-            const statusSpan = diaAtual.querySelector('.dia__dia-horario');
-            const hiddenInput = diaAtual.querySelector('input[type="hidden"]');
-
-            statusSpan.textContent = checkbox.checked ? novoHorario : 'Fechado';
-            if (hiddenInput) hiddenInput.value = checkbox.checked ? novoHorario : 'Fechado';
-
-            diaAtual.dataset.horario = checkbox.checked ? novoHorario : 'Fechado';
-            modalHorario.style.display = 'none';
-        });
-
-
-        // Atualiza status quando o switch muda
-        document.querySelectorAll('.horarios-container__dia input[type="checkbox"]').forEach(checkbox => {
-            checkbox.addEventListener('change', () => {
-                const dia = checkbox.closest('.horarios-container__dia');
-                const statusSpan = dia.querySelector('.dia__dia-horario');
-                const btnConfig = dia.querySelector('.acoes__btn-config');
-                const hiddenInput = dia.querySelector('input[type="hidden"]');
-
-                if (checkbox.checked) {
-                    const horario = dia.dataset.horario !== 'Fechado' ? dia.dataset.horario : '09:00-18:00';
-                    statusSpan.textContent = horario;
-                    if (hiddenInput) hiddenInput.value = horario;
-                    btnConfig.classList.remove('disabled');
-                } else {
-                    statusSpan.textContent = 'Fechado';
-                    if (hiddenInput) hiddenInput.value = 'Fechado';
-                    btnConfig.classList.add('disabled');
-                }
-            });
-        });
-
-        // Formato do preço
-        const inputPreco = document.getElementById("input-preco__cadastro-fotografo");
-
-        inputPreco.addEventListener("input", (e) => {
-            let value = e.target.value.replace(/\D/g, ""); // remove tudo que não é número
-            value = (parseInt(value || "0", 10) / 100).toFixed(2); // converte para reais
-            value = new Intl.NumberFormat("pt-BR", {
-                style: "currency",
-                currency: "BRL"
-            }).format(value);
-
-            e.target.value = value.replace("R$", "").trim(); // remove R$ se você já tem no span
-        });
-    </script>
-
-
-
-
-
 </body>
 
 </html>
