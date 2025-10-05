@@ -5,7 +5,8 @@
 }
 
 .section-dois__carrosel {
-   position: relative; /* necessário pro ::before */
+   position: relative;
+   /* necessário pro ::before */
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr 1fr 30px;
@@ -19,7 +20,8 @@
    background-size: cover;
    background-position: center center;
    background-repeat: no-repeat;
-   color: white; /* texto em branco */
+   color: white;
+   /* texto em branco */
    overflow: hidden;
 }
 
@@ -31,12 +33,14 @@
    left: 0;
    width: 100%;
    height: 100%;
-   background: rgba(0, 0, 0, 0.836); /* controla a escuridão */
-   z-index: 0; /* fica atrás do conteúdo */
+   background: rgba(0, 0, 0, 0.836);
+   /* controla a escuridão */
+   z-index: 0;
+   /* fica atrás do conteúdo */
 }
 
 /* garante que o conteúdo fique na frente do overlay */
-.section-dois__carrosel > * {
+.section-dois__carrosel>* {
    position: relative;
    z-index: 1;
 }
@@ -103,33 +107,45 @@
 }
 
 .carrosel__info_category span {
-  position: relative;
-  padding-left: 20px; /* espaço para o círculo */
-  margin-left: 10px;
+   position: relative;
+   padding-left: 20px;
+   /* espaço para o círculo */
+   margin-left: 10px;
 }
 
 .carrosel__info_category span::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgb(255, 255, 255); /* 🔴 mude a cor do círculo aqui */
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background: rgb(255, 255, 255);
+   /* 🔴 mude a cor do círculo aqui */
 }
 
 
 .carrosel_points {
-   display: flex;  
+   display: flex;
+   justify-content: center;
+   gap: 8px;
    grid-column-start: 1;
    grid-column-end: -1;
    grid-row-start: 3;
    grid-row-end: -1;
-   
+
 }
 
 .carrosel_points img {
    width: 15px;
+   opacity: 0.5;
+   cursor: pointer;
+   transition: opacity 0.3s;
+}
+
+.carrosel_points img.ativo {
+   opacity: 1;
+   /* bolinha atual mais forte */
 }

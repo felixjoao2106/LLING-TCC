@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -10,6 +10,20 @@
   <link rel="stylesheet" href="./assets/css/pages/index/index.css">
   <link rel="stylesheet" href="./assets/css/pages/tela-login-user/index.css">
   <link rel="stylesheet" href="./assets/css/pages/tela-cadastro-fotografo/index.css">
+  <style>
+    .card,
+    .info {
+      display: none;
+      /* Todos escondidos por padrão */
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .card.ativo,
+    .info.ativo {
+      display: block;
+      /* Apenas o ativo aparece */
+    }
+  </style>
 </head>
 
 <body>
@@ -490,10 +504,8 @@
       </div>
 
       <!-- POINTS -->
-      <div class="carrosel_points">
-        <img src="assets/img/page/index/circle_16dp_wght400.svg" alt="">
-        <img src="assets/img/page/index/circle_16dp_wght400.svg" alt="">
-      </div>
+      <div class="carrosel_points"></div>
+
     </section>
 
   </section>
@@ -643,6 +655,7 @@
 <script src="assets/js/index/slider-rec.js"></script>
 <script src="assets/js/index/header-fixed.js"></script>
 <script src="assets/js/index/fechar_abrir.js"></script>
+<script src="assets/js/tela-cadastro-user/fechar-abrir.js"></script>
 <script src="assets/js/tela-cadastro-user/fechar-abrir.js"></script>
 
 <!--Script fotografo cadastro-->

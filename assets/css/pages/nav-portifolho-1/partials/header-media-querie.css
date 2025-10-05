@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+/*Todas demais mididas*/
+
+/*Typical Device Breakpoints Celular:
+W3C
+Pquenas Telas: ate 600px
+Celular: de 600px até 768px
+Tablet: 768px ate 992px
+Desktop: 992px ate 1200px
+Grandes Telas: acima de 1200px
+
+moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
+
+@media screen and (max-width: 768px) {
+*/
+
+@media screen and (max-width: 1080px) {
+
+    /*Desktop*/
+    /* Esconde inputs por padrão */
+    .header-fixo {
+        min-height: 80px;
+    }
+
+    .header-fixo__logo {
+        display: none;
+    }
+
+    .header-fixo__input {
+        display: none;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Quando ativo, mostra inputs */
+    .header-fixo__input.ativo {
+        display: flex;
+    }
+
+    /* Botões lupa e fechar */
+    .header-fixo__search-btn,
+    .header-fixo__close-btn {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Botão fechar começa escondido */
+    .header-fixo__close-btn {
+        display: none;
+    }
+
+    /* Quando header está ativo, troca os botões */
+    .header-fixo.ativo .header-fixo__search-btn {
+        display: none;
+    }
+
+    .header-fixo__search-btn {
+        display: block;
+    }
+
+    .header-fixo__search-btn img {
+        width: 30px;
+    }
+
+    .header-fixo.ativo .header-fixo__close-btn {
+        display: inline-block;
+    }
+
+    /* Inputs mobile */
+    .header-fixo__input input {
+        flex-grow: 1;
+        flex-shrink: 1;
+        height: 50px;
+        border-radius: 10px;
+        margin-bottom: 8px;
+    }
+
+    .section__div_user {
+        width: 2em;
+        cursor: pointer;
+    }
+
+
+
+}
