@@ -20,9 +20,9 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
   .section-tres {
     width: 100%;
     display: grid;
-    grid-template-columns: 20px 1fr 20px;
+    grid-template-columns: 10px 1fr 10px;
     grid-template-rows: 30px 1fr;
-    margin-top: 20px;
+    margin-top: 180px;
   }
 
   .section-tres h1 {
@@ -47,7 +47,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
   .carrossel-rec__item-3 {
     position: relative;
     flex: 0 0 auto;
-    width: 300px;
+    width: 275px;
     margin-top: 10px;
     margin-right: 24px;
     background: #fff;

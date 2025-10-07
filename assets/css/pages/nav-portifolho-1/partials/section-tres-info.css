@@ -1,8 +1,11 @@
 .section-tres-info {
     width: 100%;
     display: grid;
-    grid-template-columns: 270px 2fr 4fr 270px;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0px 2fr 4fr 0px;
+    grid-template-rows: auto auto auto auto; /* ← alterado de 1fr para auto */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
 }
 
@@ -23,7 +26,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto; /* ← alterado de 1fr para auto */
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -63,13 +66,11 @@
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: 2;
-
 }
 
 .info-essencial__category span {
     position: relative;
     padding-left: 15px;
-    /* espaço para o círculo */
 }
 
 .info-essencial__category span::before {
@@ -84,16 +85,11 @@
     background: rgb(0, 0, 0);
 }
 
-.info-essencial__category span {
-    position: relative;
-    padding-left: 15px;
-}
-
 .info_info-produto {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto; /* ← alterado de 1fr para auto */
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row-start: 2;
@@ -106,7 +102,6 @@
     grid-row-start: 1;
     grid-row-end: -1;
     padding-top: 9px;
-
 }
 
 .info-produto__preco {
@@ -116,7 +111,6 @@
     grid-row-end: -1;
     text-align: right;
     padding-top: 9px;
-
 }
 
 .info_info-produto button {
@@ -144,21 +138,18 @@
 .info-produto_2 hr,
 .info-produto_3 hr {
     grid-column: 1 / -1;
-    /* Faz o <hr> ocupar todas as colunas do grid */
     width: 100%;
     border: 0;
     border-top: 1px solid #ccc;
-    /* cor opcional */
     margin-top: 10px;
 }
-
 
 .info-produto_1,
 .info-produto_2,
 .info-produto_3 {
     display: grid;
     grid-template-columns: 1fr 1fr 0.3fr;
-    grid-template-rows: 50px;
+    grid-template-rows: auto; /* ← alterado de 50px para auto */
     gap: 10px;
 }
 
@@ -174,7 +165,6 @@
     grid-column-end: -1;
     grid-row-start: 2;
     grid-row-end: 3;
-
 }
 
 .info-produto_3 {
@@ -182,15 +172,4 @@
     grid-column-end: -1;
     grid-row-start: 3;
     grid-row-end: -1;
-
-}
-
-.carrossel-rec__item-3 {
-    position: relative;
-    flex: 0 0 auto;
-    width: 250px;
-    margin-top: 10px;
-    margin-right: 10px;
-    background: #fff;
-    border-radius: 10px;
 }

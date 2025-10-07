@@ -63,6 +63,12 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         display: block;
     }
 
+    .section__div-topo_a {
+        display: none;
+        color: white;
+        text-decoration: none;
+    }
+
     .header-fixo__search-btn img {
         width: 30px;
     }
@@ -84,6 +90,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         width: 2em;
         cursor: pointer;
     }
+
 
 
 
