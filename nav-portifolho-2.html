@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/global/elementos-globais/index.css">
+    <link rel="stylesheet" href="assets/css/pages/nav-portifolho-2/index.css">
+    <link rel="stylesheet" href="assets/css/global/elementos-globais/banner/index.css">
+
+</head>
+
+<body>
+    <header class="header-fixo">
+        <div class="header-fixo__logo">
+            <img src="assets/img/page/index/logo-section-1.png" alt="">
+        </div>
+
+        <!-- botão/ícone de pesquisa -->
+        <button class="header-fixo__search-btn">
+            <img src="assets/img/page/index/search_wght400.svg" alt="">
+        </button>
+
+        <!-- botão fechar -->
+        <button class="header-fixo__close-btn">✖</button>
+
+        <div class="header-fixo__input">
+            <input type="text" placeholder="Categoria">
+            <input type="text" placeholder="Onde">
+            <input type="datetime-local" placeholder="Quando">
+        </div>
+
+        <div class="header-fixo__login-fot-user">
+            <input class="header-fixo__login-fot-user__input openModal__cadastro-fotografo" type="button"
+                value="Adicione o seu portifolho">
+            <img class="section__div_user" src="./assets/img/page/index/person-wght400.svg" alt="">
+            <a class="section__div-topo_a" href="">Entrar/Cadastrar</a>
+        </div>
+    </header>
+
+    <main class="main-conteiner">
+        <section class="main-conteiner__container-info-1">
+            <section class="container-info-1">
+                <section class="container-info-1__carrossel-banner">
+                    <img class="carrossel-banner__img" src="assets/img/page/index/banner-teste.jpeg" alt="">
+                    <div class="carrossel-banner__rating">⭐ 4.9<br>15 avaliações</div>
+                    <div class="carrossel-banner__heart">❤</div>
+
+                    <div class="carrossel-banner__next-left"></div>
+                    <div class="carrossel-banner__next-rigth"></div>
+
+                    <div class="carrossel-banner__dots">
+
+                    </div>
+
+                </section>
+                <section class="container-info-1__title">
+                    <h1 style="font-size: 28px;">Cris Naquielle</h1>
+                    <span>Ensaio Infantil</span>
+                    <span>Baby born</span>
+                </section>
+                <section class="container-info-1__ensaios">
+                    <div class="ensaios__info-ensaio">
+                        <span class="info-ensaio__nome">Ensaio Baby Born com acompanhamento (0 ate 9 meses)</span>
+                        <span class="info-ensaio__preco">R$ 1000
+                            <br>Tempo do serviço: 30min</span>
+                        <button type="button">Comtrate</button>
+                        <hr>
+                    </div>
+
+                </section>
+            </section>
+        </section>
+
+        <section class="main-conteiner__container-info-2">
+            <section class="container-info-2">
+                <section class="container-info-2__location"></section>
+                <section class="container-info-2__equipe"></section>
+                <section class="container-info-2__more-info"></section>
+            </section>
+        </section>
+    </main>
+
+    <footer class="section-seis">
+        <section class="section-seis__container">
+            <div class="section-seis__container__logo-copy">
+                <img src="assets/img/page/index/logo-section-1.png" alt="">
+                <span>© 2025 LLING Inc. Todos os direitos reservados</span>
+            </div>
+            <hr>
+            <nav class="section-seis__container__info">
+                <ul>
+                    <li><a href="">Sobre nós</a></li>
+                    <li><a href="">Termos de uso</a></li>
+                    <li><a href="">Trabalhe com a gente</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="section-seis__container__redes-sociais">
+                <div class="section-seis__container__redes-sociais__instagram">
+                    <img src="assets/img/page/index/instagram-brands-solid-full.svg" alt="">
+                </div>
+                <div class="section-seis__container__redes-sociais__facebook">
+                    <img src="assets/img/page/index/facebook-brands-solid-full.svg" alt="">
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Script Header -->
+    <script src="assets/js/global/header/fechar_abrir.js"></script>
+    <script>// Simulação de dados vindos do banco de dados
+        // Simulação de dados vindos do banco de dados
+        const banners = [
+            { img: "assets/img/page/index/banner-teste.jpeg", rating: "⭐ 4.8<br>20 avaliações" },
+            { img: "assets/img/page/index/banner-teste.jpeg", rating: "⭐ 4.9<br>15 avaliações" },
+            { img: "assets/img/page/index/banner-teste.jpeg", rating: "⭐ 5.0<br>30 avaliações" },
+        ];
+
+        const carrossel = document.querySelector(".container-info-1__carrossel-banner");
+        const imgElement = carrossel.querySelector(".carrossel-banner__img");
+        const ratingElement = carrossel.querySelector(".carrossel-banner__rating");
+        const dotsContainer = carrossel.querySelector(".carrossel-banner__dots");
+
+        let atual = 0;
+
+        // Cria dinamicamente os dots
+        banners.forEach((banner, i) => {
+            const dot = document.createElement("img");
+            dot.src = "assets/img/page/index/circle_16dp_wght400.svg";
+            dot.alt = "Ir para o banner " + (i + 1);
+            dot.classList.add("dot");
+            dot.addEventListener("click", () => {
+                atual = i;
+                mostrarBanner(atual);
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll(".dot");
+
+        function mostrarBanner(index) {
+            const banner = banners[index];
+            imgElement.src = banner.img;
+            ratingElement.innerHTML = banner.rating;
+
+            // Atualiza os dots (ativo = preenchido)
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.src = "assets/img/page/index/circle-fill_16dp_wght400.svg";
+                } else {
+                    dot.src = "assets/img/page/index/circle_16dp_wght400.svg";
+                }
+            });
+        }
+
+        // Inicial
+        mostrarBanner(atual);
+
+        // Referência das setas
+        const nextLeft = carrossel.querySelector(".carrossel-banner__next-left");
+        const nextRight = carrossel.querySelector(".carrossel-banner__next-rigth");
+
+        // Adiciona ícones ou símbolos às setas
+        nextLeft.innerHTML = "&#10094;";   // seta esquerda
+        nextRight.innerHTML = "&#10095;";  // seta direita
+
+        // Clique na seta esquerda
+        nextLeft.addEventListener("click", () => {
+            atual = (atual - 1 + banners.length) % banners.length; // volta para o último se estiver no primeiro
+            mostrarBanner(atual);
+        });
+
+        // Clique na seta direita
+        nextRight.addEventListener("click", () => {
+            atual = (atual + 1) % banners.length; // vai para o próximo
+            mostrarBanner(atual);
+        });
+
+
+
+    </script>
+</body>
+
+</html>

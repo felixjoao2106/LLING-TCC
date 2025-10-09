@@ -1,6 +1,6 @@
 .header-fixo {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap ;
   justify-content: space-around;
   position: fixed;
   top: 0;
@@ -12,6 +12,7 @@
   z-index: 1000;
   transition: all 0.3s ease-in-out;
   gap: 10px;
+  overflow-x: auto; /* Previna quebra — scroll se necessário */
 
 }
 
@@ -42,23 +43,32 @@
 .header-fixo__input {
   display: flex;
   flex-wrap: nowrap;
-  width: 900px;
+  flex: 1; /* Ocupa espaço flexível */
+  min-width: 300px;
+  max-width: 900px;
 }
 
 .header-fixo__input input {
-  flex-basis: 250px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  height: 55px;
+  flex: 1;
+  min-width: 120px;
+  max-width: 100%;
+  height: 50px;
   border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .header-fixo__input input[type="datetime-local"] {
-  flex-basis: 160px;
+  min-width: 140px;
+  max-width: 180px;
 }
 
+/* Login e botões */
 .header-fixo__login-fot-user {
   display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0; /* Evita que seja comprimido */
 }
 
 .header-fixo__login-fot-user__input {
