@@ -3,8 +3,8 @@ window.addEventListener("scroll", function () {
   const scrollPos = window.scrollY;
 
   if (scrollPos > 545) { // a partir de 200px de rolagem
-    header.classList.remove("mostrar");
-  } else {
     header.classList.add("mostrar");
+  } else {
+    header.classList.remove("mostrar");
   }
 });

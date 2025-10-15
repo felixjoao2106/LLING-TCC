@@ -3,12 +3,16 @@
     --cor-secundaria: #99C7FF;
     --cor-terciaria: #EBF4FF;
     
-    --cor-branco: #fff;
+    --cor-branco: #ffffff;
     --cor-cinza-escuro: #BDBDBD;
-    --cor-cinza-claro: #D9D9D9;
+    --cor-cinza-claro: #e8e7e7;
+    /*--cor-cinza-claro: #D9D9D9;*/
     
     --cor-preto-80: #333333;
     --cor-preto-50: #333333bb;
+    
+    --cor-preto-80-porcentagem: #333333;
+    --cor-preto-50-porcentagem: rgba(0, 0, 0, 0.5);
 
     --cor-cinza-font-p: #555;
     
@@ -16,7 +20,14 @@
     
 
     --font-size-padrao-h1: 3em;
+    --font-size-padrao-h2: 3em;
+    --font-size-padrao-h3: 3em;
+    --font-size-padrao-h4: 3em;
+    --font-size-padrao-h5: 3em;
+    --font-size-padrao-h6: 0.5em;
+
     --font-size-padrao-p: 1em;
+    --font-size-padrao-span: 1em;
     
     --font-family-padrao-h1: Arial, Helvetica, sans-serif;
 }
