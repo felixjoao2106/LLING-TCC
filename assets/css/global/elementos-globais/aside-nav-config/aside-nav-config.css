@@ -1,0 +1,53 @@
+/*.container-flex*/
+.container-flex {
+    display: flex;
+    height: 600px;
+    margin-top: 100px;
+}
+
+/*.container-flex__menu-config*/
+
+.container-flex__menu-config {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid black;
+    width: 40%;
+    background-color: brown;
+    
+}
+
+.container-flex__menu-config img{
+    width: 4em;
+    
+}
+
+.menu-config__name-telefone {
+    
+}
+
+.menu-config__item {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 10px;
+    background-color: rgb(52, 66, 66);
+    
+}
+
+.menu-config__item {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 10px;
+    background-color: rgb(52, 66, 66);
+    
+}
+
+/*container-flex__agendamento-section*/
+
+.container-flex__agendamento-section {
+    width: 60%;
+    background-color: aqua;
+
+}

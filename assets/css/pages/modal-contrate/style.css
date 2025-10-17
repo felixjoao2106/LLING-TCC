@@ -17,7 +17,7 @@
     align-items: center;
     flex-direction: column;
     width: 900px;
-    height: 700px;
+    height: auto;
     gap: 10px;
     max-width: 1200px;
     margin-left: auto;
@@ -35,17 +35,26 @@ form {
     align-items: center;
 }
 
-.section-tela-contrate__dias-disponiveis {
+/* section-tela-contrate__dias-disponiveis */
+
+.section-tela-contrate__div-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.div-wrapper__dias-disponiveis {
     display: flex;
     max-width: 600px;
     gap: 20px;
+    position: relative;
 }
-
 
 hr {
     background-color: black;
     width: 100%;
 }
+
 
 .dias-disponiveis__container-dia {
     display: flex;
@@ -65,6 +74,39 @@ hr {
     border-radius: 0px 0px 10px 10px;
     background-color: green;
 }
+
+.div-wrapper__next-left,
+.div-wrapper__next-rigth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    min-height: 100%;
+
+}
+
+.next-left__icon,
+.next-rigth__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .06);
+    min-width: auto;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.next-left__icon:hover,
+.next-rigth__icon:hover {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.591);
+}
+
+.div-wrapper__next-rigth {}
+
+.next-rigth__icon {}
+
+/* section-tela-contrate__container-horario */
 
 .section-tela-contrate__container-horario {
     display: flex;
@@ -94,6 +136,7 @@ hr {
 
 }
 
+
 /* section-tela-contrate__horarios */
 
 .section-tela-contrate__horarios {
@@ -102,7 +145,12 @@ hr {
     gap: 15px;
 }
 
-.horarios__horario {
+.horarios__wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.wrapper__horario {
     display: flex;
     justify-content: center;
     width: 80px;
@@ -112,16 +160,36 @@ hr {
 
 }
 
-.horarios__next-left {
-    position: absolute;
-    right: 100%;
+.horarios__next-left,
+.horarios__next-rigth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    min-height: 100%;
+
 }
 
-.horarios__next-rigth {
-    position: absolute;
-    left: 100%;
-    
+.next-left__icon,
+.next-rigth__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .06);
+    min-width: auto;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
 }
+
+.next-left__icon:hover,
+.next-rigth__icon:hover {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.591);
+}
+
+.div-wrapper__next-left {}
+
+.div-wrapper__next-rigth {}
 
 /* section-tela-contrate__info */
 
@@ -155,7 +223,7 @@ hr {
     justify-content: space-between;
 }
 
-.info__funcionario  button{
+.info__funcionario button {
     padding: 5px 20px;
     border: none;
     color: var(--cor-branco);
@@ -181,10 +249,10 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px; 
+    gap: 5px;
 }
 
-.confirmar__preco-btnconfirmar input{
+.confirmar__preco-btnconfirmar input {
     padding: 20px 100px;
     border: none;
     color: var(--cor-branco);
