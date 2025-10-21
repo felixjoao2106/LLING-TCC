@@ -16,15 +16,21 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 900px;
-    height: auto;
     gap: 10px;
-    max-width: 1200px;
+    width: 95%;
+    padding: 15px;
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
     border-radius: 10px;
     padding: 20px;
+    max-width: 700px;
+    max-height: 90vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden; /* impedir overflow horizontal */
 }
 
 form {
@@ -48,6 +54,9 @@ form {
     max-width: 600px;
     gap: 20px;
     position: relative;
+    max-width: 100%;   /* não ultrapassa o modal */
+    overflow-x: auto;  /* permite scroll no mobile */
+    flex-wrap: nowrap; /* itens na horizontal, scroll automático */
 }
 
 hr {
@@ -153,8 +162,12 @@ hr {
     justify-content: space-between;
     gap: 15px;
     width: 100%;
+    padding: 10px;
     max-width: 700px; /* ou qualquer valor suficiente */
     position: relative;
+    max-width: 100%;   /* não ultrapassa o modal */
+    overflow-x: auto;  /* permite scroll no mobile */
+    flex-wrap: nowrap; /* itens na horizontal, scroll automático */
 }
 
 
@@ -255,8 +268,11 @@ hr {
 
 .section-tela-contrate__confirmar {
     display: flex;
+    flex-direction: column;
     width: 100%;
+    gap: 10px;
     justify-content: space-between;
+    
 }
 
 .confirmar__title-periodo {
@@ -273,6 +289,7 @@ hr {
 }
 
 .confirmar__preco-btnconfirmar input {
+    width: 100%;
     padding: 20px 100px;
     border: none;
     color: var(--cor-branco);
