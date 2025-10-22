@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/global/elementos-globais/index.css">
-    <link rel="stylesheet" href="assets/css/global/elementos-globais/aside-nav-config/aside-nav-config.css">
+    <link rel="stylesheet" href="assets/css/global/elementos-globais/aside-nav-config/index.css">
 </head>
 
 <body>
@@ -39,7 +39,8 @@
     <div class="container-flex">
         <aside class="container-flex__menu-config">
             <div class="menu-config__info-user">
-                <img src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                <img src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="">
                 <div class="menu-config__name-telefone">
                     <h2>Usuario</h2>
                     <p>(11) 78493-0166</p>
@@ -98,22 +99,25 @@
         </aside>
         <section class="container-flex__configuracao-de-conta-section">
             <div class="configuracao-de-conta-section__title">
-                <img src="" alt="">
-                <span>Agendamento</span>
+                <img src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                <h2>Configurações de conta</h2>
             </div>
             <div class="configuracao-de-conta-section__input">
-                <label for="input__nome-completo">Nome e sobrenome</label>
-                <input type="text" autocomplete="family-name" id="input__nome-completo">
-                <label for="">Configurações de conta</label>
-                <input type="text" autocomplete="email" id="input__nome-completo">
-                <label for="">Favoritos</label>
-                <input type="text" autocomplete="tel" id="input__nome-completo">
-                <label for="">Avaliações</label>
-                <input type="text" autocomplete="new-password" id="input__nome-completo">
-                <label for="">Sair</label>
-                <input type="text" autocomplete="new-password" id="input__nome-completo">
+                <label for="input-nome-completo">Nome completo</label>
+                <input type="text" autocomplete="name" id="input-nome-completo">
+
+                <label for="input-email">Email</label>
+                <input type="email" autocomplete="email" id="input-email">
+
+                <label for="input-telefone">Telefone</label>
+                <input type="tel" autocomplete="tel" id="input-telefone">
+
+                <label for="input-senha">Senha</label>
+                <input type="password" autocomplete="new-password" id="input-senha">
+
                 <input type="submit" value="Alterar">
             </div>
+
         </section>
     </div>
 </body>

@@ -3,6 +3,7 @@
     display: flex;
     height: 600px;
     margin-top: 100px;
+    gap: 30px;
 }
 
 /*.container-flex__menu-config*/
@@ -59,11 +60,21 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-left: 10px;
 
 }
 
-.configuracao-de-conta-section__title {}
+.configuracao-de-conta-section__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+}
+
+.configuracao-de-conta-section__title img{
+    width: 3em;
+}
 
 .configuracao-de-conta-section__input {
     display: flex;
@@ -74,7 +85,7 @@
 }
 
 .configuracao-de-conta-section__input input {
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
     border: 1px black solid;
 
@@ -84,7 +95,8 @@
     margin-top: 10px;
     background-color: var(--cor-preto-80);
     color: var(--cor-branco);
-    height: 40px;
+    height: 43px;
     border: none;
+    font-size: 1em;
 
 }
