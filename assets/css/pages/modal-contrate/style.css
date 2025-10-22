@@ -79,6 +79,12 @@ hr {
     height: 105px;
     border: 1px black solid;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.dias-disponiveis__container-dia:hover {
+    transition: 0.5s;
+    border: 1px var(--cor-preto-40) solid;
 }
 
 .dias-disponiveis__container-dia--select {
@@ -92,7 +98,14 @@ hr {
     height: 10px;
     border-radius: 0px 0px 10px 10px;
     border: 2px rgb(255, 255, 255) solid;
+}
+
+.container-dia__status--ativo {
     background-color: green;
+}
+
+.container-dia__status--desativo {
+    background-color: rgb(255, 0, 0);
 }
 
 .div-wrapper__next-left,
@@ -193,6 +206,13 @@ hr {
     border-radius: 10px;
     border: 1px solid black;
     padding: 10px;
+    cursor: pointer;
+}
+
+.wrapper__horario:hover {
+    transition: 0.5s;
+    border: 1px var(--cor-preto-40) solid;
+
 }
 
 .wrapper__horario--select {
@@ -274,6 +294,7 @@ hr {
 }
 
 .info__funcionario select {
+    cursor: pointer;
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -326,4 +347,9 @@ hr {
     background-color: var(--cor-primaria);
     border-radius: 5px;
     font-size: 1.2em;
+}
+
+.confirmar__preco-btnconfirmar input:hover {
+    background-color: var(--cor-secundaria);
+    cursor: pointer;
 }
