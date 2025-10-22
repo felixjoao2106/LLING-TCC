@@ -86,6 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         diasContainer.appendChild(inputData); // mantém input no DOM
+
+        const mesAnoEl = document.getElementById('mesAno');
+        if (subset.length > 0 && mesAnoEl) {
+            const dataReferencia = new Date(subset[0].iso);
+            const mes = dataReferencia.toLocaleDateString('pt-BR', { month: 'long' });
+            const ano = dataReferencia.getFullYear();
+            mesAnoEl.textContent = `${mes.charAt(0).toUpperCase() + mes.slice(1)} ${ano}`;
+        }
     }
 
     leftArrow.addEventListener('click', () => {
@@ -207,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Seleciona setas e wrapper de horários
     const leftHorarioArrow = document.querySelector('.horarios__next-left');
     const rightHorarioArrow = document.querySelector('.horarios__next-rigth');
-  
+
 
     // Quantos pixels o container vai se mover a cada clique
     const scrollStep = 200; // ajuste conforme o tamanho do horário

@@ -13,6 +13,7 @@
 }
 
 .modal-overlay__section-tela-contrate {
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -34,6 +35,19 @@
     /* impedir overflow horizontal */
 }
 
+/* Botão fechar */
+.section-tela-contrate__modal-close {
+    position: absolute;
+    padding: 5px;
+    top: 5px;
+    right: 25px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
 form {
     width: 90%;
     display: flex;
@@ -48,6 +62,7 @@ form {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .div-wrapper__dias-disponiveis {
