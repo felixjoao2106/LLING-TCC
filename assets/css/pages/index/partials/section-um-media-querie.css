@@ -21,7 +21,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
     .section-um {
         display: grid;
         grid-template-columns: 1fr 2fr 2fr 1fr;
-        grid-template-rows: 130px 1fr 1fr;
+        grid-template-rows: 130px 1fr 100px;
         position: relative;
         width: 100%;
         height: 545px;
@@ -133,64 +133,6 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
 
     /* 4. Itens dentro da .section__div--enbaixo */
 
-    .section__div-enbaixo {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        grid-row-start: 3;
-        grid-row-end: 4;
-        grid-column-start: 2;
-        grid-column-end: 4;
-        white-space: nowrap;
-        margin-bottom: 10px;
-    }
-
-    .section__div-enbaixo__item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 200px;
-        height: 120px;
-        background-color: aqua;
-        padding: 10px;
-    }
-
-    .section__div-enbaixo__item a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.5em;
-    }
-
-    .img-casamento,
-    .img-ei,
-    .img-cosplay,
-    .img-cosplay,
-    .img-estetico {
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        text-shadow: 2px 1px rgba(0, 0, 0, 0.401);
-    }
-
-    .img-casamento {
-        background-image: url('../../../../img/page/index/casamento.jpg');
-    }
-
-    .img-ei {
-        background-image: url('../../../../img/page/index/ensaio-fotografico.jpg');
-
-    }
-
-    .img-cosplay {
-        background-image: url('../../../../img/page/index/cosplay.jpg');
-
-    }
-
-    .img-estetico {
-        background-image: url('../../../../img/page/index/estetico.jpg');
-
-    }
-
+    
+    
 }

@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 30px 1fr;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .section-tres h1 {

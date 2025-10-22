@@ -22,7 +22,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         display: grid;
         grid-template-columns: 1fr 4fr 1fr;
         grid-template-rows: 30px 1fr;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .section-tres h1 {

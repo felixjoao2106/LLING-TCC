@@ -2,7 +2,7 @@
 .section-um {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-rows: 90px 1fr 1fr;
+    grid-template-rows: 90px 1fr 100px;
     position: relative;
     width: 100%;
     height: 545px;
@@ -124,7 +124,7 @@
 .section__div-enbaixo {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     gap: 10px;
     grid-row-start: 3;
@@ -132,22 +132,23 @@
     grid-column-start: 2;
     grid-column-end: 4;
     white-space: nowrap;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .section__div-enbaixo__item {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 50px;
-    background-color: var(--cor-branco);
     padding: 10px;
+}
+
+.section__div-enbaixo__item:hover {
+    border: 1px var(--cor-branco) solid;
+    border-radius: 10px;
 }
 
 .section__div-enbaixo__item a {
     text-decoration: none;
     color: white;
+    font-size: 1.4em;
 }
 
 .img-casamento,
@@ -155,27 +156,5 @@
 .img-cosplay,
 .img-cosplay,
 .img-estetico {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     text-shadow: 2px 1px rgba(0, 0, 0, 0.401);
-}
-
-.img-casamento {
-    background-image: url('../../../../img/page/index/casamento.jpg');
-}
-
-.img-ei {
-    background-image: url('../../../../img/page/index/ensaio-fotografico.jpg');
-
-}
-
-.img-cosplay {
-    background-image: url('../../../../img/page/index/cosplay.jpg');
-
-}
-
-.img-estetico {
-    background-image: url('../../../../img/page/index/estetico.jpg');
-
 }
