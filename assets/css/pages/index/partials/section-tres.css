@@ -33,6 +33,7 @@
   margin-right: 10px;
   background: #fff;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .carrossel-rec__item-3>div,
