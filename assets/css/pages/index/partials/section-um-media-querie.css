@@ -21,7 +21,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
     .section-um {
         display: grid;
         grid-template-columns: 1fr 2fr 2fr 1fr;
-        grid-template-rows: 130px 1fr 00px;
+        grid-template-rows: 130px 1fr 100px;
         position: relative;
         width: 100%;
         height: 545px;
