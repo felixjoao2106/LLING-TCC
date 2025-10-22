@@ -1,24 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Configurações iniciais ---
-    const diasContainer = document.querySelector('.div-wrapper__dias-disponiveis');
-    const leftDiaArrow = document.querySelector('.next-left__icon');
-    const rightDiaArrow = document.querySelector('.next-rigth__icon');
-    const inputData = document.getElementById('input-data-selecionada');
 
-    const wrapperHorarios = document.querySelector('.horarios__wrapper');
-    const leftHorarioArrow = document.querySelector('.horarios__next-left');
-    const rightHorarioArrow = document.querySelector('.horarios__next-rigth');
-    const inputHorario = document.getElementById('input-horario-selecionado');
-
-    const btnManha = document.querySelector('.container-horario__manha');
-    const btnTarde = document.querySelector('.container-horario__tarde');
-    const btnNoite = document.querySelector('.container-horario__noite');
-
-    const diasPorPagina = 6;
-    const horariosPorPagina = 6;
-    const hoje = new Date();
-    hoje.setHours(0, 0, 0, 0);
-
+    // --- Dados do fotógrafo ---
     const fotografo = {
         horarios_funcionamento: {
             Segunda: { status: true, horario: "09:00-18:00" },
@@ -33,28 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
             { nome: "Baby born", duracao: 40, preco: 200 }
         ]
     };
-    const duracao = fotografo.ensaios[0].duracao;
 
+    // --- Seleção de dias ---
+    const diasContainer = document.querySelector('.div-wrapper__dias-disponiveis');
+    const leftArrow = document.querySelector('.next-left__icon');
+    const rightArrow = document.querySelector('.next-rigth__icon');
+    const inputData = document.getElementById('input-data-selecionada');
+
+    const diasPorPagina = 6;
+    const hoje = new Date();
+    hoje.setHours(0, 0, 0, 0);
+
+    let paginaAtual = 0;
     let diasGerados = [];
-    let paginaDiasAtual = 0;
-    let paginaHorarioAtual = 0;
-    let horariosDiaAtual = [];
 
-    // --- Funções utilitárias ---
     function formatarIso(d) { return d.toISOString().split('T')[0]; }
     function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
-    function nomeMes(d) {
-        return capitalize(new Intl.DateTimeFormat('pt-BR', { month: 'short' }).format(d).replace('.', ''));
-    }
-    function nomeDiaSemana(d) {
-        return capitalize(new Intl.DateTimeFormat('pt-BR', { weekday: 'short' }).format(d).replace('.', ''));
-    }
-    function toMinutes(h) { const [hh, mm] = h.split(':').map(Number); return hh * 60 + mm; }
-    function toHour(min) { const hh = String(Math.floor(min / 60)).padStart(2, '0'); const mm = String(min % 60).padStart(2, '0'); return `${hh}:${mm}`; }
+    function nomeMes(d) { return capitalize(new Intl.DateTimeFormat('pt-BR', { month: 'short' }).format(d).replace('.', '')); }
+    function nomeDiaSemana(d) { return capitalize(new Intl.DateTimeFormat('pt-BR', { weekday: 'short' }).format(d).replace('.', '')); }
 
-    // --- Gerar dias ---
     function gerarDias(qtd) {
-        const inicioIndex = diasGerados.length;
+        let inicioIndex = diasGerados.length;
         for (let i = inicioIndex; i < inicioIndex + qtd; i++) {
             const d = new Date(hoje);
             d.setDate(d.getDate() + i);
@@ -68,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Renderizar dias ---
     function renderizarDias(pagina) {
         diasContainer.innerHTML = '';
         const inicio = pagina * diasPorPagina;
@@ -80,54 +60,60 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('dias-disponiveis__container-dia');
             card.dataset.iso = obj.iso;
 
-            const statusDiv = document.createElement('div');
-            statusDiv.classList.add('container-dia__status');
-
-            const mapaDias = { seg: 'Segunda', ter: 'Terça', qua: 'Quarta', qui: 'Quinta', sex: 'Sexta', sab: 'Sábado', dom: 'Domingo' };
-            const chaveDia = obj.diaSemana.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-            const nomeDia = mapaDias[chaveDia] || 'Segunda';
-            const info = fotografo.horarios_funcionamento[nomeDia];
-            if (info && info.status) statusDiv.classList.add('container-dia__status--ativo');
-            else statusDiv.classList.add('container-dia__status--desativo');
-
-            card.appendChild(statusDiv);
-            card.innerHTML += `
+            card.innerHTML = `
+                <div class="container-dia__status"></div>
                 <p>${obj.mes}</p>
                 <p>${obj.dia}</p>
                 <p>${obj.diaSemana}</p>
             `;
 
+            const statusEl = card.querySelector('.container-dia__status');
+            const mapaDias = {
+                seg: 'Segunda', ter: 'Terça', qua: 'Quarta', qui: 'Quinta',
+                sex: 'Sexta', sab: 'Sábado', dom: 'Domingo'
+            };
+            const chave = obj.diaSemana.slice(0, 3).toLowerCase();
+            const nomeDia = mapaDias[chave] || obj.diaSemana;
+            const infoDia = fotografo.horarios_funcionamento[nomeDia];
+
+            if (infoDia && infoDia.status && infoDia.horario !== "Fechado") {
+                statusEl.classList.add('container-dia__status--ativo');
+            } else {
+                statusEl.classList.add('container-dia__status--desativo');
+            }
+
             diasContainer.appendChild(card);
         });
 
-        diasContainer.appendChild(inputData); // manter input no DOM
-        atualizarMesAno(subset);
+        diasContainer.appendChild(inputData); // mantém input no DOM
     }
 
-    function atualizarMesAno(diasVisiveis) {
-        const label = document.getElementById('mesAno');
-        if (!label || diasVisiveis.length === 0) return;
+    leftArrow.addEventListener('click', () => {
+        if (paginaAtual > 0) { paginaAtual--; renderizarDias(paginaAtual); }
+    });
 
-        const primeiro = diasVisiveis[0].data;
-        const ultimo = diasVisiveis[diasVisiveis.length - 1].data;
+    rightArrow.addEventListener('click', () => {
+        const totalPaginas = Math.ceil(diasGerados.length / diasPorPagina);
+        if (paginaAtual + 1 >= totalPaginas) gerarDias(diasPorPagina);
+        paginaAtual++;
+        renderizarDias(paginaAtual);
+    });
 
-        const mesPrimeiro = primeiro.toLocaleString('pt-BR', { month: 'long' });
-        const anoPrimeiro = primeiro.getFullYear();
-        const mesUltimo = ultimo.toLocaleString('pt-BR', { month: 'long' });
-        const anoUltimo = ultimo.getFullYear();
+    gerarDias(diasPorPagina * 2);
+    renderizarDias(paginaAtual);
 
-        let texto;
-        if (anoPrimeiro === anoUltimo) {
-            if (mesPrimeiro === mesUltimo) texto = `${capitalize(mesPrimeiro)} ${anoPrimeiro}`;
-            else texto = `${capitalize(mesPrimeiro)} – ${capitalize(mesUltimo)} ${anoPrimeiro}`;
-        } else {
-            texto = `${capitalize(mesPrimeiro)} ${anoPrimeiro} – ${capitalize(mesUltimo)} ${anoUltimo}`;
-        }
-        label.textContent = texto;
-    }
+    // --- Seleção de horários ---
+    const duracao = fotografo.ensaios[0].duracao;
+    const inputHorario = document.getElementById('input-horario-selecionado');
+    const wrapperHorarios = document.querySelector('.horarios__wrapper');
+    const btnManha = document.querySelector('.container-horario__manha');
+    const btnTarde = document.querySelector('.container-horario__tarde');
+    const btnNoite = document.querySelector('.container-horario__noite');
 
-    // --- Gerar horários de um dia ---
-    function gerarHorarios(dia) {
+    function toMinutes(h) { const [hh, mm] = h.split(':').map(Number); return hh * 60 + mm; }
+    function toHour(min) { const hh = String(Math.floor(min / 60)).padStart(2, '0'); const mm = String(min % 60).padStart(2, '0'); return `${hh}:${mm}`; }
+
+    function gerarHorarios(dia, duracao) {
         const info = fotografo.horarios_funcionamento[dia];
         if (!info || !info.status || info.horario === "Fechado") return [];
 
@@ -145,20 +131,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return horarios;
     }
 
-    // --- Renderizar horários da página atual ---
-    function renderizarHorariosPagina() {
+    function renderizarHorarios(dia) {
         wrapperHorarios.innerHTML = '';
-        if (!horariosDiaAtual.length) {
-            wrapperHorarios.innerHTML = '<p>Sem horários disponíveis</p>';
-            inputHorario.value = '';
-            return;
-        }
+        const horarios = gerarHorarios(dia, duracao);
+        if (horarios.length === 0) { wrapperHorarios.innerHTML = '<p>Sem horários disponíveis</p>'; return; }
 
-        const inicio = paginaHorarioAtual * horariosPorPagina;
-        const fim = inicio + horariosPorPagina;
-        const subset = horariosDiaAtual.slice(inicio, fim);
-
-        subset.forEach(h => {
+        horarios.forEach(h => {
             const div = document.createElement('div');
             div.classList.add('wrapper__horario');
             div.dataset.periodo = h.periodo;
@@ -166,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
             wrapperHorarios.appendChild(div);
         });
 
-        // Seleciona automaticamente o primeiro horário visível
         const primeiroHorario = wrapperHorarios.querySelector('.wrapper__horario');
         if (primeiroHorario) {
             primeiroHorario.classList.add('wrapper__horario--select');
@@ -174,15 +151,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Eventos de dias ---
-    leftDiaArrow.addEventListener('click', () => {
-        if (paginaDiasAtual > 0) { paginaDiasAtual--; renderizarDias(paginaDiasAtual); }
-    });
-    rightDiaArrow.addEventListener('click', () => {
-        if ((paginaDiasAtual + 1) * diasPorPagina >= diasGerados.length) gerarDias(diasPorPagina);
-        paginaDiasAtual++; renderizarDias(paginaDiasAtual);
-    });
+    function ativarPeriodo(periodo) {
+        btnManha.classList.remove('manha--ativo');
+        btnTarde.classList.remove('tarde--ativo');
+        btnNoite.classList.remove('noite--ativo');
+        if (periodo === 'manha') btnManha.classList.add('manha--ativo');
+        if (periodo === 'tarde') btnTarde.classList.add('tarde--ativo');
+        if (periodo === 'noite') btnNoite.classList.add('noite--ativo');
+    }
 
+    btnManha.addEventListener('click', () => { ativarPeriodo('manha'); scrollParaPeriodo('manha'); });
+    btnTarde.addEventListener('click', () => { ativarPeriodo('tarde'); scrollParaPeriodo('tarde'); });
+    btnNoite.addEventListener('click', () => { ativarPeriodo('noite'); scrollParaPeriodo('noite'); });
+
+    function scrollParaPeriodo(periodo) {
+        const alvo = wrapperHorarios.querySelector(`.wrapper__horario[data-periodo="${periodo}"]`);
+        if (alvo) {
+            const offset = alvo.offsetLeft - wrapperHorarios.offsetLeft;
+            wrapperHorarios.scrollTo({ left: offset, behavior: 'smooth' });
+        } else {
+            wrapperHorarios.scrollTo({ left: wrapperHorarios.scrollWidth, behavior: 'smooth' });
+        }
+    }
+
+    // Clique em dia atualiza data e horários
     diasContainer.addEventListener('click', e => {
         const diaEl = e.target.closest('.dias-disponiveis__container-dia');
         if (!diaEl) return;
@@ -190,19 +182,16 @@ document.addEventListener('DOMContentLoaded', () => {
         diasContainer.querySelectorAll('.dias-disponiveis__container-dia').forEach(d => d.classList.remove('dias-disponiveis__container-dia--select'));
         diaEl.classList.add('dias-disponiveis__container-dia--select');
 
-        const nomeDiaAbrev = diaEl.querySelector('p:last-child').textContent.toLowerCase();
+        const nomeDiaAbrev = diaEl.querySelector('p:last-child')?.textContent.toLowerCase().trim();
         const mapaDias = { seg: 'Segunda', ter: 'Terça', qua: 'Quarta', qui: 'Quinta', sex: 'Sexta', sab: 'Sábado', dom: 'Domingo' };
         const chave = nomeDiaAbrev.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         const diaFormatado = mapaDias[chave] || 'Segunda';
 
-        // Atualiza input e horários
         inputData.value = diaEl.dataset.iso;
-        horariosDiaAtual = gerarHorarios(diaFormatado);
-        paginaHorarioAtual = 0;
-        renderizarHorariosPagina();
+        renderizarHorarios(diaFormatado);
     });
 
-    // --- Eventos de horários ---
+    // Clique em horário atualiza input
     wrapperHorarios.addEventListener('click', e => {
         const horarioEl = e.target.closest('.wrapper__horario');
         if (!horarioEl) return;
@@ -211,37 +200,28 @@ document.addEventListener('DOMContentLoaded', () => {
         inputHorario.value = horarioEl.textContent.trim();
     });
 
-    leftHorarioArrow.addEventListener('click', () => {
-        if (paginaHorarioAtual > 0) { paginaHorarioAtual--; renderizarHorariosPagina(); }
-    });
-    rightHorarioArrow.addEventListener('click', () => {
-        const totalPaginasHorarios = Math.ceil(horariosDiaAtual.length / horariosPorPagina);
-        if (paginaHorarioAtual + 1 < totalPaginasHorarios) { paginaHorarioAtual++; renderizarHorariosPagina(); }
-    });
-
-    // --- Períodos ---
-    function ativarPeriodo(periodo) {
-        btnManha.classList.remove('manha--ativo');
-        btnTarde.classList.remove('tarde--ativo');
-        btnNoite.classList.remove('noite--ativo');
-        if (periodo === 'manha') btnManha.classList.add('manha--ativo');
-        if (periodo === 'tarde') btnTarde.classList.add('tarde--ativo');
-        if (periodo === 'noite') btnNoite.classList.add('noite--ativo');
-
-        // Rolar para o primeiro horário do período na página atual
-        const alvo = wrapperHorarios.querySelector(`.wrapper__horario[data-periodo="${periodo}"]`);
-        if (alvo) alvo.scrollIntoView({ behavior: 'smooth', inline: 'start' });
-    }
-
-    btnManha.addEventListener('click', () => ativarPeriodo('manha'));
-    btnTarde.addEventListener('click', () => ativarPeriodo('tarde'));
-    btnNoite.addEventListener('click', () => ativarPeriodo('noite'));
-
-    // --- Inicial ---
-    gerarDias(diasPorPagina * 2);
-    renderizarDias(paginaDiasAtual);
-
-    // Seleciona primeiro dia automaticamente
+    // Inicial: seleciona primeiro dia e horários
     const primeiro = diasContainer.querySelector('.dias-disponiveis__container-dia');
     if (primeiro) primeiro.click();
+
+    // Seleciona setas e wrapper de horários
+    const leftHorarioArrow = document.querySelector('.horarios__next-left');
+    const rightHorarioArrow = document.querySelector('.horarios__next-rigth');
+  
+
+    // Quantos pixels o container vai se mover a cada clique
+    const scrollStep = 200; // ajuste conforme o tamanho do horário
+
+    leftHorarioArrow.addEventListener('click', () => {
+        wrapperHorarios.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+    });
+
+    rightHorarioArrow.addEventListener('click', () => {
+        wrapperHorarios.scrollBy({ left: scrollStep, behavior: 'smooth' });
+    });
+
+
+
+
+
 });
