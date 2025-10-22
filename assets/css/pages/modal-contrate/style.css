@@ -30,7 +30,8 @@
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
-    overflow-x: hidden; /* impedir overflow horizontal */
+    overflow-x: hidden;
+    /* impedir overflow horizontal */
 }
 
 form {
@@ -54,9 +55,12 @@ form {
     max-width: 600px;
     gap: 20px;
     position: relative;
-    max-width: 100%;   /* não ultrapassa o modal */
-    overflow-x: auto;  /* permite scroll no mobile */
-    flex-wrap: nowrap; /* itens na horizontal, scroll automático */
+    max-width: 100%;
+    /* não ultrapassa o modal */
+    overflow-x: auto;
+    /* permite scroll no mobile */
+    flex-wrap: nowrap;
+    /* itens na horizontal, scroll automático */
 }
 
 hr {
@@ -163,11 +167,15 @@ hr {
     gap: 15px;
     width: 100%;
     padding: 10px;
-    max-width: 700px; /* ou qualquer valor suficiente */
+    max-width: 700px;
+    /* ou qualquer valor suficiente */
     position: relative;
-    max-width: 100%;   /* não ultrapassa o modal */
-    overflow-x: auto;  /* permite scroll no mobile */
-    flex-wrap: nowrap; /* itens na horizontal, scroll automático */
+    max-width: 100%;
+    /* não ultrapassa o modal */
+    overflow-x: auto;
+    /* permite scroll no mobile */
+    flex-wrap: nowrap;
+    /* itens na horizontal, scroll automático */
 }
 
 
@@ -242,7 +250,9 @@ hr {
 .info__container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+
 }
 
 .info__container__titulo-periodo {
@@ -253,7 +263,21 @@ hr {
 
 .info__funcionario {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+}
+
+.info__funcionario label {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.info__funcionario select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
 .info__funcionario button {
@@ -262,7 +286,13 @@ hr {
     color: var(--cor-branco);
     background-color: var(--cor-primaria);
     border-radius: 5px;
+    cursor: pointer;
 }
+
+.info__funcionario button:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
 
 /* section-tela-contrate__confirmar */
 
@@ -272,7 +302,7 @@ hr {
     width: 100%;
     gap: 10px;
     justify-content: space-between;
-    
+
 }
 
 .confirmar__title-periodo {

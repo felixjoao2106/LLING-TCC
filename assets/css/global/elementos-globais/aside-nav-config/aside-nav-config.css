@@ -11,19 +11,22 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border-bottom: 1px solid black;
-    width: 40%;
-    background-color: brown;
-    
+    flex-basis: 700px;
+    flex-shrink: 1;
+    padding: 10px 0px 0px 10px;
+    border-right: 1px solid black;
 }
 
-.container-flex__menu-config img{
-    width: 4em;
-    
+.menu-config__info-user {
+    display: flex;
+}
+
+.menu-config__info-user img {
+    width: 6em;
 }
 
 .menu-config__name-telefone {
-    
+    padding-top: 10px;
 }
 
 .menu-config__item {
@@ -31,23 +34,57 @@
     justify-content: space-between;
     height: 60px;
     padding: 10px;
-    background-color: rgb(52, 66, 66);
-    
+    border-bottom: 1px solid black;
+
 }
 
-.menu-config__item {
+.menu-config__item>img {
+    width: 1.8em;
+
+}
+
+.menu-config__item>div {
     display: flex;
-    justify-content: space-between;
-    height: 60px;
-    padding: 10px;
-    background-color: rgb(52, 66, 66);
-    
+    align-items: center;
+    gap: 10px;
 }
 
-/*container-flex__agendamento-section*/
+.menu-config__item>div>img {
+    width: 40px;
+}
 
-.container-flex__agendamento-section {
-    width: 60%;
-    background-color: aqua;
+/*container-flex__configuracao-de-conta-section*/
+
+.container-flex__configuracao-de-conta-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+
+}
+
+.configuracao-de-conta-section__title {}
+
+.configuracao-de-conta-section__input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+
+}
+
+.configuracao-de-conta-section__input input {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px black solid;
+
+}
+
+.configuracao-de-conta-section__input input[type="submit"] {
+    margin-top: 10px;
+    background-color: var(--cor-preto-80);
+    color: var(--cor-branco);
+    height: 40px;
+    border: none;
 
 }

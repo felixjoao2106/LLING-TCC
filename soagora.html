@@ -14,16 +14,12 @@
         <section class="modal-overlay__section-tela-contrate">
             <h2>Escolher data</h2>
             <form id="form-contrate" action="#">
-
                 <div class="section-tela-contrate__div-wrapper">
                     <div class="div-wrapper__next-left">
                         <div class="next-left__icon">❮</div>
                     </div>
-                    <section class="div-wrapper__dias-disponiveis">
-
-                    </section>
+                    <section class="div-wrapper__dias-disponiveis"></section>
                     <input id="input-data-selecionada" name="data" type="hidden">
-
                     <div class="div-wrapper__next-rigth">
                         <div class="next-rigth__icon">❯</div>
                     </div>
@@ -31,13 +27,13 @@
                 <p>Setembro 2025</p>
                 <hr>
                 <div class="section-tela-contrate__container-horario">
-                    <div class="container-horario__manha ">
+                    <div class="container-horario__manha">
                         <p>Manhã</p>
                     </div>
-                    <div class="container-horario__tarde ">
+                    <div class="container-horario__tarde">
                         <p>Tarde</p>
                     </div>
-                    <div class="container-horario__noite ">
+                    <div class="container-horario__noite">
                         <p>Noite</p>
                     </div>
                 </div>
@@ -47,7 +43,6 @@
                     </div>
                     <div class="horarios__wrapper">
                         <div class="wrapper__horario">
-                            <p>09:00</p>
                         </div>
                     </div>
                     <div class="horarios__next-rigth">
@@ -68,8 +63,13 @@
                     </div>
                     <hr>
                     <div class="info__funcionario">
-                        <p>Funcionarios: Andre</p>
-                        <button type="button">Alterar</button>
+                        <label for="funcionario">Funcionário a atender:</label>
+                        <select id="funcionario" name="funcionario">
+                            <option value="andre">Andre</option>
+                            <option value="carla">Carla</option>
+                            <option value="joao">João</option>
+                            <option value="mariana">Mariana</option>
+                        </select>
                     </div>
                 </div>
                 <hr>
@@ -77,16 +77,16 @@
                     <div class="confirmar__title-periodo">
                         <h2>Baby born</h2>
                         <p>Periodo: 40min</p>
+                        <p>Total: R$200</p>
                     </div>
                     <div class="confirmar__preco-btnconfirmar">
-                        <input type="submit" value="Confirmar"></input>
-                        <p>Tota: R$200</p>
+                        <input type="submit" value="Confirmar">
                     </div>
-                    
                 </div>
             </form>
         </section>
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Seleção de dias ---
@@ -240,12 +240,23 @@
             btnNoite.addEventListener('click', () => { ativarPeriodo('noite'); scrollParaPeriodo('noite'); });
 
             function scrollParaPeriodo(periodo) {
-                const primeiroHorario = wrapperHorarios.querySelector(`.wrapper__horario[data-periodo="${periodo}"]`);
-                if (primeiroHorario) {
-                    const offset = primeiroHorario.offsetLeft - wrapperHorarios.offsetLeft;
+                const alvo = wrapperHorarios.querySelector(`.wrapper__horario[data-periodo="${periodo}"]`);
+
+                if (alvo) {
+                    // Se existe horário do período (ex: tarde), rola até ele
+                    const offset = alvo.offsetLeft - wrapperHorarios.offsetLeft;
                     wrapperHorarios.scrollTo({ left: offset, behavior: 'smooth' });
+                } else {
+                    // Se não existe (ex: noite com poucos horários),
+                    // apenas rola até o fim, sem mudar seleção
+                    wrapperHorarios.scrollTo({
+                        left: wrapperHorarios.scrollWidth,
+                        behavior: 'smooth'
+                    });
                 }
             }
+
+
 
             // Clique em dia atualiza data e horários
             diasContainer.addEventListener('click', e => {
@@ -280,6 +291,90 @@
             const primeiro = diasContainer.querySelector('.dias-disponiveis__container-dia');
             if (primeiro) primeiro.click();
         });
+
+        // --- Navegação de Horários com scroll suave ---
+        const leftHorarioArrow = document.querySelector('.horarios__next-left');
+        const rightHorarioArrow = document.querySelector('.horarios__next-rigth');
+        const wrapperHorarios = document.querySelector('.horarios__wrapper');
+
+        // Define a distância de rolagem por clique (ajuste conforme quiser)
+        const scrollStep = 200; // px
+
+        leftHorarioArrow.addEventListener('click', () => {
+            wrapperHorarios.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+        });
+
+        rightHorarioArrow.addEventListener('click', () => {
+            wrapperHorarios.scrollBy({ left: scrollStep, behavior: 'smooth' });
+        });
+
+
+        let horarioPaginaAtual = 0; // Página inicial de horários
+        const horariosPorPagina = 6; // Quantos horários por vez são exibidos
+
+        // Função para renderizar os horários
+        function renderizarHorariosPagina(pagina, dia) {
+            const horarios = gerarHorarios(dia, duracao);
+            const inicio = pagina * horariosPorPagina;
+            const fim = inicio + horariosPorPagina;
+            const subset = horarios.slice(inicio, fim);
+
+            wrapperHorarios.innerHTML = '';
+            subset.forEach(h => {
+                const div = document.createElement('div');
+                div.classList.add('wrapper__horario');
+                div.dataset.periodo = h.periodo;
+                div.innerHTML = `<p>${h.hora}</p>`;
+                wrapperHorarios.appendChild(div);
+            });
+
+            // Atualiza o horário selecionado automaticamente
+            const primeiroHorario = wrapperHorarios.querySelector('.wrapper__horario');
+            if (primeiroHorario) {
+                primeiroHorario.classList.add('wrapper__horario--select');
+                inputHorario.value = primeiroHorario.textContent.trim();
+            }
+        }
+
+        // Navegação para a esquerda (horários)
+        leftHorarioArrow.addEventListener('click', () => {
+            if (horarioPaginaAtual > 0) {
+                horarioPaginaAtual--;
+                const diaSelecionado = diasContainer.querySelector('.dias-disponiveis__container-dia--select');
+                if (diaSelecionado) {
+                    const diaIso = diaSelecionado.dataset.iso;
+                    const nomeDiaAbrev = new Date(diaIso).toLocaleString('pt-BR', { weekday: 'short' }).toLowerCase();
+                    const mapaDias = { seg: 'Segunda', ter: 'Terça', qua: 'Quarta', qui: 'Quinta', sex: 'Sexta', sab: 'Sábado', dom: 'Domingo' };
+                    const diaFormatado = mapaDias[nomeDiaAbrev] || 'Segunda';
+                    renderizarHorariosPagina(horarioPaginaAtual, diaFormatado);
+                }
+            }
+        });
+
+        // Navegação para a direita (horários)
+        rightHorarioArrow.addEventListener('click', () => {
+            const diaSelecionado = diasContainer.querySelector('.dias-disponiveis__container-dia--select');
+            if (diaSelecionado) {
+                const diaIso = diaSelecionado.dataset.iso;
+                const nomeDiaAbrev = new Date(diaIso).toLocaleString('pt-BR', { weekday: 'short' }).toLowerCase();
+                const mapaDias = { seg: 'Segunda', ter: 'Terça', qua: 'Quarta', qui: 'Quinta', sex: 'Sexta', sab: 'Sábado', dom: 'Domingo' };
+                const diaFormatado = mapaDias[nomeDiaAbrev] || 'Segunda';
+
+                const horarios = gerarHorarios(diaFormatado, duracao);
+                const totalHorarios = horarios.length;
+                const totalPaginasHorarios = Math.ceil(totalHorarios / horariosPorPagina);
+
+                // Verifica se podemos avançar para a próxima página
+                if (horarioPaginaAtual + 1 < totalPaginasHorarios) {
+                    horarioPaginaAtual++; // Avança para a próxima página
+                    renderizarHorariosPagina(horarioPaginaAtual, diaFormatado); // Atualiza os horários na tela
+                }
+            }
+        });
+
+
+
+
     </script>
 
 </body>
