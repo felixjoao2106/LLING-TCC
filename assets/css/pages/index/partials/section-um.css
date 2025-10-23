@@ -48,7 +48,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 /* 3. Itens dentro da .section__div--topo */
@@ -64,12 +64,17 @@
 }
 
 .section__div-topo_input {
-    font-size: 7px;
+    font-size: 0.6em;
     padding: 10px;
     margin-right: 20px;
     border-radius: 10px;
     border: none;
 }
+
+.section__div_user {
+    width: 6em;
+}
+
 
 .section__div-topo_input:hover {
     cursor: pointer;
@@ -101,8 +106,7 @@
 }
 
 .section__div-meio__p {
-    white-space: nowrap;
-
+text-align: center;
     color: var(--cor-branco);
     /*font-size: var( --font-size-padrao-p);*/
     font-size: 1em;

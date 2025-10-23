@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/global/elementos-globais/index.css">
+    <link rel="stylesheet" href="assets/css/global/elementos-globais/aside-nav-config/index.css">
+    <link rel="stylesheet" href="assets/css/pages/tela-user-config-index/index.css">
+</head>
+
+<body>
+    <header class="header-fixo">
+        <div class="header-fixo__logo">
+            <img src="assets/img/page/index/logo-section-1.png" alt="">
+        </div>
+
+        <!-- botão/ícone de pesquisa -->
+        <button class="header-fixo__search-btn">
+            <img src="assets/img/page/index/search_wght400.svg" alt="">
+        </button>
+
+        <!-- botão fechar -->
+        <button class="header-fixo__close-btn">✖</button>
+
+        <div class="header-fixo__input">
+            <input type="text" placeholder="Categoria">
+            <input type="text" placeholder="Onde">
+            <input type="datetime-local" placeholder="Quando">
+        </div>
+
+        <div class="header-fixo__login-fot-user">
+            <input class="header-fixo__login-fot-user__input openModal__cadastro-fotografo" type="button"
+                value="Adicione o seu portifolho">
+            <img class="section__div_user" src="./assets/img/page/index/person-wght400.svg" alt="">
+            <a class="section__div-topo_a" href="">Entrar/Cadastrar</a>
+        </div>
+    </header>
+    <div class="container-flex">
+        <aside class="container-flex__menu-config">
+            <div class="menu-config__info-user">
+                <img src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="">
+                <div class="menu-config__name-telefone">
+                    <h2>Usuario</h2>
+                    <p>(11) 78493-0166</p>
+                </div>
+            </div>
+            <div class="menu-config__item">
+                <div>
+                    <img class="item__icon-action"
+                        src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg"
+                        alt="" srcset="">
+                    <p>Agendamentos</p>
+                </div><img
+                    src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="" class="item__icon-next">
+            </div>
+            <div class="menu-config__item">
+                <div>
+                    <img class="item__icon-action"
+                        src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt="" srcset="">
+                    <p>Configurações de conta</p>
+                </div><img
+                    src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="" class="item__icon-next">
+            </div>
+            <div class="menu-config__item">
+                <div>
+                    <img class="item__icon-action"
+                        src="assets/img/page/aside-nav-config/favorite_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt="" srcset="">
+                    <p>Favoritos</p>
+                </div><img
+                    src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="" class="item__icon-next">
+            </div>
+            <div class="menu-config__item">
+                <div>
+                    <img class="item__icon-action"
+                        src="assets/img/page/aside-nav-config/star_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""
+                        srcset="">
+                    <p>Avaliações</p>
+                </div><img
+                    src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="" class="item__icon-next">
+            </div>
+            <div class="menu-config__item">
+                <div>
+                    <img class="item__icon-action"
+                        src="assets/img/page/aside-nav-config/exit_to_app_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt="" srcset="">
+                    <p>Sair</p>
+                </div><img
+                    src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="" class="item__icon-next">
+            </div>
+        </aside>
+        <section class="container-flex__configuracao-de-conta-section">
+            <div class="configuracao-de-conta-section__title">
+                <img src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                <h2>Configurações de conta</h2>
+            </div>
+            <div class="configuracao-de-conta-section__input">
+                <label for="input-nome-completo">Nome completo</label>
+                <input type="text" autocomplete="name" id="input-nome-completo">
+
+                <label for="input-email">Email</label>
+                <input type="email" autocomplete="email" id="input-email">
+
+                <label for="input-telefone">Telefone</label>
+                <input type="tel" autocomplete="tel" id="input-telefone">
+
+                <label for="input-senha">Senha</label>
+                <input type="password" autocomplete="new-password" id="input-senha">
+
+                <input type="submit" value="Alterar">
+            </div>
+
+        </section>
+    </div>
+</body>
+
+</html>

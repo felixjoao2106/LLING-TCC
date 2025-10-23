@@ -21,7 +21,29 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         display: flex;
         flex-direction: column;
         margin-top: 100px;
+        max-width: 100%;
         gap: 30px;
+        
+    }
+
+    .configuracao-de-conta-section__input, .agendamento-section__agendamento-cards {
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+        gap: 10px;
+    }
+
+    .container-flex__configuracao-de-conta-section, .container-flex__agendamento-section {
+        padding: 0px 20px 70px 20px;
+    }
+
+    .configuracao-de-conta-section__title, .agendamento-section__title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+
     }
 
 }
