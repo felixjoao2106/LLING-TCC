@@ -1,23 +1,31 @@
-/*.container-flex*/
 .container-flex {
-    display: flex;
-    height: 100%;
-    min-height: 89vh;
-    margin-top: 100px;
-    gap: 30px;
+  display: flex;
+  height: calc(100vh - 100px); /* ocupa o espaço visível menos o header fixo */
+  margin-top: 100px;
+  overflow: hidden; /* impede a rolagem geral do container */
 }
 
-/*.container-flex__menu-config*/
-
+/* Deixa o menu lateral fixo */
 .container-flex__menu-config {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-basis: 40%;
-    flex-shrink: 1;
-    padding: 10px 0px 0px 10px;
-    border-right: 1px solid black;
+  width: 300px; /* largura fixa para o menu */
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px; /* igual à altura do header fixo */
+  align-self: flex-start;
+  height: calc(100vh - 100px);
+  overflow-y: auto; /* permite rolar dentro do menu se for necessário */
+  border-right: 1px solid black;
+  background-color: white; /* garante que o fundo fique sólido */
 }
+
+/* Faz apenas a seção principal rolar */
+.container-flex__configuracao-de-conta-section, .container-flex__agendamento-section {
+  flex-grow: 1;
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+  padding: 20px;
+}
+
 
 .menu-config__info-user {
     display: flex;
