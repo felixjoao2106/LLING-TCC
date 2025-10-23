@@ -7,7 +7,8 @@
 
 /* Deixa o menu lateral fixo */
 .container-flex__menu-config {
-  width: 300px; /* largura fixa para o menu */
+
+  width: 600px; /* largura fixa para o menu */
   flex-shrink: 0;
   position: sticky;
   top: 100px; /* igual à altura do header fixo */
