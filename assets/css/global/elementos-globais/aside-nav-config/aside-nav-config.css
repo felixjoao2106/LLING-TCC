@@ -7,10 +7,10 @@
 
 /* Deixa o menu lateral fixo */
 .container-flex__menu-config {
-
-  width: 600px; /* largura fixa para o menu */
+  min-width: 500px; /* largura fixa para o menu */
   flex-shrink: 0;
   position: sticky;
+  padding: 20px 0px 0px 10px;
   top: 100px; /* igual à altura do header fixo */
   align-self: flex-start;
   height: calc(100vh - 100px);
@@ -51,10 +51,12 @@
 
 .menu-config__item>img {
     width: 1.8em;
+    cursor: pointer;
 
 }
 
 .menu-config__item>div {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -77,7 +79,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 30px;
 
 }

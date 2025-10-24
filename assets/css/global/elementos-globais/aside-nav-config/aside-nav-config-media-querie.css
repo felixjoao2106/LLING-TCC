@@ -23,27 +23,47 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         margin-top: 100px;
         max-width: 100%;
         gap: 30px;
-        
+        padding: 10px;
+        overflow: visible;
     }
 
-    .configuracao-de-conta-section__input, .agendamento-section__agendamento-cards {
+    .container-flex__menu-config {
+        width: 100%;
+        min-width: auto;
+        flex-shrink: 0;
+        position: static;
+        padding: 0px;
+        /* correção */
+        align-self: flex-start;
+        height: auto;
+        overflow-y: visible;
+        border-right: none;
+        background-color: white;
+    }
+
+    .container-flex__configuracao-de-conta-section,
+    .container-flex__agendamento-section {
+        flex-grow: 1;
+        overflow-y: visible;
+        height: auto;
+        padding: 0 20px 70px 20px;
+        width: 100%;
+    }
+
+    .configuracao-de-conta-section__input,
+    .agendamento-section__agendamento-cards {
         display: flex;
         flex-direction: column;
-        min-width: 100%;
         gap: 10px;
+        width: 100%;
     }
 
-    .container-flex__configuracao-de-conta-section, .container-flex__agendamento-section {
-        padding: 0px 20px 70px 20px;
-    }
-
-    .configuracao-de-conta-section__title, .agendamento-section__title {
+    .configuracao-de-conta-section__title,
+    .agendamento-section__title {
         display: flex;
         align-items: center;
         gap: 10px;
-        padding-top: 0px;
+        padding-top: 0;
         padding-bottom: 20px;
-
     }
-
 }
