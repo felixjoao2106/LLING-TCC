@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .modal-overlay__section-tela-agendamento-more-info {
+            position: relative;
+            background: #fff;
+            width: 420px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            padding: 25px 30px;
+        }
+
+        .section-tela-agendamento-more-info__info0 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-tela-agendamento-more-info__info0 img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+        }
+
+        .section-tela-agendamento-more-info__info0 h2 {
+        }
+
+        .section-tela-agendamento-more-info__info0 p {
+        }
+
+        .section-tela-agendamento-more-info__info1 h2 {
+            
+        }
+
+        .section-tela-agendamento-more-info__info1 p {
+        }
+
+        .section-tela-agendamento-more-info__info1 hr {
+            border: none;
+            border-bottom: 1px solid #acacac;
+        }
+
+        .section-tela-agendamento-more-info__buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .section-tela-agendamento-more-info__buttons button {
+            flex: 1;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .btn-cancelar {
+            background: #ff2c2c;
+            margin-right: 10px;
+        }
+
+        .btn-cancelar:hover {
+            background: #d91f1f;
+        }
+
+        .btn-checkout {
+            background: #4d8cff;
+        }
+
+        .btn-checkout:hover {
+            background: #3b73d1;
+        }
+
+        .section-tela-contrate__modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: #000;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal-overlay none">
+        <section class="modal-overlay__section-tela-agendamento-more-info">
+            <div class="section-tela-agendamento-more-info__info0">
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="perfil">
+                <div>
+                    <h2>Carlos Cardoso</h2>
+                    <p>(11) 95337-0166</p>
+                </div>
+                <form id="form-contrate" action="#">
+            </div>
+
+            <div class="section-tela-agendamento-more-info__info1">
+                <h2>Horário</h2>
+                <p>10:00 - 11:30</p>
+                <hr>
+                <h2>Serviço</h2>
+                <p>Ensaio baby born</p>
+                <hr>
+                <h2>Preço</h2>
+                <p>R$ 0,10</p>
+                <hr>
+                <h2>Quem fará?</h2>
+                <p>Carlos Cardoso</p>
+                <hr>
+            </div>
+
+            <div class="section-tela-agendamento-more-info__buttons">
+                <button class="btn-cancelar">Desistir</button>
+                <button class="btn-checkout">Checkout</button>
+            </div>
+
+            <button class="section-tela-contrate__modal-close" id="closeModal__contrate">&times;</button>
+            </form>
+        </section>
+
+    </div>
+</body>
+
+</html>
