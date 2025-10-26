@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
         .modal-overlay {
             display: flex;
             align-items: center;
@@ -13,9 +17,12 @@
             height: 100vh;
         }
         .modal-overlay__section-tela-agendamento-more-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             position: relative;
             background: #fff;
-            width: 420px;
+            width: 600px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             padding: 25px 30px;
@@ -38,6 +45,12 @@
         }
 
         .section-tela-agendamento-more-info__info0 p {
+        }
+
+        .section-tela-agendamento-more-info__info1 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .section-tela-agendamento-more-info__info1 h2 {
