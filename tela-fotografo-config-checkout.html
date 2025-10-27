@@ -7,48 +7,56 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/global/elementos-globais/index.css">
     <link rel="stylesheet" href="assets/css/global/elementos-globais/aside-nav-config/index.css">
-    <link rel="stylesheet" href="assets/css/pages/tela-fotografo-config-agendamento/index.css">
-    <link rel="stylesheet" href="assets/css/pages/modal-agendamento-fotografo/index.css">
+    <link rel="stylesheet" href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa/index.css">
+    <link rel="stylesheet" href="assets/css/pages/tela-fotografo-config-checkout/index.css">
+    <link rel="stylesheet" href="assets/css/pages/modal-checkout-fotografo/index.css">
 </head>
 
 <body>
     <div class="modal-overlay none">
-        <section class="modal-overlay__section-tela-agendamento-more-info">
-            <div class="section-tela-agendamento-more-info__info0">
-                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="perfil">
-                <div>
-                    <h2>Carlos Cardoso</h2>
-                    <p>(11) 95337-0166</p>
+        <section class="modal-overlay__section-tela-checkout-more-info">
+            <div class="section-tela-checkout-more-info__info">
+                <h2>Informações Checkout</h2>
+
+                <div class="info__line">
+                    <h3>Cliente:</h3>
+                    <p>Carlos Eduardo</p>
                 </div>
-                <form id="form-contrate" action="#">
+                <hr>
+
+                <div class="info__line">
+                    <h3>Feito por:</h3>
+                    <p>Augusto Eduardo</p>
+                </div>
+                <hr>
+
+                <div class="info__line">
+                    <h3>Serviço:</h3>
+                    <p>Ensaio baby born</p>
+                </div>
+                <hr>
+
+                <div class="info__line">
+                    <h3>Preço-pago:</h3>
+                    <p>R$1000</p>
+                </div>
+                <hr>
+
+                <div class="info__line">
+                    <h3>Período de serviço:</h3>
+                    <p>10:00 - 12:00</p>
+                </div>
+                <hr>
+
+                <div class="info__line">
+                    <h3>Data:</h3>
+                    <p>10/09/2025</p>
+                </div>
             </div>
 
-            <div class="section-tela-agendamento-more-info__info1">
-                <h2>Horário</h2>
-                <p>10:00 - 11:30</p>
-                <hr>
-                <h2>Serviço</h2>
-                <p>Ensaio baby born</p>
-                <hr>
-                <h2>Preço</h2>
-                <p>R$ 0,10</p>
-                <hr>
-                <h2>Quem fará?</h2>
-                <p>Carlos Cardoso</p>
-                <hr>
-            </div>
-
-            <div class="section-tela-agendamento-more-info__buttons">
-                <button class="btn-cancelar">Desistir</button>
-                <button class="btn-checkout">Checkout</button>
-            </div>
-
-            <button class="section-tela-contrate__modal-close" id="closeModal__contrate">&times;</button>
-            </form>
+            <button class="section-tela-checkout-more-info__modal-close" id="closeModal__contrate">&times;</button>
         </section>
-
     </div>
-
 
     <header class="header-fixo">
         <div class="header-fixo__logo">
@@ -153,85 +161,71 @@
 
 
 
-        <section class="container-flex__agendamento-section">
-            <div class="agendamento-section__title">
-                <img src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg"
-                    alt="">
-                <h2>Agendamentos</h2>
+        <section class="container-flex__checkout-section" aria-labelledby="titulo-checkout">
+            <div class="checkout-section__title">
+                <img src="assets/img/page/tela-fotografo-config-agendamento/check_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="Ícone de confirmação de checkout">
+                <h2 id="titulo-checkout">Checkout</h2>
             </div>
-            <div class="agendamento-section__agendamentos-data">
-                <div class="agendamentos-data__date-container">
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date">
-                    <span class="date-container__hint">MM/DD/YYYY</span>
+
+            <div class="checkout-section__container">
+                <div class="container__filtro">
+                    <label for="filtroCheckout" class="sr-only">Filtrar resultados</label>
+                    <select name="filtro" id="filtroCheckout" aria-label="Filtrar agendamentos">
+                        <option value="">Selecione um filtro</option>
+                        <option value="data">Por data</option>
+                        <option value="fotografo">Por fotógrafo</option>
+                    </select>
                 </div>
 
-                <div class="agendamentos-data__agendamento-em-andamento">
-                    <h3>Agendamentos em andamento</h3>
-
-                    <div class="ordenar-container">
-                        <label for="ordenar">Ordenar por:</label>
-                        <select id="ordenar" name="ordenar">
-                            <option value="todos">Todos</option>
-                            <option value="hoje">Hoje</option>
-                            <option value="semana">Esta semana</option>
-                            <option value="mes">Este mês</option>
-                            <option value="passados">Dias passados</option>
-                        </select>
-                    </div>
-
-
-                    <div class="agendamento-em-andamento__card">
-                        <div>
-                            <p class="horario">10:00 - 11:30</p>
-                            <p class="cliente">Carlos Cardoso</p>
+                <div class="container__container-cards" role="list">
+                    <article class="container-cards__card" role="listitem" tabindex="0"
+                        aria-label="Ensaio Baby Born, 7 de setembro de 2025, feito por Carlos">
+                        <div class="card__info0">
+                            <h4>Ensaio Baby Born</h4>
+                            <p><time datetime="2025-09-07">7 de setembro de 2025</time></p>
+                            <p>Feito por: Carlos</p>
                         </div>
-                        <p class="servico">Ensaio baby born</p>
                         <img src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                            alt="Abrir">
-                    </div>
+                            alt="Ver detalhes do ensaio">
+                    </article>
+
+                    <article class="container-cards__card" role="listitem" tabindex="0"
+                        aria-label="Ensaio Infantil, 12 de outubro de 2025, feito por Maria">
+                        <div class="card__info0">
+                            <h4>Ensaio Infantil</h4>
+                            <p><time datetime="2025-10-12">12 de outubro de 2025</time></p>
+                            <p>Feito por: Maria</p>
+                        </div>
+                        <img src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="Ver detalhes do ensaio">
+                    </article>
                 </div>
             </div>
-
-
         </section>
+
+
     </div>
 
     <script>
-        // Seleciona o card de configurações
-        const configCard = document.querySelector('.menu-config__item:nth-of-type(3)');
-
-        // Seleciona os itens que inicialmente têm a classe 'none'
-        const hiddenItems = document.querySelectorAll('.menu-config__item.none');
-
-        // Seleciona o ícone de seta dentro do card de configurações
-        const arrowIcon = configCard.querySelector('.item__icon-next');
-
-        // Adiciona o evento de clique
-        configCard.addEventListener('click', () => {
-            hiddenItems.forEach(item => item.classList.toggle('none')); // alterna a classe 'none'
-            arrowIcon.classList.toggle('rotated'); // alterna a rotação do ícone
-        });
-    </script>
-
-    <script>
-        // Seleciona o card de agendamento
-        const agendamentoCard = document.querySelector('.agendamento-em-andamento__card');
+        // Seleciona todos os cards de checkout
+        const checkoutCards = document.querySelectorAll('.container-cards__card');
         // Seleciona o modal
         const modalOverlay = document.querySelector('.modal-overlay');
         // Seleciona o botão de fechar
         const closeModalBtn = document.getElementById('closeModal__contrate');
 
-        // Quando clicar no card, mostra o modal
-        agendamentoCard.addEventListener('click', () => {
-            modalOverlay.classList.remove('none');
+        // Abre o modal ao clicar em qualquer card
+        checkoutCards.forEach(card => {
+            card.addEventListener('click', () => {
+                modalOverlay.classList.remove('none');
+            });
         });
 
-        // Quando clicar no botão de fechar, esconde o modal
+        // Fecha o modal ao clicar no botão "×"
         closeModalBtn.addEventListener('click', () => {
             modalOverlay.classList.add('none');
         });
-
     </script>
 
 

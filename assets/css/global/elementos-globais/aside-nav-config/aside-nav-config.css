@@ -20,7 +20,7 @@
 }
 
 /* Faz apenas a seção principal rolar */
-.container-flex__configuracao-de-conta-section, .container-flex__agendamento-section, .container-flex__favorito, .container-flex__avaliacao, .container-flex__detalhes-da-empresa-section {
+.container-flex__configuracao-de-conta-section, .container-flex__agendamento-section, .container-flex__favorito, .container-flex__avaliacao, .container-flex__detalhes-da-empresa-section, .container-flex__checkout-section {
   flex-grow: 1;
   overflow-y: auto;
   height: calc(100vh - 100px);
@@ -68,14 +68,14 @@
 
 /*container-flex__configuracao-de-conta-section*/
 
-.container-flex__configuracao-de-conta-section, .container-flex__agendamento-section, .container-flex__favorito, .container-flex__avaliacao, .container-flex__detalhes-da-empresa-section {
+.container-flex__configuracao-de-conta-section, .container-flex__agendamento-section, .container-flex__favorito, .container-flex__avaliacao, .container-flex__detalhes-da-empresa-section, .container-flex__checkout-section {
     display: flex;
     flex-direction: column;
     width: 100%;
 
 }
 
-.configuracao-de-conta-section__title, .agendamento-section__title, .favorito__title, .avaliacao__title, .detalhes-da-empresa-section__title{
+.configuracao-de-conta-section__title, .agendamento-section__title, .favorito__title, .avaliacao__title, .detalhes-da-empresa-section__title, .checkout-section__title{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -84,7 +84,7 @@
 
 }
 
-.configuracao-de-conta-section__title img, .agendamento-section__title img, .favorito__title img, .avaliacao__title img, .detalhes-da-empresa-section__title img{
+.configuracao-de-conta-section__title img, .agendamento-section__title img, .favorito__title img, .avaliacao__title img, .detalhes-da-empresa-section__title img, .checkout-section__title img{
     width: 3em;
 }
 

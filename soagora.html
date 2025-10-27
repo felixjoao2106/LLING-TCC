@@ -1,154 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-        .modal-overlay {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .modal-overlay__section-tela-agendamento-more-info {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            position: relative;
-            background: #fff;
-            width: 600px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            padding: 25px 30px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Info</title>
+  <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .modal-overlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.2);
+    }
 
-        .section-tela-agendamento-more-info__info0 {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+    .modal-overlay__section-tela-checkout-more-info {
+      background: #fff;
+      width: 480px;
+      border-radius: 2px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      padding: 25px 30px;
+      position: relative;
+      font-family: Arial, sans-serif;
+    }
 
-        .section-tela-agendamento-more-info__info0 img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 2px solid #ccc;
-        }
+    .section-tela-checkout-more-info__info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .section-tela-checkout-more-info__info h2 {
+        
+    }
 
-        .section-tela-agendamento-more-info__info0 h2 {
-        }
+    .info__line {
+      display: flex;
+      gap: 6px;
+      align-items: baseline;
+    }
 
-        .section-tela-agendamento-more-info__info0 p {
-        }
+    .info__line h2 {
+      font-weight: bold;
+      color: #000;
+    }
 
-        .section-tela-agendamento-more-info__info1 {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+    .info__line p {
+      color: #333;
+    }
 
-        .section-tela-agendamento-more-info__info1 h2 {
-            
-        }
+    hr {
+      border: none;
+      border-bottom: 1px solid #acacac;
+    }
 
-        .section-tela-agendamento-more-info__info1 p {
-        }
-
-        .section-tela-agendamento-more-info__info1 hr {
-            border: none;
-            border-bottom: 1px solid #acacac;
-        }
-
-        .section-tela-agendamento-more-info__buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .section-tela-agendamento-more-info__buttons button {
-            flex: 1;
-            padding: 10px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 6px;
-            color: #fff;
-            cursor: pointer;
-            transition: 0.2s ease;
-        }
-
-        .btn-cancelar {
-            background: #ff2c2c;
-            margin-right: 10px;
-        }
-
-        .btn-cancelar:hover {
-            background: #d91f1f;
-        }
-
-        .btn-checkout {
-            background: #4d8cff;
-        }
-
-        .btn-checkout:hover {
-            background: #3b73d1;
-        }
-
-        .section-tela-contrate__modal-close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 1.5rem;
-            color: #000;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+    .section-tela-checkout-more-info__modal-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.5rem;
+      color: #000;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="modal-overlay none">
-        <section class="modal-overlay__section-tela-agendamento-more-info">
-            <div class="section-tela-agendamento-more-info__info0">
-                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="perfil">
-                <div>
-                    <h2>Carlos Cardoso</h2>
-                    <p>(11) 95337-0166</p>
-                </div>
-                <form id="form-contrate" action="#">
-            </div>
+  <div class="modal-overlay">
+    <section class="modal-overlay__section-tela-checkout-more-info">
 
-            <div class="section-tela-agendamento-more-info__info1">
-                <h2>Horário</h2>
-                <p>10:00 - 11:30</p>
-                <hr>
-                <h2>Serviço</h2>
-                <p>Ensaio baby born</p>
-                <hr>
-                <h2>Preço</h2>
-                <p>R$ 0,10</p>
-                <hr>
-                <h2>Quem fará?</h2>
-                <p>Carlos Cardoso</p>
-                <hr>
-            </div>
+      <div class="section-tela-checkout-more-info__info">
+        <h2>Informações Checkout</h2>
 
-            <div class="section-tela-agendamento-more-info__buttons">
-                <button class="btn-cancelar">Desistir</button>
-                <button class="btn-checkout">Checkout</button>
-            </div>
+        <div class="info__line">
+          <h3>Cliente:</h3>
+          <p>Carlos Eduardo</p>
+        </div>
+        <hr>
 
-            <button class="section-tela-contrate__modal-close" id="closeModal__contrate">&times;</button>
-            </form>
-        </section>
+        <div class="info__line">
+          <h3>Feito por:</h3>
+          <p>Augusto Eduardo</p>
+        </div>
+        <hr>
 
-    </div>
+        <div class="info__line">
+          <h3>Serviço:</h3>
+          <p>Ensaio baby born</p>
+        </div>
+        <hr>
+
+        <div class="info__line">
+          <h3>Preço-pago:</h3>
+          <p>R$1000</p>
+        </div>
+        <hr>
+
+        <div class="info__line">
+          <h3>Período de serviço:</h3>
+          <p>10:00 - 12:00</p>
+        </div>
+        <hr>
+
+        <div class="info__line">
+          <h3>Data:</h3>
+          <p>10/09/2025</p>
+        </div>
+      </div>
+
+      <button class="section-tela-checkout-more-info__modal-close" id="closeModal__contrate">&times;</button>
+    </section>
+  </div>
 </body>
 
 </html>

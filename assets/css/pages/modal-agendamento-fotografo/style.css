@@ -1,0 +1,132 @@
+.modal-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-overlay__section-tela-contrate {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 95%;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 700px;
+    max-height: 95vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* impedir overflow horizontal */
+}
+
+.modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.modal-overlay__section-tela-agendamento-more-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background: #fff;
+    width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 25px 30px;
+}
+
+.section-tela-agendamento-more-info__info0 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-tela-agendamento-more-info__info0 img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.section-tela-agendamento-more-info__info0 h2 {}
+
+.section-tela-agendamento-more-info__info0 p {}
+
+.section-tela-agendamento-more-info__info1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-tela-agendamento-more-info__info1 h2 {}
+
+.section-tela-agendamento-more-info__info1 p {}
+
+.section-tela-agendamento-more-info__info1 hr {
+    border: none;
+    border-bottom: 1px solid #acacac;
+}
+
+.section-tela-agendamento-more-info__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.section-tela-agendamento-more-info__buttons button {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-cancelar {
+    background: #ff2c2c;
+    margin-right: 10px;
+}
+
+.btn-cancelar:hover {
+    background: #d91f1f;
+}
+
+.btn-checkout {
+    background: #4d8cff;
+}
+
+.btn-checkout:hover {
+    background: #3b73d1;
+}
+
+.section-tela-contrate__modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
