@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Document</title>
+    <link href="assets/css/global/elementos-globais/index.css" rel="stylesheet" />
+    <link href="assets/css/global/elementos-globais/aside-nav-config/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa/index.css" rel="stylesheet" />
+</head>
+
+<body><a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;">Pular para o conteúdo
+        principal</a>
+    <header class="header-fixo">
+        <div class="header-fixo__logo">
+            <img alt="" src="assets/img/page/index/logo-section-1.png" />
+        </div>
+        <!-- botão/ícone de pesquisa -->
+        <button class="header-fixo__search-btn">
+            <img alt="" src="assets/img/page/index/search_wght400.svg" />
+        </button>
+        <!-- botão fechar -->
+        <button class="header-fixo__close-btn">✖</button>
+        <div class="header-fixo__input">
+            <label for="Categoria">Categoria</label>
+            <input id="Categoria" placeholder="Categoria" type="text" />
+            <label for="Onde">Onde</label>
+            <input id="Onde" placeholder="Onde" type="text" />
+            <label for="Quando">Quando</label>
+            <input id="Quando" placeholder="Quando" type="datetime-local" />
+        </div>
+        <div class="header-fixo__login-fot-user">
+            <input class="header-fixo__login-fot-user__input openModal__cadastro-fotografo" type="button"
+                value="Adicione o seu portifolho" />
+            <img alt="" class="section__div_user" src="./assets/img/page/index/person-wght400.svg" />
+            <a class="section__div-topo_a" href="">Entrar/Cadastrar</a>
+        </div>
+    </header>
+    <main id="main">
+
+        <div class="container-flex">
+            <aside class="container-flex__menu-config">
+                <div class="menu-config__info-user none">
+                    <img alt=""
+                        src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                    <div class="menu-config__name-telefone">
+                        <h2>Usuario</h2>
+                        <p>(11) 78493-0166</p>
+                    </div>
+                </div>
+
+                <div class="menu-config__item" id="item-agendamentos">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg" />
+                        <p>Agendamentos</p>
+                    </div>
+                </div>
+
+                <div class="menu-config__item" id="item-config-empresa">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Configurações da empresa</p>
+                    </div>
+                    <img alt="" class="item__icon-next"
+                        src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                </div>
+
+                <div class="menu-config__item none" id="item-adicionar-servico">
+                    <div>
+                        <p>Adicionar serviço</p>
+                    </div>
+                </div>
+
+                <div class="menu-config__item none" id="item-detalhes-empresa">
+                    <div>
+                        <p>Detalhes da empresa</p>
+                    </div>
+                </div>
+
+                <div class="menu-config__item" id="item-checkout">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/tela-fotografo-config-agendamento/check_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Checkouts</p>
+                    </div>
+                </div>
+
+                <div class="menu-config__item" id="item-sair">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/exit_to_app_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Sair</p>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="container-flex__detalhes-da-empresa-section">
+                <div class="detalhes-da-empresa-section__title">
+                    <img alt=""
+                        src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                    <h2>Configurações da emrpesa</h2>
+                </div>
+                <div class="detalhes-da-empresa-section__container">
+                    <h3>Detalhes da empresa</h3>
+                    <section class="container__container-items">
+                        <div class="container-items__item">
+                            <p>Informações gerais</p>
+                        </div>
+                        <div class="container-items__item">
+                            <p>Categoria</p>
+                        </div>
+                        <div class="container-items__item">
+                            <p>Imagens</p>
+                        </div>
+                        <div class="container-items__item">
+                            <p>Integrantes</p>
+                        </div>
+                        <div class="container-items__item">
+                            <p>Localização</p>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <script>
+            // Seleciona o card de configurações
+            const configCard = document.querySelector('.menu-config__item:nth-of-type(3)');
+
+            // Seleciona os itens que inicialmente têm a classe 'none'
+            const hiddenItems = document.querySelectorAll('.menu-config__item.none');
+
+            // Seleciona o ícone de seta dentro do card de configurações
+            const arrowIcon = configCard.querySelector('.item__icon-next');
+
+            // Adiciona o evento de clique
+            configCard.addEventListener('click', () => {
+                hiddenItems.forEach(item => item.classList.toggle('none')); // alterna a classe 'none'
+                arrowIcon.classList.toggle('rotated'); // alterna a rotação do ícone
+            });
+        </script>
+    </main>
+    <script>
+    // Mapear cada item com sua página correspondente
+    const rotasDetalhes = {
+        "Informações gerais": "tela-fotografo-config-detalhes-da-empresa-informacoes-gerais.html",
+        "Categoria": "tela-fotografo-config-detalhes-da-empresa-categoria.html",
+        "Imagens": "tela-fotografo-config-detalhes-da-empresa__imagens.html",
+        "Integrantes": "tela-fotografo-config-detalhes-da-empresa-integrantes.html",
+        "Localização": "tela-fotografo-config-detalhes-da-empresa-localizacao.html"
+    };
+
+    // Seleciona todos os cards
+    const cards = document.querySelectorAll('.container-items__item');
+
+    // Adiciona o clique em cada card
+    cards.forEach(card => {
+        card.style.cursor = 'pointer'; // muda o cursor para indicar clicável
+        card.addEventListener('click', () => {
+            const nomeItem = card.textContent.trim();
+            if (rotasDetalhes[nomeItem]) {
+                window.location.href = rotasDetalhes[nomeItem];
+            }
+        });
+
+        // Efeito visual de hover
+        card.addEventListener('mouseenter', () => {
+            card.style.backgroundColor = '#EBF4FF';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.backgroundColor = 'transparent';
+        });
+    });
+</script>
+
+    <script src="assets/js/global/aside-nav-fotografo/rotas.js"></script>
+</body>
+
+</html>

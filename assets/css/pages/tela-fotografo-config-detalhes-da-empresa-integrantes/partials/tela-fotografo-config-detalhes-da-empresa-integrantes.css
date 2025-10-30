@@ -1,0 +1,114 @@
+.detalhes-da-empresa-section__container--integrantes__form-info-integrantes {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-info-integrantes__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 1220px;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Lista de integrantes */
+.form-info-integrantes__lista {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
+    gap: 10px;
+    flex-basis: 290px;
+    flex-grow: 1;
+}
+
+.integrante-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.integrante-card__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.integrante-card__avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.integrante-card__texto strong {
+    display: block;
+    font-size: 14px;
+}
+
+.integrante-card__texto p {
+    font-size: 12px;
+    color: #555;
+    margin: 0;
+}
+
+.integrante-card__excluir {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Formulário lateral */
+.form-info-integrantes__add {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+
+.form-info-integrantes__add input,
+.form-info-integrantes__add select {
+    height: 40px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.avatar-upload label {
+    font-size: 14px;
+    color: #555;
+}
+
+.avatar-preview {
+    width: 100%;
+    height: 200px;
+    border: black solid 1px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-preview img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.btn-salvar {
+    height: 40px;
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-salvar:hover {
+    background: #333;
+}

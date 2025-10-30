@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*Todas demais mididas*/
+
+/*Typical Device Breakpoints Celular:
+W3C
+Pquenas Telas: ate 600px
+Celuolar: de 600px até 768px
+Tablet: 768px ate 992px
+Desktop: 992px ate 1200px
+Grandes Telas: acima de 1200px
+
+moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
+
+*/
+
+@media screen and (max-width: 600px) {
+    .agendamentos-data__date-container {
+        max-width: 100%;
+    }
+
+    .agendamento-section__agendamentos-data {
+        max-width: 100%;
+    }
+
+}

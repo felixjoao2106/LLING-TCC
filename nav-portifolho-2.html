@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Document</title>
+    <link href="assets/css/global/elementos-globais/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/nav-portifolho-2/index.css" rel="stylesheet" />
+    <link href="assets/css/global/elementos-globais/banner/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/modal-contrate/index.css" rel="stylesheet" />
+</head>
+
+<body><a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;">Pular para o conteúdo
+        principal</a>
+    <div class="modal-overlay none">
+        <section class="modal-overlay__section-tela-contrate">
+            <h2>Escolher data</h2>
+            <button class="section-tela-contrate__modal-close" id="closeModal__contrate">×</button>
+            <form action="#" id="form-contrate">
+                <div class="section-tela-contrate__div-wrapper">
+                    <div class="div-wrapper__next-left">
+                        <div class="next-left__icon">❮</div>
+                    </div>
+                    <section class="div-wrapper__dias-disponiveis"></section>
+                    <input id="input-data-selecionada" name="data" type="hidden" />
+                    <div class="div-wrapper__next-rigth">
+                        <div class="next-rigth__icon">❯</div>
+                    </div>
+                </div>
+                <p id="mesAno">Setembro 2025</p>
+                <hr />
+                <div class="section-tela-contrate__container-horario">
+                    <div class="container-horario__manha manha--ativo">
+                        <p>Manhã</p>
+                    </div>
+                    <div class="container-horario__tarde">
+                        <p>Tarde</p>
+                    </div>
+                    <div class="container-horario__noite">
+                        <p>Noite</p>
+                    </div>
+                </div>
+                <div class="section-tela-contrate__horarios">
+                    <div class="horarios__next-left">
+                        <div class="next-left__icon">❮</div>
+                    </div>
+                    <div class="horarios__wrapper">
+                        <div class="wrapper__horario">
+                        </div>
+                    </div>
+                    <div class="horarios__next-rigth">
+                        <div class="next-rigth__icon">❯</div>
+                    </div>
+                    <input id="input-horario-selecionado" name="horario" type="hidden" />
+                </div>
+                <hr />
+                <div class="section-tela-contrate__info">
+                    <div class="info__container">
+                        <div class="info__container__titulo-periodo">
+                            <h3>Baby born</h3>
+                            <p>Periodo: 40min</p>
+                        </div>
+                        <div class="info__container__preco">
+                            <h2>R$200</h2>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="info__funcionario">
+                        <label for="funcionario">Funcionário a atender:</label>
+                        <select id="funcionario" name="funcionario">
+                            <option value="andre">Andre</option>
+                            <option value="carla">Carla</option>
+                            <option value="joao">João</option>
+                            <option value="mariana">Mariana</option>
+                        </select>
+                    </div>
+                </div>
+                <hr />
+                <div class="section-tela-contrate__confirmar">
+                    <div class="confirmar__title-periodo">
+                        <h2>Baby born</h2>
+                        <p>Periodo: 40min</p>
+                        <p>Total: R$200</p>
+                    </div>
+                    <div class="confirmar__preco-btnconfirmar">
+                        <input type="submit" value="Confirmar" />
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <header class="header-fixo">
+        <div class="header-fixo__logo">
+            <img alt="" src="assets/img/page/index/logo-section-1.png" />
+        </div>
+        <!-- botão/ícone de pesquisa -->
+        <button class="header-fixo__search-btn">
+            <img alt="" src="assets/img/page/index/search_wght400.svg" />
+        </button>
+        <!-- botão fechar -->
+        <button class="header-fixo__close-btn">✖</button>
+        <div class="header-fixo__input">
+            <label for="Categoria">Categoria</label>
+            <input id="Categoria" placeholder="Categoria" type="text" />
+            <label for="Onde">Onde</label>
+            <input id="Onde" placeholder="Onde" type="text" />
+            <label for="Quando">Quando</label>
+            <input id="Quando" placeholder="Quando" type="datetime-local" />
+        </div>
+        <div class="header-fixo__login-fot-user">
+            <input class="header-fixo__login-fot-user__input openModal__cadastro-fotografo" type="button"
+                value="Adicione o seu portifolho" />
+            <img alt="" class="section__div_user" src="./assets/img/page/index/person-wght400.svg" />
+            <a class="section__div-topo_a" href="">Entrar/Cadastrar</a>
+        </div>
+    </header>
+    <main class="main-conteiner" id="main">
+        <section class="main-conteiner__container-info-1">
+            <section class="container-info-1">
+                <section class="container-info-1__carrossel-banner">
+                    <img alt="" class="carrossel-banner__img" src="assets/img/page/index/banner-teste.jpeg" />
+                    <div class="carrossel-banner__rating">⭐ 4.9<br />15 avaliações</div>
+                    <div class="carrossel-banner__heart">❤</div>
+                    <div class="carrossel-banner__next-left"></div>
+                    <div class="carrossel-banner__next-rigth"></div>
+                    <div class="carrossel-banner__dots">
+                    </div>
+                </section>
+                <section class="container-info-1__title">
+                    <h1 style="font-size: 28px;">Cris Naquielle</h1>
+                    <span>Ensaio Infantil</span>
+                    <span>Baby born</span>
+                </section>
+                <section class="container-info-1__ensaios">
+                    <h2>Serviços</h2>
+                    <hr />
+                    <div class="ensaios__info-ensaio">
+                        <span class="info-ensaio__nome">Ensaio Baby Born com acompanhamento (0 ate 9 meses)</span>
+                        <span class="info-ensaio__preco">R$ 1000
+                            <br />Tempo do serviço: 30min</span>
+                        <button type="button">Comtrate</button>
+                        <hr />
+                    </div>
+                    <div class="ensaios__info-ensaio">
+                        <span class="info-ensaio__nome">Ensaio Baby Born com acompanhamento (0 ate 9 meses)</span>
+                        <span class="info-ensaio__preco">R$ 1000
+                            <br />Tempo do serviço: 30min</span>
+                        <button type="button">Comtrate</button>
+                        <hr />
+                    </div>
+                    <div class="ensaios__info-ensaio">
+                        <span class="info-ensaio__nome">Ensaio Baby Born com acompanhamento (0 ate 9 meses)</span>
+                        <span class="info-ensaio__preco">R$ 1000
+                            <br />Tempo do serviço: 30min</span>
+                        <button type="button">Comtrate</button>
+                        <hr />
+                    </div>
+                    <div class="ensaios__info-ensaio">
+                        <span class="info-ensaio__nome">Ensaio Baby Born com acompanhamento (0 ate 9 meses)</span>
+                        <span class="info-ensaio__preco">R$ 1000
+                            <br />Tempo do serviço: 30min</span>
+                        <button type="button">Comtrate</button>
+                        <hr />
+                    </div>
+                </section>
+            </section>
+        </section>
+        <section class="main-conteiner__container-info-2">
+            <section class="container-info-2">
+                <section class="container-info-2__location">
+                    <div class="location__map-img"></div>
+                    <div class="location__map-info">
+                        <img alt="" src="assets/img/account_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Lorem, ipsum dolor sit amet consectetur Illorepudiandae dolorum ab asperiores eligendi.</p>
+                        <img alt="" src="assets/img/arrow_forward_ios_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                    </div>
+                </section>
+                <section class="container-info-2__equipe">
+                    <h3>Menbros</h3>
+                    <div class="equipe__avatar">
+                        <div class="avatar__container">
+                            <div class="container__avatar__img">
+                                <img alt="" src="" />
+                            </div>
+                            <div class="container__avatar__info">
+                                <h4>Caique</h4>
+                                <ul>
+                                    <li>Fotografo</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="avatar__container">
+                            <div class="container__avatar__img">
+                                <img alt="" src="" />
+                            </div>
+                            <div class="container__avatar__info">
+                                <h4>Caique</h4>
+                                <ul>
+                                    <li>Fotografo</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="avatar__container">
+                            <div class="container__avatar__img">
+                                <img alt="" src="" />
+                            </div>
+                            <div class="container__avatar__info">
+                                <h4>Caique</h4>
+                                <ul>
+                                    <li>Fotografo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container-info-2__more-info">
+                    <h3>Infoprmações</h3>
+                    <hr />
+                    <h4>Telefone</h4>
+                    <p>(11) 61268-84052</p>
+                    <hr />
+                    <h4>Horario</h4>
+                    <div class="more-info__horario">
+                        <p>Hoje</p>
+                        <p>08:00 até 18:00</p>
+                    </div>
+                    <hr />
+                    <h4>Redes sociais</h4>
+                    <div>
+                        <a href=""><img alt="" src="assets/img/page/index/instagram-brands-solid-full.svg" /></a>
+                        <a href=""><img alt="" src="assets/img/page/index/facebook-brands-solid-full.svg" /></a>
+                    </div>
+                    <hr />
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer class="section-seis">
+        <section class="section-seis__container">
+            <div class="section-seis__container__logo-copy">
+                <img alt="" src="assets/img/page/index/logo-section-1.png" />
+                <span>© 2025 LLING Inc. Todos os direitos reservados</span>
+            </div>
+            <hr />
+            <nav class="section-seis__container__info">
+                <ul>
+                    <li><a href="">Sobre nós</a></li>
+                    <li><a href="">Termos de uso</a></li>
+                    <li><a href="">Trabalhe com a gente</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="section-seis__container__redes-sociais">
+                <div class="section-seis__container__redes-sociais__instagram">
+                    <img alt="" src="assets/img/page/index/instagram-brands-solid-full.svg" />
+                </div>
+                <div class="section-seis__container__redes-sociais__facebook">
+                    <img alt="" src="assets/img/page/index/facebook-brands-solid-full.svg" />
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Script Header -->
+    <script src="assets/js/global/header/fechar_abrir.js"></script>
+    <script>// Simulação de dados vindos do banco de dados
+        // Simulação de dados vindos do banco de dados
+        const banners = [
+            { img: "assets/img/page/index/banner-teste.jpeg", rating: "⭐ 4.8<br>20 avaliações" },
+            { img: "assets/img/page/index/banner-teste.jpeg", rating: "⭐ 4.9<br>15 avaliações" },
+            { img: "assets/img/page/index/banner-teste.jpeg", rating: "⭐ 5.0<br>30 avaliações" },
+        ];
+
+        const carrossel = document.querySelector(".container-info-1__carrossel-banner");
+        const imgElement = carrossel.querySelector(".carrossel-banner__img");
+        const ratingElement = carrossel.querySelector(".carrossel-banner__rating");
+        const dotsContainer = carrossel.querySelector(".carrossel-banner__dots");
+
+        let atual = 0;
+
+        // Cria dinamicamente os dots
+        banners.forEach((banner, i) => {
+            const dot = document.createElement("img");
+            dot.src = "assets/img/page/index/circle_16dp_wght400.svg";
+            dot.alt = "Ir para o banner " + (i + 1);
+            dot.classList.add("dot");
+            dot.addEventListener("click", () => {
+                atual = i;
+                mostrarBanner(atual);
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll(".dot");
+
+        function mostrarBanner(index) {
+            const banner = banners[index];
+            imgElement.src = banner.img;
+            ratingElement.innerHTML = banner.rating;
+
+            // Atualiza os dots (ativo = preenchido)
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.src = "assets/img/page/index/circle-fill_16dp_wght400.svg";
+                } else {
+                    dot.src = "assets/img/page/index/circle_16dp_wght400.svg";
+                }
+            });
+        }
+
+        // Inicial
+        mostrarBanner(atual);
+
+        // Referência das setas
+        const nextLeft = carrossel.querySelector(".carrossel-banner__next-left");
+        const nextRight = carrossel.querySelector(".carrossel-banner__next-rigth");
+
+        // Adiciona ícones ou símbolos às setas
+        nextLeft.innerHTML = "&#10094;";   // seta esquerda
+        nextRight.innerHTML = "&#10095;";  // seta direita
+
+        // Clique na seta esquerda
+        nextLeft.addEventListener("click", () => {
+            atual = (atual - 1 + banners.length) % banners.length; // volta para o último se estiver no primeiro
+            mostrarBanner(atual);
+        });
+
+        // Clique na seta direita
+        nextRight.addEventListener("click", () => {
+            atual = (atual + 1) % banners.length; // vai para o próximo
+            mostrarBanner(atual);
+        });
+
+
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modalOverlay = document.querySelector(".modal-overlay");
+            const botoesContrate = document.querySelectorAll(".ensaios__info-ensaio button");
+            const closeModal = document.getElementById("closeModal__contrate");
+
+            // Exibir modal ao clicar em "Contrate"
+            botoesContrate.forEach(botao => {
+                botao.addEventListener("click", () => {
+                    modalOverlay.classList.remove("none");
+                });
+            });
+
+            // Fechar modal apenas ao clicar no botão "✖"
+            closeModal.addEventListener("click", () => {
+                modalOverlay.classList.add("none");
+            });
+        });
+    </script>
+    <script src="assets/js/tela-contrate/full.js"></script>
+</body>
+
+</html>

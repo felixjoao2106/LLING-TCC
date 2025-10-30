@@ -1,0 +1,106 @@
+/* Fundo escuro transparente atrás do modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    /* começa escondido */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Botão de fechar */
+.modal-overlay__section-cadastro__modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 40px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Caixa do modal */
+.modal-overlay__section-cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    min-height: 600px;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 12px;
+    padding: 25px;
+    padding-top: 70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Texto */
+.modal-overlay__section-cadastro__div-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-overlay__section-cadastro__div-text h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.modal-overlay__section-cadastro__div-text p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Inputs */
+.modal-overlay__section-cadastro__div-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-overlay__section-cadastro__div-input input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Botão */
+.modal-overlay__section-cadastro__div-button {
+    width: 100%;
+    text-align: center;
+}
+
+.modal-overlay__section-cadastro__div-button input {
+    width: 100%;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.modal-overlay__section-cadastro__div-button p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.modal-overlay__section-cadastro__div-button p:hover {
+    text-decoration: underline;
+}

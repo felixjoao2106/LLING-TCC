@@ -1,0 +1,61 @@
+.section-quinto {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+.section-quinto__anuncio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: var(--cor-terciaria);
+    border-radius: 20px;
+    margin-top: 40px;
+
+}
+
+.section-quinto__anuncio__text {
+    flex: 1 1 500px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 500px;
+    padding: 0 10px 0 10px;
+}
+
+.section-quinto__anuncio__text h2 {
+    font-size: 2em;
+    line-height: 1.5;
+
+}
+
+.section-quinto__anuncio__text p {
+    font-size: 1em;
+    line-height: 1.7;
+
+}
+
+.section-quinto__anuncio__img0,
+.section-quinto__anuncio__img1 {
+    flex: 1 1 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 220px;
+    background-position: center center;
+}
+
+.section-quinto__anuncio__img0 {
+    background-image: url("../../../../img/page/index/download.jpeg");
+}
+
+.section-quinto__anuncio__img1 {
+    background-image: url("../../../../img/page/index/pexels-anna-nekrashevich-7550886.jpg");
+}
+
+.section-quinto__anuncio__img img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 200px;
+
+}

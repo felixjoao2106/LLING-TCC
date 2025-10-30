@@ -1,0 +1,4 @@
+@import './partials/style.css';
+@import './partials/style-media-querie.css';
+
+@import '../../global/global.css'

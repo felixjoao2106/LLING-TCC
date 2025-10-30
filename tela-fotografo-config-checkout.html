@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Document</title>
+    <link href="assets/css/global/elementos-globais/index.css" rel="stylesheet" />
+    <link href="assets/css/global/elementos-globais/aside-nav-config/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/tela-fotografo-config-checkout/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/modal-checkout-fotografo/index.css" rel="stylesheet" />
+</head>
+
+<body><a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;">Pular para o conteúdo
+        principal</a>
+    <header class="header-fixo">
+        <div class="header-fixo__logo">
+            <img alt="" src="assets/img/page/index/logo-section-1.png" />
+        </div>
+        <!-- botão/ícone de pesquisa -->
+        <button class="header-fixo__search-btn">
+            <img alt="" src="assets/img/page/index/search_wght400.svg" />
+        </button>
+        <!-- botão fechar -->
+        <button class="header-fixo__close-btn">✖</button>
+        <div class="header-fixo__input">
+            <label for="Categoria">Categoria</label>
+            <input id="Categoria" placeholder="Categoria" type="text" />
+            <label for="Onde">Onde</label>
+            <input id="Onde" placeholder="Onde" type="text" />
+            <label for="Quando">Quando</label>
+            <input id="Quando" placeholder="Quando" type="datetime-local" />
+        </div>
+        <div class="header-fixo__login-fot-user">
+            <input class="header-fixo__login-fot-user__input openModal__cadastro-fotografo" type="button"
+                value="Adicione o seu portifolho" />
+            <img alt="" class="section__div_user" src="./assets/img/page/index/person-wght400.svg" />
+            <a class="section__div-topo_a" href="">Entrar/Cadastrar</a>
+        </div>
+    </header>
+    <main id="main">
+        <div class="modal-overlay none">
+            <section class="modal-overlay__section-tela-checkout-more-info">
+                <div class="section-tela-checkout-more-info__info">
+                    <h2>Informações Checkout</h2>
+                    <div class="info__line">
+                        <h3>Cliente:</h3>
+                        <p>Carlos Eduardo</p>
+                    </div>
+                    <hr />
+                    <div class="info__line">
+                        <h3>Feito por:</h3>
+                        <p>Augusto Eduardo</p>
+                    </div>
+                    <hr />
+                    <div class="info__line">
+                        <h3>Serviço:</h3>
+                        <p>Ensaio baby born</p>
+                    </div>
+                    <hr />
+                    <div class="info__line">
+                        <h3>Preço-pago:</h3>
+                        <p>R$1000</p>
+                    </div>
+                    <hr />
+                    <div class="info__line">
+                        <h3>Período de serviço:</h3>
+                        <p>10:00 - 12:00</p>
+                    </div>
+                    <hr />
+                    <div class="info__line">
+                        <h3>Data:</h3>
+                        <p>10/09/2025</p>
+                    </div>
+                </div>
+                <button class="section-tela-checkout-more-info__modal-close" id="closeModal__contrate">×</button>
+            </section>
+        </div>
+
+        <div class="container-flex">
+           <aside class="container-flex__menu-config">
+                <div class="menu-config__info-user none">
+                    <img alt=""
+                        src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                    <div class="menu-config__name-telefone">
+                        <h2>Usuario</h2>
+                        <p>(11) 78493-0166</p>
+                    </div>
+                </div>
+
+                <div class="menu-config__item" id="item-agendamentos">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg" />
+                        <p>Agendamentos</p>
+                    </div>
+                </div>
+
+                <div class="menu-config__item" id="item-config-empresa">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Configurações da empresa</p>
+                    </div>
+                    <img alt="" class="item__icon-next"
+                        src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                </div>
+
+                <div class="menu-config__item none" id="item-adicionar-servico">
+                    <div>
+                        <p>Adicionar serviço</p>
+                    </div>
+                </div>
+
+                <div class="menu-config__item none" id="item-detalhes-empresa">
+                    <div>
+                        <p>Detalhes da empresa</p>
+                    </div>
+                </div>
+
+                <div class="menu-config__item" id="item-checkout">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/tela-fotografo-config-agendamento/check_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Checkouts</p>
+                    </div>
+                </div>
+
+                <div class="menu-config__item" id="item-sair">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/exit_to_app_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Sair</p>
+                    </div>
+                </div>
+            </aside>
+            <section aria-labelledby="titulo-checkout" class="container-flex__checkout-section">
+                <div class="checkout-section__title">
+                    <img alt="Ícone de confirmação de checkout"
+                        src="assets/img/page/tela-fotografo-config-agendamento/check_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                    <h2 id="titulo-checkout">Checkout</h2>
+                </div>
+                <div class="checkout-section__container">
+                    <div class="container__filtro">
+                        <label class="sr-only" for="filtroCheckout">Filtrar resultados</label>
+                        <select aria-label="Filtrar agendamentos" id="filtroCheckout" name="filtro">
+                            <option value="">Selecione um filtro</option>
+                            <option value="data">Por data</option>
+                            <option value="fotografo">Por fotógrafo</option>
+                        </select>
+                    </div>
+                    <div class="container__container-cards" role="list">
+                        <article aria-label="Ensaio Baby Born, 7 de setembro de 2025, feito por Carlos"
+                            class="container-cards__card" role="listitem" tabindex="0">
+                            <div class="card__info0">
+                                <h4>Ensaio Baby Born</h4>
+                                <p><time datetime="2025-09-07">7 de setembro de 2025</time></p>
+                                <p>Feito por: Carlos</p>
+                            </div>
+                            <img alt="Ver detalhes do ensaio"
+                                src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                        </article>
+                        <article aria-label="Ensaio Infantil, 12 de outubro de 2025, feito por Maria"
+                            class="container-cards__card" role="listitem" tabindex="0">
+                            <div class="card__info0">
+                                <h4>Ensaio Infantil</h4>
+                                <p><time datetime="2025-10-12">12 de outubro de 2025</time></p>
+                                <p>Feito por: Maria</p>
+                            </div>
+                            <img alt="Ver detalhes do ensaio"
+                                src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>
+            // Seleciona todos os cards de checkout
+            const checkoutCards = document.querySelectorAll('.container-cards__card');
+            // Seleciona o modal
+            const modalOverlay = document.querySelector('.modal-overlay');
+            // Seleciona o botão de fechar
+            const closeModalBtn = document.getElementById('closeModal__contrate');
+
+            // Abre o modal ao clicar em qualquer card
+            checkoutCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    modalOverlay.classList.remove('none');
+                });
+            });
+
+            // Fecha o modal ao clicar no botão "×"
+            closeModalBtn.addEventListener('click', () => {
+                modalOverlay.classList.add('none');
+            });
+        </script>
+        <script>
+            // Seleciona o card de configurações
+            const configCard = document.querySelector('.menu-config__item:nth-of-type(3)');
+
+            // Seleciona os itens que inicialmente têm a classe 'none'
+            const hiddenItems = document.querySelectorAll('.menu-config__item.none');
+
+            // Seleciona o ícone de seta dentro do card de configurações
+            const arrowIcon = configCard.querySelector('.item__icon-next');
+
+            // Adiciona o evento de clique
+            configCard.addEventListener('click', () => {
+                hiddenItems.forEach(item => item.classList.toggle('none')); // alterna a classe 'none'
+                arrowIcon.classList.toggle('rotated'); // alterna a rotação do ícone
+            });
+        </script>
+        
+    </main>
+    <script src="assets/js/global/aside-nav-fotografo/rotas.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+@import './partials/section-um-filtro.css';
+@import './partials/section-um-filtro-media-querie.css';
+@import './partials/section-dois-carrossel.css';
+@import './partials/section-dois-carrossel-media-querie.css';
+@import './partials/section-tres-info.css';
+@import './partials/section-tres-info-media-querie.css';
+
+@import '../../global/global.css'
