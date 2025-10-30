@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*Todas demais mididas*/
+
+/*Typical Device Breakpoints Celular:
+W3C
+Pquenas Telas: ate 600px
+Celuolar: de 600px até 768px
+Tablet: 768px ate 992px
+Desktop: 992px ate 1200px
+Grandes Telas: acima de 1200px
+
+moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
+
+*/
+
+@media screen and (max-width: 768px) {
+    .modal-overlay__section-tela-imagens-negocio-add-img {
+        width: 95%;
+        min-height: 500px;
+        padding: 20px;
+    }
+
+    .info__imgs {
+        max-height: 320px;
+        overflow-y: auto;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-wrapper {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+    }
+
+    /* Botão de remoção sempre visível em mobile */
+    .remove-btn {
+        opacity: 1 !important;
+        background: rgba(0, 0, 0, 0.7);
+    }
+}

@@ -1,0 +1,158 @@
+.avaliacao__card-container {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 4px;
+}
+
+.card-container__card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+}
+
+.card-container__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid #000;
+}
+
+.info__0 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info__0 img:first-child {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info__0 img:nth-child(2) {
+  width: 24px;
+  height: 24px;
+}
+
+.info__0 h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.info__0 h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.info__img-arrow img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.card-container__comentario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #000;
+}
+
+.card-container__comentario h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.card-container__comentario p {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0 0 6px 0;
+}
+
+.card-container__comentario label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.card-container__comentario textarea {
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.card-container__comentario textarea:focus {
+  border-color: #000;
+}
+
+.card-container__comentario select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 0.9rem;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.card-container__comentario select:focus {
+  border-color: #000;
+}
+
+.card-container__comentario button,
+.card-container__buttons button {
+  background-color: #2b2b2b;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.card-container__comentario button:hover,
+.card-container__buttons button:hover {
+  background-color: #000;
+}
+
+.card-container__buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 12px;
+}
+
+@media (max-width: 480px) {
+  .card-container__buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-container__buttons button {
+    width: 100%;
+  }
+
+  .card-container__comentario textarea,
+  .card-container__comentario select {
+    font-size: 1rem;
+  }
+}
