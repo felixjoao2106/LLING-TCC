@@ -507,5 +507,9 @@ hr {
   cursor: pointer;
   color: #444;
   font-size: 14px;
+  text-decoration: none;
+}
+
+.div-input__div-button p:hover {
   text-decoration: underline;
 }

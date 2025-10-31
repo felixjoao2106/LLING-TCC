@@ -1,173 +1,179 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/global/elementos-globais/index.css">
-    <link rel="stylesheet" href="assets/css/global/elementos-globais/aside-nav-config/index.css">
-    <link rel="stylesheet" href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa/index.css">
-    <link rel="stylesheet"
-        href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa-informacoes-gerais/index.css">
+    <link href="assets/css/global/elementos-globais/index.css" rel="stylesheet" />
+    <link href="assets/css/global/elementos-globais/aside-nav-config/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa-informacoes-gerais/index.css"
+        rel="stylesheet" />
 </head>
 
-<body>
-    <header class="header-fixo">
+<body><a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;">Pular para o conteúdo
+        principal</a>
+    <header class="header-fixo ">
         <div class="header-fixo__logo">
-            <img src="assets/img/page/index/logo-section-1.png" alt="">
+            <a href="index.html"><img alt="" src="assets/img/page/index/logo-section-1.png" /></a>
         </div>
-
         <!-- botão/ícone de pesquisa -->
-        <button class="header-fixo__search-btn">
-            <img src="assets/img/page/index/search_wght400.svg" alt="">
-        </button>
-
+        <button class="header-fixo__search-btn"><img alt="" src="assets/img/page/index/search_wght400.svg" /></button>
         <!-- botão fechar -->
         <button class="header-fixo__close-btn">✖</button>
-
         <div class="header-fixo__input">
-            <input type="text" placeholder="Categoria">
-            <input type="text" placeholder="Onde">
-            <input type="datetime-local" placeholder="Quando">
+            <label for="Categoria" class="none">Categoria</label>
+            <input id="Categoria" placeholder="Categoria" type="text" />
+            <label for="Onde" class="none">Onde</label>
+            <input id="Onde" placeholder="Onde" type="text" />
+            <label for="Quando" class="none">Quando</label>
+            <input id="Quando" placeholder="Quando" type="datetime-local" />
         </div>
-
         <div class="header-fixo__login-fot-user">
             <input class="header-fixo__login-fot-user__input openModal__cadastro-fotografo" type="button"
-                value="Adicione o seu portifolho">
-            <img class="section__div_user" src="./assets/img/page/index/person-wght400.svg" alt="">
+                value="Adicione o seu portifolho" />
+            <img alt="" class="section__div_user" src="./assets/img/page/index/person-wght400.svg" />
             <a class="section__div-topo_a" href="">Entrar/Cadastrar</a>
         </div>
     </header>
+    <main id="main">
 
-
-    <div class="container-flex">
-        <aside class="container-flex__menu-config">
-            <div class="menu-config__info-user none">
-                <img src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                    alt="">
-                <div class="menu-config__name-telefone">
-                    <h2>Usuario</h2>
-                    <p>(11) 78493-0166</p>
+        <div class="container-flex">
+            <aside class="container-flex__menu-config">
+                <div class="menu-config__info-user none">
+                    <img alt=""
+                        src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                    <div class="menu-config__name-telefone">
+                        <h2>Usuario</h2>
+                        <p>(11) 78493-0166</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg"
-                        alt="">
-                    <p>Agendamentos</p>
+                <div class="menu-config__item" id="item-agendamentos">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg" />
+                        <p>Agendamentos</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="">
-                    <p>Configurações da empresa</p>
+                <div class="menu-config__item" id="item-config-empresa">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Configurações da empresa</p>
+                    </div>
+                    <img alt="" class="item__icon-next"
+                        src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
                 </div>
-                <img src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                    alt="" class="item__icon-next">
-            </div>
 
-            <div class="menu-config__item none">
-                <div>
-                    <p>Adicionar serviço</p>
+                <div class="menu-config__item none" id="item-adicionar-servico">
+                    <div>
+                        <p>Adicionar serviço</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="menu-config__item none">
-                <div>
-                    <p>Detalhes da empresa</p>
+                <div class="menu-config__item none" id="item-detalhes-empresa">
+                    <div>
+                        <p>Detalhes da empresa</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/tela-fotografo-config-agendamento/check_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="">
-                    <p>Cheakouts</p>
+                <div class="menu-config__item" id="item-checkout">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/tela-fotografo-config-agendamento/check_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Checkouts</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/exit_to_app_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="">
-                    <p>Sair</p>
+                <div class="menu-config__item" id="item-sair">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/exit_to_app_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Sair</p>
+                    </div>
                 </div>
-            </div>
-        </aside>
+            </aside>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section class="container-flex__detalhes-da-empresa-section">
-            <div class="detalhes-da-empresa-section__title">
-                <img src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <h2>Configurações da emrpesa</h2>
-            </div>
-            <div
-                class="detalhes-da-empresa-section__container detalhes-da-empresa-section__container--informacoes-gerais">
-                <h3>Detalhes da empresa</h3>
-                <h4>Informações gerais</h4>
-                <form action=""><div class="detalhes-da-empresa-section__container--informacoes-gerais__input">
-                    
-                        <label for="input-nome-comercial">Nome comercial</label>
-                        <input type="text" id="input-nome-comercial" autocomplete="organization">
-                        <label for="input-telefone-comercial">Telefone comercial</label>
-                        <input type="tel" id="input-telefone-comercial" autocomplete="tel">
-                        <label for="input-email-comercial">E-mail comercial</label>
-                        <input type="email" id="input-email-comercial" autocomplete="email">
-                        <label for="input-link-instagram">Link do Instagram</label>
-                        <input type="url" id="input-link-instagram" autocomplete="url">
-                        <label for="input-link-facebook">Link do Facebook</label>
-                        <input type="url" id="input-link-facebook" autocomplete="url">
-                        <label for="input-link-linkedin">Link do LinkedIn</label>
-                        <input type="url" id="input-link-linkedin" autocomplete="url">
-                        <label for="input-link-website">Link do website da empresa</label>
-                        <input type="url" id="input-link-website" autocomplete="url">
-                        <input type="submit" value="Salvar">
+            <section class="container-flex__detalhes-da-empresa-section">
+                <div class="detalhes-da-empresa-section__title">
+                    <img alt=""
+                        src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                    <h2>Configurações da emrpesa</h2>
+                </div>
+                <div
+                    class="detalhes-da-empresa-section__container detalhes-da-empresa-section__container--informacoes-gerais">
+                    <h3>Detalhes da empresa</h3>
+                    <h4>Informações gerais</h4>
+                    <form action="">
+                        <div class="detalhes-da-empresa-section__container--informacoes-gerais__input">
+                            <label for="input-nome-comercial">Nome comercial</label>
+                            <input autocomplete="organization" id="input-nome-comercial" type="text" />
+                            <label for="input-telefone-comercial">Telefone comercial</label>
+                            <input autocomplete="tel" id="input-telefone-comercial" type="tel" />
+                            <label for="input-email-comercial">E-mail comercial</label>
+                            <input autocomplete="email" id="input-email-comercial" type="email" />
+                            <label for="input-link-instagram">Link do Instagram</label>
+                            <input autocomplete="url" id="input-link-instagram" type="url" />
+                            <label for="input-link-facebook">Link do Facebook</label>
+                            <input autocomplete="url" id="input-link-facebook" type="url" />
+                            <label for="input-link-linkedin">Link do LinkedIn</label>
+                            <input autocomplete="url" id="input-link-linkedin" type="url" />
+                            <label for="input-link-website">Link do website da empresa</label>
+                            <input autocomplete="url" id="input-link-website" type="url" />
+                            <input type="submit" value="Salvar" />
+                        </div>
                     </form>
                 </div>
+            </section>
+        </div>
 
 
+        <script>
+            // Seleciona o card de configurações
+            const configCard = document.querySelector('.menu-config__item:nth-of-type(3)');
+
+            // Seleciona os itens que inicialmente têm a classe 'none'
+            const hiddenItems = document.querySelectorAll('.menu-config__item.none');
+
+            // Seleciona o ícone de seta dentro do card de configurações
+            const arrowIcon = configCard.querySelector('.item__icon-next');
+
+            // Adiciona o evento de clique
+            configCard.addEventListener('click', () => {
+                hiddenItems.forEach(item => item.classList.toggle('none')); // alterna a classe 'none'
+                arrowIcon.classList.toggle('rotated'); // alterna a rotação do ícone
+            });
+        </script>
+    </main>
+    <footer class="section-seis">
+        <section class="section-seis__container">
+            <div class="section-seis__container__logo-copy">
+                <img alt="" src="assets/img/page/index/logo-section-1.png" /> <span>© 2025 LLING Inc. Todos os direitos
+                    reservados</span>
+            </div>
+            <hr />
+            <nav class="section-seis__container__info">
+                <ul>
+                    <li><a href="">Sobre nos</a></li>
+                    <li><a href="">Termos de uso</a></li>
+                    <li><a href="">Trabalhe com agente</a> </li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="section-seis__container__redes-sociais">
+                <div class="section-seis__container__redes-sociais__instagram"><img alt=""
+                        src="assets/img/page/index/instagram-brands-solid-full.svg" /></div>
+                <div class="section-seis__container__redes-sociais__facebook"><img alt=""
+                        src="assets/img/page/index/facebook-brands-solid-full.svg" /></div>
             </div>
         </section>
+    </footer>
 
-    </div>
-
-    <script>
-        // Seleciona o card de configurações
-        const configCard = document.querySelector('.menu-config__item:nth-of-type(3)');
-
-        // Seleciona os itens que inicialmente têm a classe 'none'
-        const hiddenItems = document.querySelectorAll('.menu-config__item.none');
-
-        // Seleciona o ícone de seta dentro do card de configurações
-        const arrowIcon = configCard.querySelector('.item__icon-next');
-
-        // Adiciona o evento de clique
-        configCard.addEventListener('click', () => {
-            hiddenItems.forEach(item => item.classList.toggle('none')); // alterna a classe 'none'
-            arrowIcon.classList.toggle('rotated'); // alterna a rotação do ícone
-        });
-    </script>
-
+    <script src="assets/js/global/aside-nav-fotografo/rotas.js"></script>
 </body>
 
 </html>

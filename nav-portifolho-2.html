@@ -1,22 +1,422 @@
 <!DOCTYPE html>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <html lang="en">
+=======
+
+<html lang="pt-BR">
+>>>>>>> Stashed changes
+=======
+
+<html lang="pt-BR">
+>>>>>>> Stashed changes
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="assets/css/global/elementos-globais/index.css">
     <link rel="stylesheet" href="assets/css/pages/nav-portifolho-2/index.css">
     <link rel="stylesheet" href="assets/css/global/elementos-globais/banner/index.css">
+    <link href="./assets/css/pages/tela-cadastro-user/index.css" rel="stylesheet" />
+    <link href="./assets/css/pages/tela-login-user/index.css" rel="stylesheet" />
+    <link href="./assets/css/pages/tela-cadastro-fotografo/index.css" rel="stylesheet" />
 
 
 
 
-    <link rel="stylesheet" href="assets/css/pages/modal-contrate/index.css">
+    <link rel="stylesheet" href="assets/css/pages/modal-contrate/index.css">    
 
 </head>
 
 <body>
+=======
+    <link href="assets/css/global/elementos-globais/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/nav-portifolho-2/index.css" rel="stylesheet" />
+    <link href="assets/css/global/elementos-globais/banner/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/modal-contrate/index.css" rel="stylesheet" />
+    <link href="./assets/css/pages/tela-cadastro-user/index.css" rel="stylesheet" />
+    <link href="./assets/css/pages/tela-login-user/index.css" rel="stylesheet" />
+    <link href="./assets/css/pages/tela-cadastro-fotografo/index.css" rel="stylesheet" />
+</head>
+
+<body><a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;">Pular para o conteúdo
+        principal</a>
+    <!-- Modal cadastro fotografo -->
+    <div class="modal-overlay" id="modal__cadastro-fotografo">
+        <section class="section-cadastro-fotografo">
+            <button class="section-cadastro-fotografo__modal-close" id="closeModal__cadastro-fotografo">×</button>
+            <div class="section-cadastro-fotografo__div-title">
+                <h1>Crie uma conta</h1>
+                <p>Faça o cadastro e, tenha uma plataforma inteira de visibilidade</p>
+            </div>
+            <div class="section-cadastro-fotografo__div-input">
+                <form action="cadastro.php" method="POST">
+                    <!-- E-mail -->
+                    <div class="div-input__e-mail">
+                        <label for="input-email__cadastro-fotografo"><strong>E-mail</strong></label>
+                        <input id="input-email__cadastro-fotografo" name="email" placeholder="E-mail" required=""
+                            type="email" />
+                        <hr />
+                    </div>
+                    <!-- Sobre você -->
+                    <div class="div-input__sobre-voce">
+                        <sapn><strong>Sobre você</strong></sapn>
+                        <label for="input-empresa__cadastro-fotografo">Nome da empresa</label>
+                        <input id="input-empresa__cadastro-fotografo" name="empresa" placeholder="Nome da empresa"
+                            required="" type="text" />
+                        <label for="input-nome__cadastro-fotografo">Nome completo</label>
+                        <input id="input-nome__cadastro-fotografo" name="nome" placeholder="Nome completo" required=""
+                            type="text" />
+                        <label for="input-telefone__cadastro-fotografo">Telefone</label>
+                        <input id="input-telefone__cadastro-fotografo" name="telefone" placeholder="Telefone"
+                            required="" type="tel" />
+                        <hr />
+                    </div>
+                    <!-- Senha -->
+                    <div class="div-input__senha">
+                        <label for="input-senha__cadastro-fotografo"><strong>Senha</strong></label>
+                        <input id="input-senha__cadastro-fotografo" name="senha" placeholder="Senha" required=""
+                            type="password" />
+                        <hr />
+                    </div>
+                    <div class="div-input__imagem-local">
+                        <label for="input-imagem__cadastro-fotografo"><strong>
+                                Adicione seu local de trabalho
+                                (Opcional)
+                            </strong></label>
+                        <!-- Input escondido -->
+                        <input accept="image/*" id="input-imagem__cadastro-fotografo" style="display: none;"
+                            type="file" />
+                        <!-- Área clicável -->
+                        <div aria-label="Adicionar imagem do local de trabalho" class="imagem-local__upload-box"
+                            id="preview__cadastro-fotografo"
+                            onclick="document.getElementById('input-imagem__cadastro-fotografo').click()" role="button"
+                            tabindex="0">
+                            <img alt="ícone câmera" id="icone-camera__cadastro-fotografo"
+                                src="assets/img/page/tela-cadastro-fotografo/photo_camera_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                                style="width: 36px; opacity: 0.7;" />
+                            <p>
+                                Adicione uma foto do seu local de trabalho.<br />
+                                <span>Opcional, mas altamente recomendado. Mostre aos clientes o que você faz.</span>
+                            </p>
+                        </div>
+                        <hr />
+                    </div>
+                    <!-- Localização completa -->
+                    <div class="div-input__localizacao">
+                        <!-- CEP -->
+                        <label><strong>Localização</strong></label>
+                        <label for="input-cep__cadastro-fotografo">CEP</label>
+                        <div style="position: relative;">
+                            <input id="input-cep__cadastro-fotografo" maxlength="10" name="cep"
+                                placeholder="Digite o CEP" type="text" />
+                            <span
+                                style="position: absolute; top: 55%; right: 12px; transform: translateY(-50%); cursor: pointer;">
+                                <img alt="Buscar"
+                                    src="assets/img/page/tela-cadastro-fotografo/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                                    style="width: 20px;" />
+                            </span>
+                        </div>
+                        <!-- Rua / Endereço -->
+                        <label for="input-endereco__cadastro-fotografo">Rua</label>
+                        <input id="input-endereco__cadastro-fotografo" name="endereco" placeholder="Rua" readonly=""
+                            type="text" />
+                        <!-- Número -->
+                        <label for="input-numero__cadastro-fotografo">Número</label>
+                        <input id="input-numero__cadastro-fotografo" name="numero" placeholder="Número do endereço"
+                            type="text" />
+                        <!-- Bairro -->
+                        <label for="input-bairro__cadastro-fotografo">Bairro</label>
+                        <input id="input-bairro__cadastro-fotografo" name="bairro" placeholder="Bairro" readonly=""
+                            type="text" />
+                        <!-- Cidade -->
+                        <label for="input-cidade__cadastro-fotografo">Cidade</label>
+                        <input id="input-cidade__cadastro-fotografo" name="cidade" placeholder="Cidade" readonly=""
+                            type="text" />
+                        <!-- Estado -->
+                        <label for="input-estado__cadastro-fotografo">Estado</label>
+                        <input id="input-estado__cadastro-fotografo" name="estado" placeholder="Estado" readonly=""
+                            type="text" />
+                        <!-- Complemento -->
+                        <label for="input-complemento__cadastro-fotografo">Complemento</label>
+                        <input id="input-complemento__cadastro-fotografo" name="complemento" placeholder="Complemento"
+                            type="text" />
+                        <hr />
+                    </div>
+                    <!-- Tipo de ensaio -->
+                    <div class="div-input__tipo-ensaio">
+                        <label for="input-ensaio__cadastro-fotografo"><strong>Seu tipo de ensaio</strong></label>
+                        <select id="input-ensaio__cadastro-fotografo" name="tipo_ensaio" required="">
+                            <option disabled="" selected="" value="">Escolha</option>
+                            <option value="casamento">Casamento</option>
+                            <option value="gestante">Gestante</option>
+                            <option value="infantil">Infantil</option>
+                            <option value="família">Família</option>
+                            <option value="ensaio-externo">Ensaio Externo</option>
+                            <option value="studio">Estúdio</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <hr />
+                    </div>
+                    <div class="div-input__horarios-container">
+                        <label><strong>Horários de funcionamento</strong></label>
+                        <!-- Segunda -->
+                        <div class="horarios-container__dia" data-dia="Segunda" data-horario="09:00-18:00">
+                            <span class="dia__dia-nome">Segunda</span>
+                            <span class="dia__dia-horario">09:00-18:00</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
+                                    <input checked="" name="segunda_status" type="checkbox" />
+                                    <span class="switch__slider"></span>
+                                </label>
+                                <button class="acoes__btn-config" type="button">
+                                    <img alt=""
+                                        src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                </button>
+                            </div>
+                            <input name="segunda_horario" type="hidden" value="09:00-18:00" />
+                        </div>
+                        <!-- Terça -->
+                        <div class="horarios-container__dia" data-dia="Terça" data-horario="09:00-18:00">
+                            <span class="dia__dia-nome">Terça</span>
+                            <span class="dia__dia-horario">09:00-18:00</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
+                                    <input checked="" name="terca_status" type="checkbox" />
+                                    <span class="switch__slider"></span>
+                                </label>
+                                <button class="acoes__btn-config" type="button">
+                                    <img alt=""
+                                        src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                </button>
+                            </div>
+                            <input name="terca_horario" type="hidden" value="09:00-18:00" />
+                        </div>
+                        <!-- Quarta -->
+                        <div class="horarios-container__dia" data-dia="Quarta" data-horario="09:00-18:00">
+                            <span class="dia__dia-nome">Quarta</span>
+                            <span class="dia__dia-horario">09:00-18:00</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
+                                    <input checked="" name="quarta_status" type="checkbox" />
+                                    <span class="switch__slider"></span>
+                                </label>
+                                <button class="acoes__btn-config" type="button">
+                                    <img alt=""
+                                        src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                </button>
+                            </div>
+                            <input name="quarta_horario" type="hidden" value="09:00-18:00" />
+                        </div>
+                        <!-- Quinta -->
+                        <div class="horarios-container__dia" data-dia="Quinta" data-horario="09:00-18:00">
+                            <span class="dia__dia-nome">Quinta</span>
+                            <span class="dia__dia-horario">09:00-18:00</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
+                                    <input checked="" name="quinta_status" type="checkbox" />
+                                    <span class="switch__slider"></span>
+                                </label>
+                                <button class="acoes__btn-config" type="button">
+                                    <img alt=""
+                                        src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                </button>
+                            </div>
+                            <input name="quinta_horario" type="hidden" value="09:00-18:00" />
+                        </div>
+                        <!-- Sexta -->
+                        <div class="horarios-container__dia" data-dia="Sexta" data-horario="09:00-18:00">
+                            <span class="dia__dia-nome">Sexta</span>
+                            <span class="dia__dia-horario">09:00-18:00</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
+                                    <input checked="" name="sexta_status" type="checkbox" />
+                                    <span class="switch__slider"></span>
+                                </label>
+                                <button class="acoes__btn-config" type="button">
+                                    <img alt=""
+                                        src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                </button>
+                            </div>
+                            <input name="sexta_horario" type="hidden" value="09:00-18:00" />
+                        </div>
+                        <!-- Sábado -->
+                        <div class="horarios-container__dia" data-dia="Sábado" data-horario="Fechado">
+                            <span class="dia__dia-nome">Sábado</span>
+                            <span class="dia__dia-horario">Fechado</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
+                                    <input name="sabado_status" type="checkbox" />
+                                    <span class="switch__slider"></span>
+                                </label>
+                                <button class="acoes__btn-config disabled" type="button">
+                                    <img alt=""
+                                        src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                </button>
+                            </div>
+                            <input name="sabado_horario" type="hidden" value="Fechado" />
+                        </div>
+                        <!-- Domingo -->
+                        <div class="horarios-container__dia" data-dia="Domingo" data-horario="Fechado">
+                            <span class="dia__dia-nome">Domingo</span>
+                            <span class="dia__dia-horario">Fechado</span>
+                            <div class="dia__acoes">
+                                <label class="acoes__switch">
+                                    <input name="domingo_status" type="checkbox" />
+                                    <span class="switch__slider"></span>
+                                </label>
+                                <button class="acoes__btn-config disabled" type="button">
+                                    <img alt=""
+                                        src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                </button>
+                            </div>
+                            <input name="domingo_horario" type="hidden" value="Fechado" />
+                        </div>
+                        <hr />
+                    </div>
+                    <!-- Modal de configuração do horário -->
+                    <div class="div-input__modal-overlay" id="modal-horario__cadastro-fotografo" style="display:none;">
+                        <div class="modal-overlay__div-config-time">
+                            <button class="div-config-time__modal-close">×</button>
+                            <div class="div-config-time__div-title">
+                                <h3>Configurar Horário</h3>
+                                <p id="modal-dia-nome__cadastro-fotografo"></p>
+                            </div>
+                            <div>
+                                <label for="hora-inicio__cadastro-fotografo">Hora de início</label>
+                                <input id="hora-inicio__cadastro-fotografo" type="time" />
+                                <label for="hora-fim__cadastro-fotografo">Hora de fim</label>
+                                <input id="hora-fim__cadastro-fotografo" type="time" />
+                                <button id="salvar-horario__cadastro-fotografo">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-input__adicionar-ensaio">
+                        <!-- Nome do Ensaio -->
+                        <div class="adicionar-ensaio__nome-ensaio">
+                            <label for="input-nome-ensaio__cadastro-fotografo">Nome do Ensaio</label>
+                            <input id="input-nome-ensaio__cadastro-fotografo" name="nome_ensaio"
+                                placeholder="Digite o nome do ensaio" required="" type="text" />
+                        </div>
+                        <!-- Duração -->
+                        <div class="adicionar-ensaio__duracao">
+                            <label for="select-horas__cadastro-fotografo">Duração</label>
+                            <div class="duracao__duracao-container">
+                                <!-- Horas -->
+                                <label for="select-horas__cadastro-fotografo">Horas</label>
+                                <select id="select-horas__cadastro-fotografo" name="horas" required="">
+                                    <option value="0">0 h</option>
+                                    <option value="1">1 h</option>
+                                    <option value="2">2 h</option>
+                                    <option value="3">3 h</option>
+                                    <option value="4">4 h</option>
+                                    <option value="5">5 h</option>
+                                    <option value="6">6 h</option>
+                                    <option value="7">7 h</option>
+                                    <option value="8">8 h</option>
+                                    <option value="9">9 h</option>
+                                    <option value="10">10 h</option>
+                                    <option value="11">11 h</option>
+                                    <option value="12">12 h</option>
+                                </select>
+                                <span>:</span>
+                                <!-- Minutos -->
+                                <label for="select-minutos__cadastro-fotografo">Minutos</label>
+                                <select id="select-minutos__cadastro-fotografo" name="minutos" required="">
+                                    <option value="0">00 min</option>
+                                    <option value="5">05 min</option>
+                                    <option value="10">10 min</option>
+                                    <option value="15">15 min</option>
+                                    <option value="20">20 min</option>
+                                    <option value="25">25 min</option>
+                                    <option value="30">30 min</option>
+                                    <option value="35">35 min</option>
+                                    <option value="40">40 min</option>
+                                    <option value="45">45 min</option>
+                                    <option value="50">50 min</option>
+                                    <option value="55">55 min</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Preço -->
+                        <div class="adicionar-ensaio__preco">
+                            <label for="input-preco__cadastro-fotografo">Preço</label>
+                            <div class="preco__preco-wrapper">
+                                <span class="preco-wrapper__preco-simbolo">R$</span>
+                                <input id="input-preco__cadastro-fotografo" inputmode="numeric" name="preco"
+                                    placeholder="0,00" required="" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-input__div-button">
+                        <input type="submit" value="Cadastrar-se" />
+                        <p class="link-ja-conta-fotografo">Já tenho uma conta</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <!-- Modal para login do usuario e fotografo -->
+    <div class="modal-overlay" id="modal__login-fotografo">
+        <section class="modal-overlay__section-login">
+            <button class="modal-overlay__section-login__modal-close">×</button>
+            <div class="modal-overlay__section-login__div-text">
+                <h1>Faça login</h1>
+                <p>Faça o login e contrate um de nossos profissionais</p>
+            </div>
+            <div class="modal-overlay__section-login__div-input">
+                <form action="login.php" method="POST">
+                    <label for="nome">Nome completo</label>
+                    <input autocomplete="name" id="nome" name="nome" placeholder="Nome completo" required=""
+                        type="text" />
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" placeholder="E-mail" required="" type="email" />
+                    <label for="senha">Senha</label>
+                    <input id="senha" name="senha" placeholder="Senha" required="" type="password" />
+                    <div class="modal-overlay__section-login__div-button">
+                        <input type="submit" value="Entrar" />
+                        <p>Não tenho conta</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <!-- Modal cadastro usuario -->
+    <div class="modal-overlay" id="cadastroModal">
+        <section class="modal-overlay__section-cadastro">
+            <button class="modal-overlay__section-cadastro__modal-close" id="closeModal">×</button>
+            <div class="modal-overlay__section-cadastro__div-text">
+                <h1>Crie uma conta</h1>
+                <p>Faça o cadastro e contrate um de nossos profissionais</p>
+            </div>
+            <div class="modal-overlay__section-cadastro__div-input">
+                <form action="cadastro.php" method="POST">
+                    <label for="nome1">Nome completo</label>
+                    <input autocomplete="name" id="nome1" name="nome" placeholder="Nome completo" required=""
+                        type="text" />
+                    <label for="email1">E-mail</label>
+                    <input id="email1" name="email" placeholder="E-mail" required="" type="email" />
+                    <label for="senha1">Senha</label>
+                    <input id="senha1" name="senha" placeholder="Senha" required="" type="password" />
+                    <label for="confirma_senha">Confirme sua senha</label>
+                    <input id="confirma_senha" name="confirma_senha" placeholder="Confirme sua senha" required=""
+                        type="password" />
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" name="telefone" placeholder="Telefone" required="" type="tel" />
+                    <div class="modal-overlay__section-cadastro__div-button">
+                        <input type="submit" value="Cadastrar-se" />
+                        <p>Já tenho uma conta</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     <div class="modal-overlay none">
         <section class="modal-overlay__section-tela-contrate">
             <h2>Escolher data</h2>
@@ -123,8 +523,388 @@
             <a class="section__div-topo_a" href="">Entrar/Cadastrar</a>
         </div>
     </header>
+<<<<<<< Updated upstream
 
     <main class="main-conteiner">
+        <!-- Modal cadastro fotografo -->
+        <div class="modal-overlay none" id="modal__cadastro-fotografo">
+            <section class="section-cadastro-fotografo">
+                <button class="section-cadastro-fotografo__modal-close" id="closeModal__cadastro-fotografo">×</button>
+                <div class="section-cadastro-fotografo__div-title">
+                    <h1>Crie uma conta</h1>
+                    <p>Faça o cadastro e, tenha uma plataforma inteira de visibilidade</p>
+                </div>
+                <div class="section-cadastro-fotografo__div-input">
+                    <form action="cadastro.php" method="POST">
+                        <!-- E-mail -->
+                        <div class="div-input__e-mail">
+                            <label for="input-email__cadastro-fotografo"><strong>E-mail</strong></label>
+                            <input id="input-email__cadastro-fotografo" name="email" placeholder="E-mail" required=""
+                                type="email" />
+                            <hr />
+                        </div>
+                        <!-- Sobre você -->
+                        <div class="div-input__sobre-voce">
+                            <sapn><strong>Sobre você</strong></sapn>
+                            <label for="input-empresa__cadastro-fotografo">Nome da empresa</label>
+                            <input id="input-empresa__cadastro-fotografo" name="empresa" placeholder="Nome da empresa"
+                                required="" type="text" />
+                            <label for="input-nome__cadastro-fotografo">Nome completo</label>
+                            <input id="input-nome__cadastro-fotografo" name="nome" placeholder="Nome completo"
+                                required="" type="text" />
+                            <label for="input-telefone__cadastro-fotografo">Telefone</label>
+                            <input id="input-telefone__cadastro-fotografo" name="telefone" placeholder="Telefone"
+                                required="" type="tel" />
+                            <hr />
+                        </div>
+                        <!-- Senha -->
+                        <div class="div-input__senha">
+                            <label for="input-senha__cadastro-fotografo"><strong>Senha</strong></label>
+                            <input id="input-senha__cadastro-fotografo" name="senha" placeholder="Senha" required=""
+                                type="password" />
+                            <hr />
+                        </div>
+                        <div class="div-input__imagem-local">
+                            <label for="input-imagem__cadastro-fotografo"><strong>
+                                    Adicione seu local de trabalho
+                                    (Opcional)
+                                </strong></label>
+                            <!-- Input escondido -->
+                            <input accept="image/*" id="input-imagem__cadastro-fotografo" style="display: none;"
+                                type="file" />
+                            <!-- Área clicável -->
+                            <div aria-label="Adicionar imagem do local de trabalho" class="imagem-local__upload-box"
+                                id="preview__cadastro-fotografo"
+                                onclick="document.getElementById('input-imagem__cadastro-fotografo').click()"
+                                role="button" tabindex="0">
+                                <img alt="ícone câmera" id="icone-camera__cadastro-fotografo"
+                                    src="assets/img/page/tela-cadastro-fotografo/photo_camera_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                                    style="width: 36px; opacity: 0.7;" />
+                                <p>
+                                    Adicione uma foto do seu local de trabalho.<br />
+                                    <span>Opcional, mas altamente recomendado. Mostre aos clientes o que você
+                                        faz.</span>
+                                </p>
+                            </div>
+                            <hr />
+                        </div>
+                        <!-- Localização completa -->
+                        <div class="div-input__localizacao">
+                            <!-- CEP -->
+                            <label><strong>Localização</strong></label>
+                            <label for="input-cep__cadastro-fotografo">CEP</label>
+                            <div style="position: relative;">
+                                <input id="input-cep__cadastro-fotografo" maxlength="10" name="cep"
+                                    placeholder="Digite o CEP" type="text" />
+                                <span
+                                    style="position: absolute; top: 55%; right: 12px; transform: translateY(-50%); cursor: pointer;">
+                                    <img alt="Buscar"
+                                        src="assets/img/page/tela-cadastro-fotografo/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                                        style="width: 20px;" />
+                                </span>
+                            </div>
+                            <!-- Rua / Endereço -->
+                            <label for="input-endereco__cadastro-fotografo">Rua</label>
+                            <input id="input-endereco__cadastro-fotografo" name="endereco" placeholder="Rua" readonly=""
+                                type="text" />
+                            <!-- Número -->
+                            <label for="input-numero__cadastro-fotografo">Número</label>
+                            <input id="input-numero__cadastro-fotografo" name="numero" placeholder="Número do endereço"
+                                type="text" />
+                            <!-- Bairro -->
+                            <label for="input-bairro__cadastro-fotografo">Bairro</label>
+                            <input id="input-bairro__cadastro-fotografo" name="bairro" placeholder="Bairro" readonly=""
+                                type="text" />
+                            <!-- Cidade -->
+                            <label for="input-cidade__cadastro-fotografo">Cidade</label>
+                            <input id="input-cidade__cadastro-fotografo" name="cidade" placeholder="Cidade" readonly=""
+                                type="text" />
+                            <!-- Estado -->
+                            <label for="input-estado__cadastro-fotografo">Estado</label>
+                            <input id="input-estado__cadastro-fotografo" name="estado" placeholder="Estado" readonly=""
+                                type="text" />
+                            <!-- Complemento -->
+                            <label for="input-complemento__cadastro-fotografo">Complemento</label>
+                            <input id="input-complemento__cadastro-fotografo" name="complemento"
+                                placeholder="Complemento" type="text" />
+                            <hr />
+                        </div>
+                        <!-- Tipo de ensaio -->
+                        <div class="div-input__tipo-ensaio">
+                            <label for="input-ensaio__cadastro-fotografo"><strong>Seu tipo de ensaio</strong></label>
+                            <select id="input-ensaio__cadastro-fotografo" name="tipo_ensaio" required="">
+                                <option disabled="" selected="" value="">Escolha</option>
+                                <option value="casamento">Casamento</option>
+                                <option value="gestante">Gestante</option>
+                                <option value="infantil">Infantil</option>
+                                <option value="família">Família</option>
+                                <option value="ensaio-externo">Ensaio Externo</option>
+                                <option value="studio">Estúdio</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                            <hr />
+                        </div>
+                        <div class="div-input__horarios-container">
+                            <label><strong>Horários de funcionamento</strong></label>
+                            <!-- Segunda -->
+                            <div class="horarios-container__dia" data-dia="Segunda" data-horario="09:00-18:00">
+                                <span class="dia__dia-nome">Segunda</span>
+                                <span class="dia__dia-horario">09:00-18:00</span>
+                                <div class="dia__acoes">
+                                    <label class="acoes__switch">
+                                        <input checked="" name="segunda_status" type="checkbox" />
+                                        <span class="switch__slider"></span>
+                                    </label>
+                                    <button class="acoes__btn-config" type="button">
+                                        <img alt=""
+                                            src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                    </button>
+                                </div>
+                                <input name="segunda_horario" type="hidden" value="09:00-18:00" />
+                            </div>
+                            <!-- Terça -->
+                            <div class="horarios-container__dia" data-dia="Terça" data-horario="09:00-18:00">
+                                <span class="dia__dia-nome">Terça</span>
+                                <span class="dia__dia-horario">09:00-18:00</span>
+                                <div class="dia__acoes">
+                                    <label class="acoes__switch">
+                                        <input checked="" name="terca_status" type="checkbox" />
+                                        <span class="switch__slider"></span>
+                                    </label>
+                                    <button class="acoes__btn-config" type="button">
+                                        <img alt=""
+                                            src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                    </button>
+                                </div>
+                                <input name="terca_horario" type="hidden" value="09:00-18:00" />
+                            </div>
+                            <!-- Quarta -->
+                            <div class="horarios-container__dia" data-dia="Quarta" data-horario="09:00-18:00">
+                                <span class="dia__dia-nome">Quarta</span>
+                                <span class="dia__dia-horario">09:00-18:00</span>
+                                <div class="dia__acoes">
+                                    <label class="acoes__switch">
+                                        <input checked="" name="quarta_status" type="checkbox" />
+                                        <span class="switch__slider"></span>
+                                    </label>
+                                    <button class="acoes__btn-config" type="button">
+                                        <img alt=""
+                                            src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                    </button>
+                                </div>
+                                <input name="quarta_horario" type="hidden" value="09:00-18:00" />
+                            </div>
+                            <!-- Quinta -->
+                            <div class="horarios-container__dia" data-dia="Quinta" data-horario="09:00-18:00">
+                                <span class="dia__dia-nome">Quinta</span>
+                                <span class="dia__dia-horario">09:00-18:00</span>
+                                <div class="dia__acoes">
+                                    <label class="acoes__switch">
+                                        <input checked="" name="quinta_status" type="checkbox" />
+                                        <span class="switch__slider"></span>
+                                    </label>
+                                    <button class="acoes__btn-config" type="button">
+                                        <img alt=""
+                                            src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                    </button>
+                                </div>
+                                <input name="quinta_horario" type="hidden" value="09:00-18:00" />
+                            </div>
+                            <!-- Sexta -->
+                            <div class="horarios-container__dia" data-dia="Sexta" data-horario="09:00-18:00">
+                                <span class="dia__dia-nome">Sexta</span>
+                                <span class="dia__dia-horario">09:00-18:00</span>
+                                <div class="dia__acoes">
+                                    <label class="acoes__switch">
+                                        <input checked="" name="sexta_status" type="checkbox" />
+                                        <span class="switch__slider"></span>
+                                    </label>
+                                    <button class="acoes__btn-config" type="button">
+                                        <img alt=""
+                                            src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                    </button>
+                                </div>
+                                <input name="sexta_horario" type="hidden" value="09:00-18:00" />
+                            </div>
+                            <!-- Sábado -->
+                            <div class="horarios-container__dia" data-dia="Sábado" data-horario="Fechado">
+                                <span class="dia__dia-nome">Sábado</span>
+                                <span class="dia__dia-horario">Fechado</span>
+                                <div class="dia__acoes">
+                                    <label class="acoes__switch">
+                                        <input name="sabado_status" type="checkbox" />
+                                        <span class="switch__slider"></span>
+                                    </label>
+                                    <button class="acoes__btn-config disabled" type="button">
+                                        <img alt=""
+                                            src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                    </button>
+                                </div>
+                                <input name="sabado_horario" type="hidden" value="Fechado" />
+                            </div>
+                            <!-- Domingo -->
+                            <div class="horarios-container__dia" data-dia="Domingo" data-horario="Fechado">
+                                <span class="dia__dia-nome">Domingo</span>
+                                <span class="dia__dia-horario">Fechado</span>
+                                <div class="dia__acoes">
+                                    <label class="acoes__switch">
+                                        <input name="domingo_status" type="checkbox" />
+                                        <span class="switch__slider"></span>
+                                    </label>
+                                    <button class="acoes__btn-config disabled" type="button">
+                                        <img alt=""
+                                            src="assets/img/page/tela-cadastro-fotografo/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                                    </button>
+                                </div>
+                                <input name="domingo_horario" type="hidden" value="Fechado" />
+                            </div>
+                            <hr />
+                        </div>
+                        <!-- Modal de configuração do horário -->
+                        <div class="div-input__modal-overlay" id="modal-horario__cadastro-fotografo"
+                            style="display:none;">
+                            <div class="modal-overlay__div-config-time">
+                                <button class="div-config-time__modal-close">×</button>
+                                <div class="div-config-time__div-title">
+                                    <h3>Configurar Horário</h3>
+                                    <p id="modal-dia-nome__cadastro-fotografo"></p>
+                                </div>
+                                <div>
+                                    <label for="hora-inicio__cadastro-fotografo">Hora de início</label>
+                                    <input id="hora-inicio__cadastro-fotografo" type="time" />
+                                    <label for="hora-fim__cadastro-fotografo">Hora de fim</label>
+                                    <input id="hora-fim__cadastro-fotografo" type="time" />
+                                    <button id="salvar-horario__cadastro-fotografo">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-input__adicionar-ensaio">
+                            <!-- Nome do Ensaio -->
+                            <div class="adicionar-ensaio__nome-ensaio">
+                                <label for="input-nome-ensaio__cadastro-fotografo">Nome do Ensaio</label>
+                                <input id="input-nome-ensaio__cadastro-fotografo" name="nome_ensaio"
+                                    placeholder="Digite o nome do ensaio" required="" type="text" />
+                            </div>
+                            <!-- Duração -->
+                            <div class="adicionar-ensaio__duracao">
+                                <label for="select-horas__cadastro-fotografo">Duração</label>
+                                <div class="duracao__duracao-container">
+                                    <!-- Horas -->
+                                    <label for="select-horas__cadastro-fotografo">Horas</label>
+                                    <select id="select-horas__cadastro-fotografo" name="horas" required="">
+                                        <option value="0">0 h</option>
+                                        <option value="1">1 h</option>
+                                        <option value="2">2 h</option>
+                                        <option value="3">3 h</option>
+                                        <option value="4">4 h</option>
+                                        <option value="5">5 h</option>
+                                        <option value="6">6 h</option>
+                                        <option value="7">7 h</option>
+                                        <option value="8">8 h</option>
+                                        <option value="9">9 h</option>
+                                        <option value="10">10 h</option>
+                                        <option value="11">11 h</option>
+                                        <option value="12">12 h</option>
+                                    </select>
+                                    <span>:</span>
+                                    <!-- Minutos -->
+                                    <label for="select-minutos__cadastro-fotografo">Minutos</label>
+                                    <select id="select-minutos__cadastro-fotografo" name="minutos" required="">
+                                        <option value="0">00 min</option>
+                                        <option value="5">05 min</option>
+                                        <option value="10">10 min</option>
+                                        <option value="15">15 min</option>
+                                        <option value="20">20 min</option>
+                                        <option value="25">25 min</option>
+                                        <option value="30">30 min</option>
+                                        <option value="35">35 min</option>
+                                        <option value="40">40 min</option>
+                                        <option value="45">45 min</option>
+                                        <option value="50">50 min</option>
+                                        <option value="55">55 min</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Preço -->
+                            <div class="adicionar-ensaio__preco">
+                                <label for="input-preco__cadastro-fotografo">Preço</label>
+                                <div class="preco__preco-wrapper">
+                                    <span class="preco-wrapper__preco-simbolo">R$</span>
+                                    <input id="input-preco__cadastro-fotografo" inputmode="numeric" name="preco"
+                                        placeholder="0,00" required="" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-input__div-button">
+                            <input type="submit" value="Cadastrar-se" />
+                            <p class="link-ja-conta-fotografo">Já tenho uma conta</p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <!-- Modal para login do usuario e fotografo -->
+        <div class="modal-overlay none" id="modal__login-fotografo">
+            <section class="modal-overlay__section-login">
+                <button class="modal-overlay__section-login__modal-close">×</button>
+                <div class="modal-overlay__section-login__div-text">
+                    <h1>Faça login</h1>
+                    <p>Faça o login e contrate um de nossos profissionais</p>
+                </div>
+                <div class="modal-overlay__section-login__div-input">
+                    <form action="login.php" method="POST">
+                        <label for="nome">Nome completo</label>
+                        <input autocomplete="name" id="nome" name="nome" placeholder="Nome completo" required=""
+                            type="text" />
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" placeholder="E-mail" required="" type="email" />
+                        <label for="senha">Senha</label>
+                        <input id="senha" name="senha" placeholder="Senha" required="" type="password" />
+                        <div class="modal-overlay__section-login__div-button">
+                            <input type="submit" value="Entrar" />
+                            <p>Não tenho conta</p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <!-- Modal cadastro usuario -->
+        <div class="modal-overlay none" id="cadastroModal">
+            <section class="modal-overlay__section-cadastro">
+                <button class="modal-overlay__section-cadastro__modal-close" id="closeModal">×</button>
+                <div class="modal-overlay__section-cadastro__div-text">
+                    <h1>Crie uma conta</h1>
+                    <p>Faça o cadastro e contrate um de nossos profissionais</p>
+                </div>
+                <div class="modal-overlay__section-cadastro__div-input">
+                    <form action="cadastro.php" method="POST">
+                        <label for="nome1">Nome completo</label>
+                        <input autocomplete="name" id="nome1" name="nome" placeholder="Nome completo" required=""
+                            type="text" />
+                        <label for="email1">E-mail</label>
+                        <input id="email1" name="email" placeholder="E-mail" required="" type="email" />
+                        <label for="senha1">Senha</label>
+                        <input id="senha1" name="senha" placeholder="Senha" required="" type="password" />
+                        <label for="confirma_senha">Confirme sua senha</label>
+                        <input id="confirma_senha" name="confirma_senha" placeholder="Confirme sua senha" required=""
+                            type="password" />
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" name="telefone" placeholder="Telefone" required="" type="tel" />
+                        <div class="modal-overlay__section-cadastro__div-button">
+                            <input type="submit" value="Cadastrar-se" />
+                            <p>Já tenho uma conta</p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+=======
+    <main class="main-conteiner" id="main">
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         <section class="main-conteiner__container-info-1">
             <section class="container-info-1">
                 <section class="container-info-1__carrossel-banner">
@@ -385,6 +1165,24 @@
 
 
     <script src="assets/js/tela-contrate/full.js"></script>
+
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+    <script src="assets/js/tela-cadastro-user/fechar-abrir.js"></script>
+    <!--Script fotografo cadastro-->
+    <script src="assets/js/tela-cadastro-fotografo/abrir-fechar-modal.js"></script>
+    <script src="assets/js/tela-cadastro-fotografo/abrir-modal-time.js"></script>
+    <script src="assets/js/tela-cadastro-fotografo/atualiza-input-disable.js"></script>
+    <script src="assets/js/tela-cadastro-fotografo/buscar-por-cep.js"></script>
+    <script src="assets/js/tela-cadastro-fotografo/formata-preco.js"></script>
+    <script src="assets/js/tela-cadastro-fotografo/imagem-local-de-trabalho.js"></script>
+    <script src="assets/js/tela-cadastro-fotografo/salva-horario-modal.js"></script>
+    <script src="assets/js/tela-cadastro-fotografo/ja-tenho-conta.js"></script>
 </body>
 
 </html>

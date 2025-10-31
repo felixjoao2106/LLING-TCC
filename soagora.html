@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Imagens do seu negócio</title>
   <style>
     * {
@@ -199,118 +200,117 @@
   </style>
 </head>
 
-<body>
-  <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="titulo-imagens-negocio">
-    <section class="modal-overlay__section-tela-imagens-negocio-add-img">
-      <button class="section-tela-checkout-more-info__modal-close" aria-label="Fechar janela">&times;</button>
-
-      <div class="section-tela-imagens-negocio-add-img__info">
-        <p id="titulo-imagens-negocio">Imagens do seu negócio</p>
-
-        <div class="info__input-add" tabindex="0">
-          <label for="add-foto" aria-label="Adicionar foto">
-            📷 Adicionar foto
-          </label>
-          <input type="file" id="add-foto" name="add-foto" accept="image/*">
+<body><a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;">Pular para o conteúdo
+    principal</a>
+  <main id="main">
+    <div aria-labelledby="titulo-imagens-negocio" aria-modal="true" class="modal-overlay" role="dialog">
+      <section class="modal-overlay__section-tela-imagens-negocio-add-img">
+        <button aria-label="Fechar janela" class="section-tela-checkout-more-info__modal-close">×</button>
+        <div class="section-tela-imagens-negocio-add-img__info">
+          <p id="titulo-imagens-negocio">Imagens do seu negócio</p>
+          <div class="info__input-add" tabindex="0">
+            <label aria-label="Adicionar foto" for="add-foto">
+              📷 Adicionar foto
+            </label>
+            <input accept="image/*" id="add-foto" name="add-foto" type="file" />
+          </div>
+          <div class="info__imgs" id="imagens-container">
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 1" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 2" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 3" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 2" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 3" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 2" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 3" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 2" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 3" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 2" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 3" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 1" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 2" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+            <div class="img-wrapper">
+              <img alt="Foto do negócio 3" src="https://placehold.co/200x150" />
+              <button aria-label="Remover imagem" class="remove-btn">×</button>
+            </div>
+          </div>
         </div>
+      </section>
+    </div>
+    <script>
+      // Remoção de imagens
+      const atualizarRemocoes = () => {
+        document.querySelectorAll('.remove-btn').forEach(btn => {
+          btn.onclick = (e) => {
+            const wrapper = e.target.closest('.img-wrapper');
+            wrapper.remove();
+          };
+        });
+      };
 
-        <div class="info__imgs" id="imagens-container">
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 1">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 2">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 3">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 2">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 3">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 2">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 3">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 2">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 3">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 2">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 3">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 1">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 2">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-          <div class="img-wrapper">
-            <img src="https://placehold.co/200x150" alt="Foto do negócio 3">
-            <button class="remove-btn" aria-label="Remover imagem">×</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+      atualizarRemocoes();
 
-  <script>
-    // Remoção de imagens
-    const atualizarRemocoes = () => {
-      document.querySelectorAll('.remove-btn').forEach(btn => {
-        btn.onclick = (e) => {
-          const wrapper = e.target.closest('.img-wrapper');
-          wrapper.remove();
-        };
-      });
-    };
+      // Adição dinâmica de imagem
+      const inputAdd = document.getElementById('add-foto');
+      const container = document.getElementById('imagens-container');
 
-    atualizarRemocoes();
-
-    // Adição dinâmica de imagem
-    const inputAdd = document.getElementById('add-foto');
-    const container = document.getElementById('imagens-container');
-
-    inputAdd.addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function (ev) {
-          const wrapper = document.createElement('div');
-          wrapper.classList.add('img-wrapper');
-          wrapper.innerHTML = `
+      inputAdd.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (ev) {
+            const wrapper = document.createElement('div');
+            wrapper.classList.add('img-wrapper');
+            wrapper.innerHTML = `
             <img src="${ev.target.result}" alt="Nova imagem do negócio">
             <button class="remove-btn" aria-label="Remover imagem">×</button>
           `;
-          container.appendChild(wrapper);
-          atualizarRemocoes();
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  </script>
+            container.appendChild(wrapper);
+            atualizarRemocoes();
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
+  </main>
 </body>
 
 </html>

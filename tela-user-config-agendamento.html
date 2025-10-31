@@ -1,244 +1,253 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/global/elementos-globais/index.css">
-    <link rel="stylesheet" href="assets/css/global/elementos-globais/aside-nav-config/index.css">
-    <link rel="stylesheet" href="assets/css/pages/tela-user-config-agendamento/index.css">
+    <link href="assets/css/global/elementos-globais/index.css" rel="stylesheet" />
+    <link href="assets/css/global/elementos-globais/aside-nav-config/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/tela-user-config-agendamento/index.css" rel="stylesheet" />
 </head>
 
-<body>
-    <header class="header-fixo">
+<body><a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;">Pular para o conteúdo
+        principal</a>
+    <header class="header-fixo ">
         <div class="header-fixo__logo">
-            <img src="assets/img/page/index/logo-section-1.png" alt="">
+            <a href="index.html"><img alt="" src="assets/img/page/index/logo-section-1.png" /></a>
         </div>
-
         <!-- botão/ícone de pesquisa -->
-        <button class="header-fixo__search-btn">
-            <img src="assets/img/page/index/search_wght400.svg" alt="">
-        </button>
-
+        <button class="header-fixo__search-btn"><img alt="" src="assets/img/page/index/search_wght400.svg" /></button>
         <!-- botão fechar -->
         <button class="header-fixo__close-btn">✖</button>
-
         <div class="header-fixo__input">
-            <input type="text" placeholder="Categoria">
-            <input type="text" placeholder="Onde">
-            <input type="datetime-local" placeholder="Quando">
+            <label for="Categoria" class="none">Categoria</label>
+            <input id="Categoria" placeholder="Categoria" type="text" />
+            <label for="Onde" class="none">Onde</label>
+            <input id="Onde" placeholder="Onde" type="text" />
+            <label for="Quando" class="none">Quando</label>
+            <input id="Quando" placeholder="Quando" type="datetime-local" />
         </div>
-
         <div class="header-fixo__login-fot-user">
             <input class="header-fixo__login-fot-user__input openModal__cadastro-fotografo" type="button"
-                value="Adicione o seu portifolho">
-            <img class="section__div_user" src="./assets/img/page/index/person-wght400.svg" alt="">
+                value="Adicione o seu portifolho" />
+            <img alt="" class="section__div_user" src="./assets/img/page/index/person-wght400.svg" />
             <a class="section__div-topo_a" href="">Entrar/Cadastrar</a>
         </div>
     </header>
-    <div class="container-flex">
-        <aside class="container-flex__menu-config">
-            <div class="menu-config__info-user">
-                <img src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                    alt="">
-                <div class="menu-config__name-telefone">
-                    <h2>Usuario</h2>
-                    <p>(11) 78493-0166</p>
-                </div>
-            </div>
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg"
-                        alt="" srcset="">
-                    <p>Agendamentos</p>
-                </div><img
-                    src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                    alt="" class="item__icon-next">
-            </div>
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="" srcset="">
-                    <p>Configurações de conta</p>
-                </div><img
-                    src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                    alt="" class="item__icon-next">
-            </div>
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/favorite_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="" srcset="">
-                    <p>Favoritos</p>
-                </div><img
-                    src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                    alt="" class="item__icon-next">
-            </div>
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/star_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""
-                        srcset="">
-                    <p>Avaliações</p>
-                </div><img
-                    src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                    alt="" class="item__icon-next">
-            </div>
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/exit_to_app_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="" srcset="">
-                    <p>Sair</p>
-                </div><img
-                    src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                    alt="" class="item__icon-next">
-            </div>
-        </aside>
+    <main id="main">
 
-
-
-
-
-
-
-
-
-
-
-
-        
-        <section class="container-flex__agendamento-section">
-            <div class="agendamento-section__title">
-                <img src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg"
-                    alt="">
-                <h2>Agendamentos</h2>
-            </div>
-            <div class="agendamento-section__agendamento-cards">
-                <div class="agendamento-cards__card">
-                    <div class="card__preview">
-                        <div class="preview__info-left">
-                            <p class="info-left__status status--em-andamento">Status: Em andamento</p>
-                            <p class="info-left__title">Ensaio baby born</p>
-                            <p class="info-left__data">4 setembror de 2025</p>
-                        </div>
-                        <div class="preview__arrow-right">
-                            <img src="assets/img/page/tela-user-config-agendamento/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                                alt="">
-                        </div>
-                    </div>
-                    <div class="card__info-total">
-                        <h4>4 Setembro de 2025</h4>
-                        <div class="info-total__info1">
-                            <img src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                                alt="avatar empressa">
-                            <div class="info1__title-localizacao">
-                                <h4>Empressa x</h4>
-                                <p>Rua Coronel Guimarães, 1036, Centro, 95760-000, São Sebastião do Caí</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <p>Ensaio baby born</p>
-                        <div class="info-total__info2">
-                            <div class="info2__avatar-funcionario"><img
-                                    src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                                    alt="">
-                                <p>Feito por: Carlos</p>
-                            </div>
-                            <div class="info2__preco-duracao">
-                                <p>R$ 0,10</p>
-                                <p>Das 10:00 - 11:30</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <button type="button">Cancelar</button>
+        <div class="container-flex">
+            <aside class="container-flex__menu-config">
+                <div class="menu-config__info-user">
+                    <img alt=""
+                        src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                    <div class="menu-config__name-telefone">
+                        <h2>Usuario</h2>
+                        <p>(11) 78493-0166</p>
                     </div>
                 </div>
-                <div class="agendamento-cards__card">
-                    <div class="card__preview">
-                        <div class="preview__info-left">
-                            <p class="info-left__status status--cancelado">Status: Cancelado</p>
-                            <p class="info-left__title">Ensaio baby born</p>
-                            <p class="info-left__data">4 setembror de 2025</p>
-                        </div>
-                        <div class="preview__arrow-right">
-                            <img src="assets/img/page/tela-user-config-agendamento/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                                alt="">
-                        </div>
+                <div class="menu-config__item" id="item-agendamentos">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg" />
+                        <p>Agendamentos</p>
                     </div>
-                    <div class="card__info-total">
-                        <h4>4 Setembro de 2025</h4>
-                        <div class="info-total__info1">
-                            <img src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                                alt="avatar empressa">
-                            <div class="info1__title-localizacao">
-                                <h4>Empressa x</h4>
-                                <p>Rua Coronel Guimarães, 1036, Centro, 95760-000, São Sebastião do Caí</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <p>Ensaio baby born</p>
-                        <div class="info-total__info2">
-                            <div class="info2__avatar-funcionario"><img
-                                    src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                                    alt="">
-                                <p>Feito por: Carlos</p>
-                            </div>
-                            <div class="info2__preco-duracao">
-                                <p>R$ 0,10</p>
-                                <p>Das 10:00 - 11:30</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <button type="button">Cancelar</button>
-                    </div>
+                    <img alt="" class="item__icon-next"
+                        src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
                 </div>
-                <div class="agendamento-cards__card">
-                    <div class="card__preview">
-                        <div class="preview__info-left">
-                            <p class="info-left__status status--concluido">Status: Cancelado</p>
-                            <p class="info-left__title">Ensaio baby born</p>
-                            <p class="info-left__data">4 setembror de 2025</p>
-                        </div>
-                        <div class="preview__arrow-right">
-                            <img src="assets/img/page/tela-user-config-agendamento/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                                alt="">
-                        </div>
-                    </div>
-                    <div class="card__info-total">
-                        <h4>4 Setembro de 2025</h4>
-                        <div class="info-total__info1">
-                            <img src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                                alt="avatar empressa">
-                            <div class="info1__title-localizacao">
-                                <h4>Empressa x</h4>
-                                <p>Rua Coronel Guimarães, 1036, Centro, 95760-000, São Sebastião do Caí</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <p>Ensaio baby born</p>
-                        <div class="info-total__info2">
-                            <div class="info2__avatar-funcionario"><img
-                                    src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                                    alt="">
-                                <p>Feito por: Carlos</p>
-                            </div>
-                            <div class="info2__preco-duracao">
-                                <p>R$ 0,10</p>
-                                <p>Das 10:00 - 11:30</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <button type="button">Cancelar</button>
-                    </div>
-                </div>
-            </div>
 
+                <div class="menu-config__item" id="item-config-conta">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Configurações de conta</p>
+                    </div>
+                    <img alt="" class="item__icon-next"
+                        src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                </div>
+
+                <div class="menu-config__item" id="item-favoritos">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/favorite_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Favoritos</p>
+                    </div>
+                    <img alt="" class="item__icon-next"
+                        src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                </div>
+
+                <div class="menu-config__item" id="item-avaliacoes">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/star_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Avaliações</p>
+                    </div>
+                    <img alt="" class="item__icon-next"
+                        src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                </div>
+
+                <div class="menu-config__item" id="item-sair">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/exit_to_app_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Sair</p>
+                    </div>
+                    <img alt="" class="item__icon-next"
+                        src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                </div>
+
+            </aside>
+            <section class="container-flex__agendamento-section">
+                <div class="agendamento-section__title">
+                    <img alt=""
+                        src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg" />
+                    <h2>Agendamentos</h2>
+                </div>
+                <div class="agendamento-section__agendamento-cards">
+                    <div class="agendamento-cards__card">
+                        <div class="card__preview">
+                            <div class="preview__info-left">
+                                <p class="info-left__status status--em-andamento">Status: Em andamento</p>
+                                <p class="info-left__title">Ensaio baby born</p>
+                                <p class="info-left__data">4 setembror de 2025</p>
+                            </div>
+                            <div class="preview__arrow-right">
+                                <img alt=""
+                                    src="assets/img/page/tela-user-config-agendamento/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                            </div>
+                        </div>
+                        <div class="card__info-total">
+                            <h4>4 Setembro de 2025</h4>
+                            <div class="info-total__info1">
+                                <img alt="avatar empressa"
+                                    src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                                <div class="info1__title-localizacao">
+                                    <h4>Empressa x</h4>
+                                    <p>Rua Coronel Guimarães, 1036, Centro, 95760-000, São Sebastião do Caí</p>
+                                </div>
+                            </div>
+                            <hr />
+                            <p>Ensaio baby born</p>
+                            <div class="info-total__info2">
+                                <div class="info2__avatar-funcionario"><img alt=""
+                                        src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                                    <p>Feito por: Carlos</p>
+                                </div>
+                                <div class="info2__preco-duracao">
+                                    <p>R$ 0,10</p>
+                                    <p>Das 10:00 - 11:30</p>
+                                </div>
+                            </div>
+                            <hr />
+                            <button type="button">Cancelar</button>
+                        </div>
+                    </div>
+                    <div class="agendamento-cards__card">
+                        <div class="card__preview">
+                            <div class="preview__info-left">
+                                <p class="info-left__status status--cancelado">Status: Cancelado</p>
+                                <p class="info-left__title">Ensaio baby born</p>
+                                <p class="info-left__data">4 setembror de 2025</p>
+                            </div>
+                            <div class="preview__arrow-right">
+                                <img alt=""
+                                    src="assets/img/page/tela-user-config-agendamento/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                            </div>
+                        </div>
+                        <div class="card__info-total">
+                            <h4>4 Setembro de 2025</h4>
+                            <div class="info-total__info1">
+                                <img alt="avatar empressa"
+                                    src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                                <div class="info1__title-localizacao">
+                                    <h4>Empressa x</h4>
+                                    <p>Rua Coronel Guimarães, 1036, Centro, 95760-000, São Sebastião do Caí</p>
+                                </div>
+                            </div>
+                            <hr />
+                            <p>Ensaio baby born</p>
+                            <div class="info-total__info2">
+                                <div class="info2__avatar-funcionario"><img alt=""
+                                        src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                                    <p>Feito por: Carlos</p>
+                                </div>
+                                <div class="info2__preco-duracao">
+                                    <p>R$ 0,10</p>
+                                    <p>Das 10:00 - 11:30</p>
+                                </div>
+                            </div>
+                            <hr />
+                            <button type="button">Cancelar</button>
+                        </div>
+                    </div>
+                    <div class="agendamento-cards__card">
+                        <div class="card__preview">
+                            <div class="preview__info-left">
+                                <p class="info-left__status status--concluido">Status: Cancelado</p>
+                                <p class="info-left__title">Ensaio baby born</p>
+                                <p class="info-left__data">4 setembror de 2025</p>
+                            </div>
+                            <div class="preview__arrow-right">
+                                <img alt=""
+                                    src="assets/img/page/tela-user-config-agendamento/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                            </div>
+                        </div>
+                        <div class="card__info-total">
+                            <h4>4 Setembro de 2025</h4>
+                            <div class="info-total__info1">
+                                <img alt="avatar empressa"
+                                    src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                                <div class="info1__title-localizacao">
+                                    <h4>Empressa x</h4>
+                                    <p>Rua Coronel Guimarães, 1036, Centro, 95760-000, São Sebastião do Caí</p>
+                                </div>
+                            </div>
+                            <hr />
+                            <p>Ensaio baby born</p>
+                            <div class="info-total__info2">
+                                <div class="info2__avatar-funcionario"><img alt=""
+                                        src="assets/img/page/tela-user-config-agendamento/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                                    <p>Feito por: Carlos</p>
+                                </div>
+                                <div class="info2__preco-duracao">
+                                    <p>R$ 0,10</p>
+                                    <p>Das 10:00 - 11:30</p>
+                                </div>
+                            </div>
+                            <hr />
+                            <button type="button">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="section-seis">
+        <section class="section-seis__container">
+            <div class="section-seis__container__logo-copy">
+                <img alt="" src="assets/img/page/index/logo-section-1.png" /> <span>© 2025 LLING Inc. Todos os direitos
+                    reservados</span>
+            </div>
+            <hr />
+            <nav class="section-seis__container__info">
+                <ul>
+                    <li><a href="">Sobre nos</a></li>
+                    <li><a href="">Termos de uso</a></li>
+                    <li><a href="">Trabalhe com agente</a> </li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="section-seis__container__redes-sociais">
+                <div class="section-seis__container__redes-sociais__instagram"><img alt=""
+                        src="assets/img/page/index/instagram-brands-solid-full.svg" /></div>
+                <div class="section-seis__container__redes-sociais__facebook"><img alt=""
+                        src="assets/img/page/index/facebook-brands-solid-full.svg" /></div>
+            </div>
         </section>
-    </div>
+    </footer>
+    <script src="assets/js/global/aside-nav-user/rotas.js"></script>
 </body>
 
 </html>

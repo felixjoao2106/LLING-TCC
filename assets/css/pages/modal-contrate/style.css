@@ -48,7 +48,7 @@
     z-index: 2;
 }
 
-form {
+.modal-overlay__section-tela-contrate form {
     width: 90%;
     display: flex;
     gap: 20px;

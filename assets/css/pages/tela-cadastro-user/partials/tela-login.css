@@ -98,4 +98,9 @@
     font-size: 14px;
     color: #333;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.modal-overlay__section-cadastro__div-button p:hover {
+    text-decoration: underline;
 }

@@ -1,0 +1,32 @@
+input[type="submit"] {
+    transition: all 0.3s ease;
+}
+
+/* Feedback visual ao passar o mouse */
+input[type="submit"]:hover {
+    background-color: var(--cor-primaria);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Feedback ao clicar */
+input[type="submit"]:active {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Acessibilidade: foco visível */
+input[type="submit"]:focus {
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 3px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    input[type="submit"] {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+        max-width: 100%;
+    }
+}
