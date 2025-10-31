@@ -13,22 +13,20 @@
 
 <body><a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;">Pular para o conteúdo
         principal</a>
-    <header class="header-fixo">
+    <header class="header-fixo ">
         <div class="header-fixo__logo">
-            <img alt="" src="assets/img/page/index/logo-section-1.png" />
+            <a href="index.html"><img alt="" src="assets/img/page/index/logo-section-1.png" /></a>
         </div>
         <!-- botão/ícone de pesquisa -->
-        <button class="header-fixo__search-btn">
-            <img alt="" src="assets/img/page/index/search_wght400.svg" />
-        </button>
+        <button class="header-fixo__search-btn"><img alt="" src="assets/img/page/index/search_wght400.svg" /></button>
         <!-- botão fechar -->
         <button class="header-fixo__close-btn">✖</button>
         <div class="header-fixo__input">
-            <label for="Categoria">Categoria</label>
+            <label for="Categoria" class="none">Categoria</label>
             <input id="Categoria" placeholder="Categoria" type="text" />
-            <label for="Onde">Onde</label>
+            <label for="Onde" class="none">Onde</label>
             <input id="Onde" placeholder="Onde" type="text" />
-            <label for="Quando">Quando</label>
+            <label for="Quando" class="none">Quando</label>
             <input id="Quando" placeholder="Quando" type="datetime-local" />
         </div>
         <div class="header-fixo__login-fot-user">
@@ -132,6 +130,7 @@
                 </div>
             </section>
         </div>
+
         <script>
             // Seleciona o card de configurações
             const configCard = document.querySelector('.menu-config__item:nth-of-type(3)');
@@ -149,6 +148,29 @@
             });
         </script>
     </main>
+    <footer class="section-seis">
+    <section class="section-seis__container">
+      <div class="section-seis__container__logo-copy">
+        <img alt="" src="assets/img/page/index/logo-section-1.png" /> <span>© 2025 LLING Inc. Todos os direitos
+          reservados</span>
+      </div>
+      <hr />
+      <nav class="section-seis__container__info">
+        <ul>
+          <li><a href="">Sobre nos</a></li>
+          <li><a href="">Termos de uso</a></li>
+          <li><a href="">Trabalhe com agente</a> </li>
+          <li><a href="">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="section-seis__container__redes-sociais">
+        <div class="section-seis__container__redes-sociais__instagram"><img alt=""
+            src="assets/img/page/index/instagram-brands-solid-full.svg" /></div>
+        <div class="section-seis__container__redes-sociais__facebook"><img alt=""
+            src="assets/img/page/index/facebook-brands-solid-full.svg" /></div>
+      </div>
+    </section>
+  </footer>
     <script src="assets/js/global/aside-nav-fotografo/rotas.js"></script>   
 </body>
 
