@@ -14,9 +14,3 @@ closeModalFotografo.addEventListener("click", () => {
     modalFotografo.style.display = "none";
 });
 
-// Fechar clicando fora
-window.addEventListener("click", (e) => {
-    if (e.target === modalFotografo) {
-        modalFotografo.style.display = "none";
-    }
-});

@@ -1,221 +1,227 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/global/elementos-globais/index.css">
-    <link rel="stylesheet" href="assets/css/global/elementos-globais/aside-nav-config/index.css">
-    <link rel="stylesheet" href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa/index.css">
-    <link rel="stylesheet" href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa-categoria/index.css">
+    <link href="assets/css/global/elementos-globais/index.css" rel="stylesheet" />
+    <link href="assets/css/global/elementos-globais/aside-nav-config/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa/index.css" rel="stylesheet" />
+    <link href="assets/css/pages/tela-fotografo-config-detalhes-da-empresa-categoria/index.css" rel="stylesheet" />
 </head>
 
-<body>
-    <header class="header-fixo">
+<body><a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;">Pular para o conteúdo
+        principal</a>
+    <header class="header-fixo ">
         <div class="header-fixo__logo">
-            <img src="assets/img/page/index/logo-section-1.png" alt="">
+            <a href="index.html"><img alt="" src="assets/img/page/index/logo-section-1.png" /></a>
         </div>
-
         <!-- botão/ícone de pesquisa -->
-        <button class="header-fixo__search-btn">
-            <img src="assets/img/page/index/search_wght400.svg" alt="">
-        </button>
-
+        <button class="header-fixo__search-btn"><img alt="" src="assets/img/page/index/search_wght400.svg" /></button>
         <!-- botão fechar -->
         <button class="header-fixo__close-btn">✖</button>
-
         <div class="header-fixo__input">
-            <input type="text" placeholder="Categoria">
-            <input type="text" placeholder="Onde">
-            <input type="datetime-local" placeholder="Quando">
+            <label for="Categoria" class="none">Categoria</label>
+            <input id="Categoria" placeholder="Categoria" type="text" />
+            <label for="Onde" class="none">Onde</label>
+            <input id="Onde" placeholder="Onde" type="text" />
+            <label for="Quando" class="none">Quando</label>
+            <input id="Quando" placeholder="Quando" type="datetime-local" />
         </div>
-
         <div class="header-fixo__login-fot-user">
             <input class="header-fixo__login-fot-user__input openModal__cadastro-fotografo" type="button"
-                value="Adicione o seu portifolho">
-            <img class="section__div_user" src="./assets/img/page/index/person-wght400.svg" alt="">
+                value="Adicione o seu portifolho" />
+            <img alt="" class="section__div_user" src="./assets/img/page/index/person-wght400.svg" />
             <a class="section__div-topo_a" href="">Entrar/Cadastrar</a>
         </div>
     </header>
+    <main id="main">
 
-
-    <div class="container-flex">
-        <aside class="container-flex__menu-config">
-            <div class="menu-config__info-user none">
-                <img src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                    alt="">
-                <div class="menu-config__name-telefone">
-                    <h2>Usuario</h2>
-                    <p>(11) 78493-0166</p>
+        <div class="container-flex">
+            <aside class="container-flex__menu-config">
+                <div class="menu-config__info-user none">
+                    <img alt=""
+                        src="assets/img/page/aside-nav-config/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
+                    <div class="menu-config__name-telefone">
+                        <h2>Usuario</h2>
+                        <p>(11) 78493-0166</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg"
-                        alt="">
-                    <p>Agendamentos</p>
+                <div class="menu-config__item" id="item-agendamentos">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/calendar_month_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg" />
+                        <p>Agendamentos</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="">
-                    <p>Configurações da empresa</p>
+                <div class="menu-config__item" id="item-config-empresa">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Configurações da empresa</p>
+                    </div>
+                    <img alt="" class="item__icon-next"
+                        src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" />
                 </div>
-                <img src="assets/img/page/aside-nav-config/arrow_forward_ios_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                    alt="" class="item__icon-next">
-            </div>
 
-            <div class="menu-config__item none">
-                <div>
-                    <p>Adicionar serviço</p>
+                <div class="menu-config__item none" id="item-adicionar-servico">
+                    <div>
+                        <p>Adicionar serviço</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="menu-config__item none">
-                <div>
-                    <p>Detalhes da empresa</p>
+                <div class="menu-config__item none" id="item-detalhes-empresa">
+                    <div>
+                        <p>Detalhes da empresa</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/tela-fotografo-config-agendamento/check_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="">
-                    <p>Cheakouts</p>
+                <div class="menu-config__item" id="item-checkout">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/tela-fotografo-config-agendamento/check_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Checkouts</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="menu-config__item">
-                <div>
-                    <img class="item__icon-action"
-                        src="assets/img/page/aside-nav-config/exit_to_app_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-                        alt="">
-                    <p>Sair</p>
+                <div class="menu-config__item" id="item-sair">
+                    <div>
+                        <img alt="" class="item__icon-action"
+                            src="assets/img/page/aside-nav-config/exit_to_app_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                        <p>Sair</p>
+                    </div>
                 </div>
-            </div>
-        </aside>
+            </aside>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section class="container-flex__detalhes-da-empresa-section">
-            <div class="detalhes-da-empresa-section__title">
-                <img src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <h2>Configurações da empresa</h2>
-            </div>
-
-            <div class="detalhes-da-empresa-section__categoria">
-                <h3>Detalhes da empresa</h3>
-                <h4>Categoria</h4>
-                <form id="empresaForm" class="categoria__container">
+            <section class="container-flex__detalhes-da-empresa-section">
+                <div class="detalhes-da-empresa-section__title">
+                    <img alt=""
+                        src="assets/img/page/aside-nav-config/settings_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
+                    <h2>Configurações da empresa</h2>
+                </div>
+                <div class="detalhes-da-empresa-section__categoria">
+                    <h3>Detalhes da empresa</h3>
                     <h4>Categoria</h4>
-                    <div class="input-wrapper">
-                        <input type="text" id="categoriaPrincipal" name="categoria_principal"
-                            placeholder="Categoria principal">
-                        <span class="seta">›</span>
-                    </div>
-                    <h4>Categoria adicionais</h4>
-                    <div class="input-wrapper">
-                        <input type="text" id="inputSubcategoria" placeholder="Fotografia infantil">
-                        <span class="seta">›</span>
-                    </div>
-                    <button type="button" id="addSubcategoria" class="btn-adicionar">Adicionar</button>
-                    <h4>Tags de Categoria adicionais</h4>
-                    <div id="listaSubcategorias"></div>
-                    <button type="submit" class="btn-salvar">Salvar</button>
-                </form>
-            </div>
-        </section>
+                    <form class="categoria__container" id="empresaForm">
+                        <h4>Categoria</h4>
+                        <div class="input-wrapper">
+                            <label for="categoriaPrincipal">Categoria principal</label>
+                            <input id="categoriaPrincipal" name="categoria_principal" placeholder="Categoria principal"
+                                type="text" />
+                            <span class="seta">›</span>
+                        </div>
+                        <h4>Categoria adicionais</h4>
+                        <div class="input-wrapper">
+                            <label for="inputSubcategoria">Fotografia infantil</label>
+                            <input id="inputSubcategoria" placeholder="Fotografia infantil" type="text" />
+                            <span class="seta">›</span>
+                        </div>
+                        <button class="btn-adicionar" id="addSubcategoria" type="button">Adicionar</button>
+                        <h4>Tags de Categoria adicionais</h4>
+                        <div id="listaSubcategorias"></div>
+                        <button class="btn-salvar" type="submit">Salvar</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <script>
+            // Seleciona o card de configurações
+            const configCard = document.querySelector('.menu-config__item:nth-of-type(3)');
 
-    </div>
+            // Seleciona os itens que inicialmente têm a classe 'none'
+            const hiddenItems = document.querySelectorAll('.menu-config__item.none');
 
-    <script>
-        // Seleciona o card de configurações
-        const configCard = document.querySelector('.menu-config__item:nth-of-type(3)');
+            // Seleciona o ícone de seta dentro do card de configurações
+            const arrowIcon = configCard.querySelector('.item__icon-next');
 
-        // Seleciona os itens que inicialmente têm a classe 'none'
-        const hiddenItems = document.querySelectorAll('.menu-config__item.none');
+            // Adiciona o evento de clique
+            configCard.addEventListener('click', () => {
+                hiddenItems.forEach(item => item.classList.toggle('none')); // alterna a classe 'none'
+                arrowIcon.classList.toggle('rotated'); // alterna a rotação do ícone
+            });
+        </script>
+        <script>
+            const form = document.getElementById('empresaForm');
+            const inputSub = document.getElementById('inputSubcategoria');
+            const listaSub = document.getElementById('listaSubcategorias');
+            const btnAdd = document.getElementById('addSubcategoria');
 
-        // Seleciona o ícone de seta dentro do card de configurações
-        const arrowIcon = configCard.querySelector('.item__icon-next');
+            let subcategorias = [];
 
-        // Adiciona o evento de clique
-        configCard.addEventListener('click', () => {
-            hiddenItems.forEach(item => item.classList.toggle('none')); // alterna a classe 'none'
-            arrowIcon.classList.toggle('rotated'); // alterna a rotação do ícone
-        });
-    </script>
-    <script>
-        const form = document.getElementById('empresaForm');
-        const inputSub = document.getElementById('inputSubcategoria');
-        const listaSub = document.getElementById('listaSubcategorias');
-        const btnAdd = document.getElementById('addSubcategoria');
+            // Adicionar subcategoria dinamicamente
+            btnAdd.addEventListener('click', () => {
+                const valor = inputSub.value.trim();
+                if (valor && !subcategorias.includes(valor)) {
+                    subcategorias.push(valor);
 
-        let subcategorias = [];
+                    const tag = document.createElement('div');
+                    tag.classList.add('tag');
+                    tag.innerHTML = `${valor} <button type="button" class="remove">×</button>`;
+                    listaSub.appendChild(tag);
 
-        // Adicionar subcategoria dinamicamente
-        btnAdd.addEventListener('click', () => {
-            const valor = inputSub.value.trim();
-            if (valor && !subcategorias.includes(valor)) {
-                subcategorias.push(valor);
+                    tag.querySelector('.remove').addEventListener('click', () => {
+                        subcategorias = subcategorias.filter(item => item !== valor);
+                        tag.remove();
+                    });
 
-                const tag = document.createElement('div');
-                tag.classList.add('tag');
-                tag.innerHTML = `${valor} <button type="button" class="remove">×</button>`;
-                listaSub.appendChild(tag);
-
-                tag.querySelector('.remove').addEventListener('click', () => {
-                    subcategorias = subcategorias.filter(item => item !== valor);
-                    tag.remove();
-                });
-
-                inputSub.value = '';
-            }
-        });
-
-        // Envio para o backend (PHP)
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const dados = {
-                categoria_principal: document.getElementById('categoriaPrincipal').value,
-                subcategorias: subcategorias
-            };
-
-            console.log("Enviando para o backend:", dados);
-
-            const response = await fetch('salvar_empresa.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(dados)
+                    inputSub.value = '';
+                }
             });
 
-            if (response.ok) {
-                alert('Dados salvos com sucesso!');
-            } else {
-                alert('Erro ao salvar!');
-            }
-        });
-    </script>
+            // Envio para o backend (PHP)
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
 
+                const dados = {
+                    categoria_principal: document.getElementById('categoriaPrincipal').value,
+                    subcategorias: subcategorias
+                };
 
+                console.log("Enviando para o backend:", dados);
+
+                const response = await fetch('salvar_empresa.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(dados)
+                });
+
+                if (response.ok) {
+                    alert('Dados salvos com sucesso!');
+                } else {
+                    alert('Erro ao salvar!');
+                }
+            });
+        </script>
+    </main>
+    <footer class="section-seis">
+        <section class="section-seis__container">
+            <div class="section-seis__container__logo-copy">
+                <img alt="" src="assets/img/page/index/logo-section-1.png" /> <span>© 2025 LLING Inc. Todos os direitos
+                    reservados</span>
+            </div>
+            <hr />
+            <nav class="section-seis__container__info">
+                <ul>
+                    <li><a href="">Sobre nos</a></li>
+                    <li><a href="">Termos de uso</a></li>
+                    <li><a href="">Trabalhe com agente</a> </li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="section-seis__container__redes-sociais">
+                <div class="section-seis__container__redes-sociais__instagram"><img alt=""
+                        src="assets/img/page/index/instagram-brands-solid-full.svg" /></div>
+                <div class="section-seis__container__redes-sociais__facebook"><img alt=""
+                        src="assets/img/page/index/facebook-brands-solid-full.svg" /></div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="assets/js/global/aside-nav-fotografo/rotas.js"></script>
 </body>
 
 </html>
