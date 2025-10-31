@@ -24,6 +24,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         max-width: 100%;
         gap: 30px;
         padding: 10px;
+        overflow: visible;
     }
 
     .container-flex__menu-config {
@@ -35,6 +36,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         /* correção */
         align-self: flex-start;
         height: auto;
+        overflow-y: visible;
         border-right: none;
         background-color: white;
     }
@@ -42,6 +44,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
     .container-flex__configuracao-de-conta-section,
     .container-flex__agendamento-section, .container-flex__favorito, .container-flex__avaliacao, .container-flex__detalhes-da-empresa-section {
         flex-grow: 1;
+        overflow-y: visible;
         height: auto;
         padding: 0 20px 70px 20px;
         width: 100%;

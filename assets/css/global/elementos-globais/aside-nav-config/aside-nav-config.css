@@ -5,6 +5,7 @@
     margin-top: 100px;
     overflow: hidden;
     /* impede a rolagem geral do container */
+    max-width: 100%;
 }
 
 /* Deixa o menu lateral fixo */
@@ -33,7 +34,7 @@
 .container-flex__detalhes-da-empresa-section,
 .container-flex__checkout-section {
     flex-grow: 1;
-    overflow-y: auto;
+    overflow-x: auto;
     height: calc(100vh - 100px);
     padding: 20px;
 }
