@@ -16,7 +16,10 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
 */
 
 @media screen and (max-width: 768px) {
-
+    main {
+        min-height: 700px;
+    }
+    
     .container-flex {
         display: flex;
         flex-direction: column;
