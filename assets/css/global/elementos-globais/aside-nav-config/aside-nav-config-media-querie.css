@@ -16,9 +16,11 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
 */
 
 @media screen and (max-width: 768px) {
-    main {
-        min-height: 700px;
+    body {
+        display: flex;
+        flex-direction: column;
     }
+    
     .container-flex {
         display: flex;
         flex-direction: column;
@@ -26,6 +28,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         max-width: 100%;
         gap: 30px;
         padding: 10px;
+        overflow: visible;
     }
 
     .container-flex__menu-config {
@@ -37,6 +40,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         /* correção */
         align-self: flex-start;
         height: auto;
+        overflow-y: visible;
         border-right: none;
         background-color: white;
     }
@@ -44,26 +48,29 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
     .container-flex__configuracao-de-conta-section,
     .container-flex__agendamento-section, .container-flex__favorito, .container-flex__avaliacao, .container-flex__detalhes-da-empresa-section {
         flex-grow: 1;
+        overflow-y: visible;
         height: auto;
         padding: 0 20px 70px 20px;
         width: 100%;
         min-height: 500px;
     }
-
+    
     .configuracao-de-conta-section__input,
     .agendamento-section__agendamento-cards, .card-container__container-card, .avaliacao__card-container, .detalhes-da-empresa-section__container {
         display: flex;
         flex-direction: column;
+        overflow-y: visible;
         gap: 10px;
         width: 100%;
     }
-
+    
     .configuracao-de-conta-section__title,
     .agendamento-section__title, .favorito__title, .avaliacao__title, .detalhes-da-empresa-section__title {
         display: flex;
         align-items: center;
         gap: 10px;
         padding-top: 0;
+        overflow-y: visible;
         padding-bottom: 20px;
     }
 }
