@@ -61,7 +61,7 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
         flex-direction: column;
         overflow-y: visible;
         gap: 10px;
-        min-height: 1000px;
+        min-height: 10000px;
         width: 100%;
     }
     
