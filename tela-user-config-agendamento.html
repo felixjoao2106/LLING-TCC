@@ -118,7 +118,7 @@
                                     src="assets/img/page/tela-user-config-agendamento/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
                             </div>
                         </div>
-                        <div class="card__info-total">
+                        <div class="card__info-total none">
                             <h4>4 Setembro de 2025</h4>
                             <div class="info-total__info1">
                                 <img alt="avatar empressa"
@@ -156,7 +156,7 @@
                                     src="assets/img/page/tela-user-config-agendamento/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
                             </div>
                         </div>
-                        <div class="card__info-total">
+                        <div class="card__info-total none">
                             <h4>4 Setembro de 2025</h4>
                             <div class="info-total__info1">
                                 <img alt="avatar empressa"
@@ -194,7 +194,7 @@
                                     src="assets/img/page/tela-user-config-agendamento/keyboard_arrow_right_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" />
                             </div>
                         </div>
-                        <div class="card__info-total">
+                        <div class="card__info-total none">
                             <h4>4 Setembro de 2025</h4>
                             <div class="info-total__info1">
                                 <img alt="avatar empressa"
@@ -248,6 +248,33 @@
         </section>
     </footer>
     <script src="assets/js/global/aside-nav-user/rotas.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".agendamento-cards__card");
+
+            cards.forEach(card => {
+                const preview = card.querySelector(".card__preview");
+                const infoTotal = card.querySelector(".card__info-total");
+                const arrow = card.querySelector(".preview__arrow-right img");
+
+                preview.addEventListener("click", () => {
+                    const isOpen = !infoTotal.classList.contains("none");
+
+                    // Fecha todos os outros cards
+                    document.querySelectorAll(".card__info-total").forEach(info => info.classList.add("none"));
+                    document.querySelectorAll(".preview__arrow-right img").forEach(img => img.classList.remove("rotacionado"));
+
+                    // Se o atual estava fechado, abre e gira a seta
+                    if (!isOpen) {
+                        infoTotal.classList.remove("none");
+                        arrow.classList.add("rotacionado");
+                    }
+                });
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>

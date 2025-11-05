@@ -18,7 +18,13 @@ moveis ja foi feito com mobal fort por isso nao precisa dos 2 primeirosd
 @media screen and (max-width: 768px) {
   .favorito__card-container {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
+
+  .favorito__card-container {
+    height: 30px;
+  }
+
+  
 
 }
